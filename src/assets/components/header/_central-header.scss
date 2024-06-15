@@ -1,0 +1,27 @@
+.central-header{
+    background-color: var(--black);
+    .container{
+        align-items: center;
+        justify-content: space-evenly;
+        .navbar{
+            .navlist{
+            padding: 25px 0px;
+            padding-right: 100px;
+                color: white;
+                display: flex;
+                font-family: var(--base-font);
+                font-size: 15px;
+                gap: 30px;
+                letter-spacing: 0.2cap;
+            }
+        }
+        .icons{
+            display: flex;
+            color: white;
+            gap: 22px;
+            font-size: 25px;
+            
+        }
+    }
+}
+

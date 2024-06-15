@@ -1,0 +1,20 @@
+.top-header {
+  width: 100%;
+  background-color: var(--green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .top-title {
+    color: var(--black);
+    text-transform: uppercase;
+    cursor: auto;
+    padding: 14px 0;
+    letter-spacing: 0.3cap;
+    font-family: var(--base-font);
+    font-weight: 750;
+    font-size: 10px;
+    @media (min-width: 768px) {
+      font-size: 11px;
+    }
+  }
+}
