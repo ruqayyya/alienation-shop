@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+}
+
+:root{
+    --green:rgb(119,255,0);
+    --base-font: "Montserrat", sans-serif;
+    --black: black;
+}
+
+.row{
+    display: flex;
+    width: 100%;
+}
