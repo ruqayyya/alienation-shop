@@ -5,7 +5,7 @@
         justify-content: space-evenly;
         .navbar{
             .navlist{
-            padding: 25px 0px;
+            padding: 24px 0px;
             padding-right: 100px;
                 color: white;
                 display: flex;
@@ -15,12 +15,11 @@
                 letter-spacing: 0.2cap;
             }
         }
-        .icons{
+        .image{
             display: flex;
             color: white;
-            gap: 22px;
-            font-size: 25px;
-            
+            gap: 20px;
+            height: 20px;
         }
     }
 }
