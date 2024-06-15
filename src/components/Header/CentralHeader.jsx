@@ -1,12 +1,8 @@
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faBars,
-  faUser,
-  faMagnifyingGlass,
-  faBagShopping,
-} from "@fortawesome/free-solid-svg-icons"; // Solid iconlar için
 import logo from "../../assets/images/image.png";
+import search from '../../assets/images/search-interface-symbol.png';
+import user from '../../assets/images/user.png';
+import bag from '../../assets/images/bag.png';
 
 const CentralHeader = () => {
   return (
@@ -15,7 +11,7 @@ const CentralHeader = () => {
         {/* <div className="burger">
           <FontAwesomeIcon icon={faBars} />
         </div> */}
-        <div className="img">
+        <div className="logo">
           <img src={logo} alt="logo" />
         </div>
         <nav className="navbar">
@@ -28,10 +24,10 @@ const CentralHeader = () => {
             <li className="navitem">REVIEWS</li>
           </ul>
         </nav>
-        <div className="icons">
-          <FontAwesomeIcon className="user" icon={faUser} />
-          <FontAwesomeIcon className="search" icon={faMagnifyingGlass} />
-          <FontAwesomeIcon icon={faBagShopping} />
+        <div className="image">
+          <img src={user} alt="user" />
+          <img src={search} alt="search" />
+          <img className="bag" src={bag} alt="bag" />
         </div>
       </div>
     </div>
