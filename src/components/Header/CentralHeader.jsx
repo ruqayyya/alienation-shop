@@ -1,16 +1,17 @@
 import React from "react";
 import logo from "../../assets/images/image.png";
-import search from '../../assets/images/search-interface-symbol.png';
-import user from '../../assets/images/user.png';
-import bag from '../../assets/images/bag.png';
+import search from "../../assets/images/search-interface-symbol.png";
+import user from "../../assets/images/user.png";
+import bag from "../../assets/images/bag.png";
+import menu from "../../assets/images/menu.png";
 
 const CentralHeader = () => {
   return (
     <div className="central-header">
       <div className="container row">
-        {/* <div className="burger">
-          <FontAwesomeIcon icon={faBars} />
-        </div> */}
+        <div className="burger">
+          <img className="menu" src={menu} alt="menu" />
+        </div>
         <div className="logo">
           <img src={logo} alt="logo" />
         </div>
@@ -25,9 +26,15 @@ const CentralHeader = () => {
           </ul>
         </nav>
         <div className="image">
-          <img src={user} alt="user" />
-          <img src={search} alt="search" />
-          <img className="bag" src={bag} alt="bag" />
+          <div className="icon">
+            <img src={user} alt="user" />
+          </div>
+          <div className="icon">
+            <img src={search} alt="search" />
+          </div>
+          <div className="icon">
+            <img className="bag" src={bag} alt="bag" />
+          </div>
         </div>
       </div>
     </div>
