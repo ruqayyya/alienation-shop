@@ -1,3 +1,7 @@
+body {
+  background-color: gray;
+}
+
 .central-header {
   width: 100%;
   background-color: var(--black);
@@ -19,14 +23,14 @@
     }
     .burger {
       display: block;
-      .menu{
+      .menu {
         height: 25px;
       }
       @media (min-width: 1230px) {
         display: none;
       }
     }
-    .logo{
+    .logo {
       margin-left: 0;
       @media (max-width: 1230px) {
         margin-left: 64px;
@@ -47,54 +51,74 @@
         @media (max-width: 1230px) {
           display: none;
         }
-        .navitem{
+        .navitem {
+          cursor: pointer;
           position: relative;
-          transition: 2s;
-          .dropdownMenu{
+          // transition: 2s ease;
+          &::after {
+            content: '';
+            position: absolute;
+            bottom: -24px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background-color: white;
+            transform: scaleX(0); 
+            transition: transform 0.3s ease; 
+          }
+          &:hover::after {
+            transform: scaleX(1); 
+          }
+          .dropdownMenu {
             display: flex;
             flex-direction: column;
-            align-items: center;
+            justify-content: center;
             position: absolute;
             top: 40px;
-            
-            width: 180px;
-            background-color: aqua;
-            transition: 2s  ease;
-            .menu{
-              text-align: left;
-
+            width: 220px;
+            background-color: black;
+            transition: 2s ease;
+            padding: 20px 10px;
+            gap: 10px;
+            font-family: sans-serif;
+            font-weight: 100;
+            text-transform: uppercase;
+            .menu {
+              cursor: pointer;
+              color: var(--white);
+              font-size: 13px;
+              gap: 20px;
             }
           }
         }
       }
     }
-  }
-  .image {
-    display: flex;
-    gap: 20px;
-    height: 22px;
-    @media (max-width: 1350px) {
-      position: absolute;
-      top: 65px;
-      right: 60px;
-    }
-    @media (max-width: 1230px) {
-      position: static;
-      align-items: center;
-    }
-
-    .icon {
+    .image {
       display: flex;
+      gap: 20px;
       height: 22px;
+      @media (max-width: 1350px) {
+        position: absolute;
+        top: 65px;
+        right: 60px;
+      }
+      @media (max-width: 1230px) {
+        position: static;
+        align-items: center;
+      }
+
+      .icon {
+        display: flex;
+        height: 22px;
+      }
     }
   }
 }
 
-
-@media (max-width:1230px) {
-  .central-header{
-    .container{
-      .navbar{
+@media (max-width: 1230px) {
+  .central-header {
+    .container {
+      .navbar {
         display: none;
       }
     }
