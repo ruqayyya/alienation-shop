@@ -11,7 +11,7 @@ const CentralHeader = () => {
 
   const toggleManMenu = () => {
     setShowManMenu(!showManMenu);
-    setShowWomanMenu(false); 
+    setShowWomanMenu(false);
   };
 
   const toggleWomanMenu = () => {
@@ -30,7 +30,11 @@ const CentralHeader = () => {
         </div>
         <nav className="navbar">
           <ul className="navlist">
-            <li className="navitem" onMouseEnter={toggleManMenu} onMouseLeave={toggleManMenu}>
+            <li
+              className="navitem"
+              onMouseEnter={toggleManMenu}
+              onMouseLeave={toggleManMenu}
+            >
               MAN
               {showManMenu && (
                 <ul className="dropdownMenu">
@@ -44,7 +48,11 @@ const CentralHeader = () => {
                 </ul>
               )}
             </li>
-            <li className="navitem" onMouseEnter={toggleWomanMenu} onMouseLeave={toggleWomanMenu}>
+            <li
+              className="navitem"
+              onMouseEnter={toggleWomanMenu}
+              onMouseLeave={toggleWomanMenu}
+            >
               WOMAN
               {showWomanMenu && (
                 <ul className="dropdownMenu">
