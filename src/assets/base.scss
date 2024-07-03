@@ -19,10 +19,19 @@
 :root{
     --green:rgb(119,255,0);
     --base-font: "Montserrat", sans-serif;
+    --shadow-color:rgb(29,29,29);
+    --gray:rgb(129,129,129);
     --black: black;
+    --light-gray:rgb(76,76,76);
+    --dark-gray:rgb(33, 33, 33);
 }
 
 .row{
     display: flex;
     width: 100%;
 }
+
+@mixin flex-container($direction: row) {
+    display: flex;
+    flex-direction: $direction;
+  }
