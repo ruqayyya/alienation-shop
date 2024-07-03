@@ -1,0 +1,23 @@
+.bottom-header {
+  width: 100%;
+  .container {
+    display: flex;
+    .gender {
+      padding: 30px 0;
+      width: 100%;
+      color: var(--green);
+      background-color: var(--black);
+      border: 1px solid var(--green);
+      text-transform: uppercase;
+      font-family: var(--base-font);
+      letter-spacing: 0.2cap;
+      font-size: 13px;
+    }
+    .man {
+      border-left: transparent;
+    }
+    .woman {
+      border-right: transparent;
+    }
+  }
+}
