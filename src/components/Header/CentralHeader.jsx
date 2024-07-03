@@ -77,7 +77,7 @@ const CentralHeader = () => {
         </nav>
         <div className="image">
           <div className="icon">
-            <img src={user} alt="user" />
+            <img  className="user" src={user} alt="user" />
           </div>
           <div className="icon">
             <img src={search} alt="search" />
