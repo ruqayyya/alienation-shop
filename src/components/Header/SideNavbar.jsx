@@ -7,7 +7,7 @@ const SideNavbar = () => {
         <div className="category-list">
           <button>
             man
-            <spanc>+</spanc>
+            <spanc className='toggle-icon' >+</spanc>
           </button>
           <div className="category-map">
             <div className="category-item">All the products</div>
@@ -23,7 +23,7 @@ const SideNavbar = () => {
         <div className="category-list">
           <button>
             woman
-            <spanc></spanc>
+            <spanc className='toggle-icon'>+</spanc>
           </button>
           <div className="category-map">
             <div className="category-item">All the products</div>
