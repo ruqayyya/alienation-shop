@@ -1,13 +1,32 @@
-import React from "react";
+import React, { useState } from "react";
 
 const SideNavbar = () => {
+  const [isRotated, setIsRotated] = useState(false);
+  const [isReversed, setIsReversed] = useState(false);
+
+  const toggleRotate = () => {
+    if (isRotated) {
+      setIsRotated(false);
+      setIsReversed(true);
+    } else if (isReversed) {
+      setIsReversed(false);
+      setIsRotated(true);
+    } else {
+      setIsRotated(true);
+    }
+  };
   return (
     <nav className="side-navbar">
       <div className="category">
         <div className="category-list">
-          <button>
+          <button
+            onClick={toggleRotate}
+            className={`${isRotated ? "rotate" : ""} ${
+              isReversed ? "reverse" : ""
+            }`}
+          >
             man
-            <span className='toggle-icon' >+</span>
+            <span className="toggle-icon"></span>
           </button>
           <div className="category-map">
             <div className="category-item">All the products</div>
@@ -21,9 +40,14 @@ const SideNavbar = () => {
           <span className="line"></span>
         </div>
         <div className="category-list">
-          <button>
+          <button
+            onClick={toggleRotate}
+            className={`${isRotated ? "rotate" : ""} ${
+              isReversed ? "reverse" : ""
+            }`}
+          >
             woman
-            <span className='toggle-icon'>+</span>
+            <span className="toggle-icon"></span>
           </button>
           <div className="category-map">
             <div className="category-item">All the products</div>

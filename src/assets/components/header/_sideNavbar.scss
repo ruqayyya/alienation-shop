@@ -7,6 +7,7 @@
       cursor: pointer;
       @include flex-container(column);
       button {
+        position: relative;
         font-family: var(--base-font);
         letter-spacing: 0.2cap;
         height: 43px;
@@ -18,6 +19,43 @@
         justify-content: space-between;
         background-color: var(--dark-gray);
         border: none;
+        transition: 1s ease;
+        .toggle-icon::after {
+          content: "";
+          position: absolute;
+          right: 1px;
+          top: 10px;
+          width: 12px;
+          height: 1px;
+          background-color: white;
+        }
+        .toggle-icon::before {
+          content: "";
+          position: absolute;
+          top: 5px;
+          right: 7px;
+          height: 11px;
+          width: 1px;
+          background-color:white;
+        }
+        &.rotate .toggle-icon::after {
+          transition: 0.5s ease;
+          transform: rotate(180deg);
+        }
+
+        &.rotate .toggle-icon::before {
+          transition: 0.5s ease;
+          transform: rotate(90deg);
+        }
+        &.reverse .toggle-icon::after {
+          transition: 0.5s ease;
+          transform: rotate(-90deg);
+        }
+
+        &.reverse .toggle-icon::before {
+          transition: 0.5s ease;
+          transform: rotate(-90deg);
+        }
       }
       .category-map {
         display: none;
