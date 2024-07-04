@@ -1,17 +1,19 @@
-import React from "react";
+import React, { useContext } from "react";
 import logo from "../../assets/images/image.png";
 import search from "../../assets/images/search-interface-symbol.png";
 import user from "../../assets/images/user.png";
 import bag from "../../assets/images/bag.png";
 import menu from "../../assets/images/menu.png";
 import Navbar from "./Navbar";
+import { MainContext } from "../../utils/MainContext";
 
 const CentralHeader = () => {
+  const { toggleSidebar}=useContext(MainContext)
   return (
     <div className="central-header">
       <div className="container row">
         <div className="burger">
-          <img className="menu" src={menu} alt="menu" />
+          <img className="menu" src={menu} alt="menu" onClick={toggleSidebar} />
         </div>
         <div className="logo">
           <img src={logo} alt="logo" />
