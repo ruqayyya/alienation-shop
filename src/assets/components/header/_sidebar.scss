@@ -1,9 +1,19 @@
 .Side-bar {
   position: absolute;
   top: 0;
-  width: 100%;
   height: 100%;
-  z-index: 2;
+  z-index: 1001;
+  animation-name: to-right;
+  transition: 0.3s ease;
+  @keyframes to-right {
+    from {
+      left: 0;
+    }
+    to {
+      right: 100px;
+    }
+  }
+
   .container {
     @include flex-container(column);
     width: 340px;

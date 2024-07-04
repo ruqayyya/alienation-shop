@@ -42,7 +42,9 @@ const Navbar = () => {
           WOMAN
           {showWomanMenu && (
             <ul className="dropdownMenu">
-              <li className="menu">All the products</li>
+              <li className="menu">All the products
+                <span></span>
+              </li>
               <li className="menu">sweatshirts</li>
               <li className="menu">t-shirt</li>
               <li className="menu">tops and dresses</li>
@@ -55,7 +57,8 @@ const Navbar = () => {
             </ul>
           )}
         </li>
-        <li className="navitem">WHO WE ARE</li>
+        <li className="navitem">WHO WE ARE
+        </li>
         <li className="navitem">RETURNS AND EXCHANGES</li>
         <li className="navitem">DOWNLOAD APP</li>
         <li className="navitem">REVIEWS</li>

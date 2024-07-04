@@ -8,6 +8,7 @@ const GlobalContext=({children})=>{
         setShowSidebar(!showSidebar)
         console.log('active');
     }
+    
 
     const globalData={ toggleSidebar, showSidebar}
     return <MainContext.Provider value={globalData}>{children}</MainContext.Provider>
