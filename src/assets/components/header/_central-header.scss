@@ -3,10 +3,14 @@ body {
 }
 
 .central-header {
-  // position: sticky;
+  
   width: 100%;
   background-color: var(--black);
-
+  position: fixed;
+  border-bottom: 1px solid rgb(20,20,20);
+  position: sticky;
+  top: 0;
+  
   .container {
     display: flex;
     justify-content: space-evenly;
@@ -16,7 +20,7 @@ body {
       gap: 15px;
       flex-direction: column !important;
       justify-content: space-around;
-      padding: 20px 0;
+      padding: 21px 0;
     }
 
     @media (max-width: 1230px) {
