@@ -1,0 +1,34 @@
+.collection-section{
+    height: 100vh;
+    .container{
+        @include flex-container($direction: column);
+        align-items: center;
+        text-align: center;
+        .title{
+            font-size: 30px;
+            color: white;
+            
+        }
+        .collection-slider{
+        @include flex-container($direction: row);
+        gap: 10px;
+       width: 600px;
+            
+            img{
+                width: 100%;
+                height: 400px;
+                object-fit: contain;
+            }
+
+        }
+        button{
+            width: 120px;
+            height: 50px;
+            border: none;
+            background-color: var(--green);
+            text-transform: uppercase;
+
+        }
+    }
+}
+
