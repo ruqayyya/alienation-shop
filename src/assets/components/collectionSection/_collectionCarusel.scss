@@ -1,0 +1,56 @@
+.slider-container {
+    width: 100%;
+    margin: auto 0;
+  img {
+    height: 390px;
+    object-fit: contain;
+    @media (max-width: 1024px) {
+
+    }
+  }
+}
+.slick-track {
+}
+.slick-arrow {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.slick-arrow:hover {
+  transform: translateY(-50%) scale(1.1);
+}
+
+@media (max-width: 1024px) {
+  .slick-prev,
+  .slick-next {
+    display: none !important;
+  }
+}
+
+.slick-prev:before,
+.slick-next:before {
+  font-family: "slick";
+  font-size: 50px;
+  color: black;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.slick-prev.slick-disabled:before,
+.slick-next.slick-disabled:before {
+  display: none;
+}
+.slick-next:before {
+    content: '→';
+
+}
+
+.slick-list{
+
+}
+
+.slick-slide{
+
+}
+
+.slick-prev {
+    left: -55px;
+}

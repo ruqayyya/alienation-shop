@@ -1,10 +1,6 @@
 .side-navbar {
-  // height: 1000px;
-  height: 100%;
   background-color: var(--dark-gray);
-  overflow:auto;
   .category {
-    // height: 700px;
     @include flex-container(column);
     font-size: 15px;
     gap: 20px;
@@ -62,8 +58,7 @@
           transform: rotate(-90deg);
         }
       }
-      .category-map {
-      }
+
       .line {
         width: 100%;
         border: 1px solid var(--light-gray);
