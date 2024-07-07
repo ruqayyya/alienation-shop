@@ -3,11 +3,11 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import black from "../../assets/images/glow_tee_dark_800x.webp";
-import hoverImage from "../../assets/images/kynek.webp"; // Hovered state image
+import hoverImage from "../../assets/images/kynek.webp"; 
 import { MainContext } from "../../utils/MainContext";
 
 function CollectionCarousel() {
-  const { hoveredIndex, setHoveredIndex, handleMouseEnter, handleMouseLeave } = useContext(MainContext);
+  const { hoveredIndex, handleMouseEnter, handleMouseLeave } = useContext(MainContext);
 
   const settings = {
     infinite: false,

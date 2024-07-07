@@ -7,6 +7,7 @@ import CollectionSection from "../components/CollectionSection";
 import TopHeader from "../components/Header/TopHeader";
 import CentralHeader from "../components/Header/CentralHeader";
 import BottomHeader from "../components/Header/BottomHeader";
+import BlowJobSection from "../components/BlowJobSection";
 
 const Home = () => {
   const { showSidebar, toggleSidebar } = useContext(MainContext);
@@ -24,6 +25,7 @@ const Home = () => {
       <main>
         <HeroSection />
         <CollectionSection />
+        <BlowJobSection/>
       </main>
     </>
   );

@@ -5,6 +5,7 @@ const GlobalContext=({children})=>{
     const [showSidebar, setShowSidebar]=useState(false)
     const [showDropdown, setShowDropdown]=useState(false)
   const [hoveredIndex, setHoveredIndex] = useState(null);
+  const [loading, setLoading] = useState(true);
   const handleMouseEnter = (index) => {
     setHoveredIndex(index);
   };
