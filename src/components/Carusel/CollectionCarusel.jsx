@@ -1,11 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import black from "../../assets/images/glow_tee_dark_800x.webp";
+import hoverImage from "../../assets/images/kynek.webp"; // Hovered state image
+import { MainContext } from "../../utils/MainContext";
 
 function CollectionCarousel() {
-  var settings = {
+  const { hoveredIndex, setHoveredIndex, handleMouseEnter, handleMouseLeave } = useContext(MainContext);
+
+  const settings = {
     infinite: false,
     speed: 500,
     slidesToShow: 4,
@@ -41,13 +45,16 @@ function CollectionCarousel() {
   return (
     <div className="slider-container">
       <Slider {...settings}>
-        <img src={black} alt="black" />
-        <img src={black} alt="black" />
-        <img src={black} alt="black" />
-        <img src={black} alt="black" />
-        <img src={black} alt="black" />
-        <img src={black} alt="black" />
-        <img src={black} alt="black" />
+        {[...Array(7)].map((_, index) => (
+          <div
+            key={index}
+            className="carousel-item"
+            onMouseEnter={() => handleMouseEnter(index)}
+            onMouseLeave={handleMouseLeave}
+          >
+            <img src={hoveredIndex === index ? hoverImage : black} alt="black" />
+          </div>
+        ))}
       </Slider>
     </div>
   );

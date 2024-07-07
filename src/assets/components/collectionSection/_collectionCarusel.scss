@@ -53,3 +53,12 @@
 .slick-prev {
   left: -55px;
 }
+
+
+.carousel-item img {
+    transition: opacity 0.3s ease;
+  }
+  
+  .carousel-item img.hovered {
+    opacity: 0;
+  }
