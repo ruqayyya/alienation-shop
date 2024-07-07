@@ -3,6 +3,7 @@ import AOS from "aos";
 import React, { useEffect } from 'react'
 import Home from './pages/Home'
 import GlobalContext from './utils/MainContext'
+import Header from "./components/Header";
 
 const App = () => {
   useEffect(() => {
