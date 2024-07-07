@@ -1,15 +1,23 @@
 .slider-container {
-    width: 100%;
-    margin: auto 0;
+  width: 100%;
+  margin: auto 0;
   img {
-    height: 390px;
+    height: 340px;
     object-fit: contain;
-    @media (max-width: 1024px) {
-
+    @media (max-width: 320px) {
+      //    height: 700px;
     }
   }
 }
 .slick-track {
+  gap: 60px;
+  display: flex;
+  @media (max-width: 768px) {
+    gap: 30px;
+  }
+  @media (max-width: 425px) {
+    gap: 10px;
+  }
 }
 .slick-arrow {
   cursor: pointer;
@@ -19,7 +27,7 @@
   transform: translateY(-50%) scale(1.1);
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1000px) {
   .slick-prev,
   .slick-next {
     display: none !important;
@@ -39,18 +47,9 @@
   display: none;
 }
 .slick-next:before {
-    content: '→';
-
-}
-
-.slick-list{
-
-}
-
-.slick-slide{
-
+  content: "→";
 }
 
 .slick-prev {
-    left: -55px;
+  left: -55px;
 }

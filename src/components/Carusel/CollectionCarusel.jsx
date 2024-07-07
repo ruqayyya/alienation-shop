@@ -31,7 +31,7 @@ function CollectionCarousel() {
       {
         breakpoint: 480,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 1.5,
           slidesToScroll: 1,
         },
       },
@@ -41,7 +41,6 @@ function CollectionCarousel() {
   return (
     <div className="slider-container">
       <Slider {...settings}>
-        <img src={black} alt="black" />
         <img src={black} alt="black" />
         <img src={black} alt="black" />
         <img src={black} alt="black" />

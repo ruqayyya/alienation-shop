@@ -16,6 +16,9 @@
             }
             .collection-slider{
                 width: 90%;
+                @media (max-width: 900px) {
+                    width: 100%;
+                   }
 
             }
             .collectionButton{
