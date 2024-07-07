@@ -10,7 +10,7 @@ import { MainContext } from "../../utils/MainContext";
 const CentralHeader = () => {
   const { toggleSidebar}=useContext(MainContext)
   return (
-    <div className="central-header">
+    <header className="central-header">
       <div className="container row">
         <div className="burger">
           <img className="menu" src={menu} alt="menu" onClick={toggleSidebar} />
@@ -31,7 +31,7 @@ const CentralHeader = () => {
           </div>
         </div>
       </div>
-    </div>
+    </header>
   );
 };
 

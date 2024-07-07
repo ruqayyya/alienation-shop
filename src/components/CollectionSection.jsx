@@ -1,5 +1,7 @@
 import React from "react";
+
 import black from '../assets/images/glow_tee_dark_800x.webp'
+import CollectionCarusel from "./Carusel/CollectionCarusel";
 
 
 const CollectionSection = () => {
@@ -10,14 +12,9 @@ const CollectionSection = () => {
         <div className="collection">
           <span className="title">GLOW COLLECTION</span>
           <div className="collection-slider">
-            <img src={black} alt="black" />
-            <img src={black} alt="black" />
-            <img src={black} alt="black" />
-            <img src={black} alt="black" />
-            <img src={black} alt="black" />
-            <img src={black} alt="black" />
+            <CollectionCarusel/>
           </div>
-          <button>see all</button>
+          <button className="collectionButton" >see all</button>
         </div>
       </div>
     </section>
