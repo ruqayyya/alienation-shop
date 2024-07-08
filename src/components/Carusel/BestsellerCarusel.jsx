@@ -6,7 +6,7 @@ import black from "../../assets/images/glow_tee_dark_800x.webp";
 import hoverImage from "../../assets/images/kynek.webp";
 import { MainContext } from "../../utils/MainContext";
 
-function CollectionCarousel() {
+function BestSellerCarusel() {
   const { hoveredIndex, handleMouseEnter, handleMouseLeave } =
     useContext(MainContext);
 
@@ -61,8 +61,7 @@ function CollectionCarousel() {
               />
               <div className="sale">-22%</div>
             </div>
-            <div className="name">thunder tee</div>
-            <div className="price">€54</div>
+
           </div>
         ))}
       </Slider>
@@ -70,4 +69,4 @@ function CollectionCarousel() {
   );
 }
 
-export default CollectionCarousel;
+export default BestSellerCarusel;

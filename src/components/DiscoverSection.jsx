@@ -14,7 +14,7 @@ const DiscoverSection = () => {
           <img  className="first-image" src={discoverimage} alt="discoverimage" />
           <img className="second-image" src={secondimage} alt="secondimage" />
         </div>
-        <button className="discoverbutton" data-aos="fade-up"data-aos-duration="1100">you discover</button>
+        <button className="discoverbutton" data-aos="fade-up"data-aos-duration="1000">you discover</button>
       </div>
     </section>
   );

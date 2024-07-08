@@ -4,18 +4,7 @@ import gif from '../assets/images/gif-email-ezgif.com-optimize_x800.gif'
 import "aos/dist/aos.css";
 import AOS from "aos";
 const BlowJobSection = () => {
-  const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    AOS.init({
-      duration: 300,
-      easing: "ease-out",
-      once: true,
-    });
-
-    const timer = setTimeout(() => setLoading(false), 800);
-    return () => clearTimeout(timer);
-  }, []);
   return (
     <section className="blow-section">
       <div className="container">
@@ -25,7 +14,7 @@ const BlowJobSection = () => {
         </div>
         <div className="bottom-part">
           <div className="title" data-aos="fade-up" data-aos-duration="1100">BLOWJOB TEE</div>
-          <button data-aos="fade-up"data-aos-duration="1100">find out now</button>
+          <button data-aos="fade-up"data-aos-duration="1200">find out now</button>
         </div>
       </div>
     </section>

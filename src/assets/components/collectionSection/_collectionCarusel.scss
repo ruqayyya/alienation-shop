@@ -1,13 +1,49 @@
 .slider-container {
   width: 100%;
   margin: auto 0;
+div{
+  position: relative;
   img {
-    height: 340px;
+    height: 390px;
     object-fit: contain;
-    @media (max-width: 320px) {
-      //    height: 700px;
+    @media (max-width:420px) {
+      height: 250px;
+    }
+    @media (max-width:780px) {
+      height: 300px;
     }
   }
+  .sale{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 10px;
+    left: 10px;
+    color: var(--black);
+    font-family: var(--base-font);
+    letter-spacing: 0.3cap;
+    font-size: 11px;
+    height: 25px;
+    width: 50px;
+    background-color: var(--green);
+    position: absolute;
+  }
+}
+.name{
+  margin-top: 20px;
+  color: white;
+  text-transform: uppercase;
+  font-family: var(--base-font);
+  letter-spacing: 0.1cap;
+  font-size: 12px;
+}
+.price{
+  color: white;
+  font-size: 12px;
+  margin-top: 10px;
+  font-family: var(--base-font);
+  letter-spacing: 0.3cap;
+}
 }
 .slick-track {
   gap: 60px;
@@ -16,7 +52,10 @@
     gap: 30px;
   }
   @media (max-width: 425px) {
-    gap: 10px;
+    gap: 15px;
+  }
+  @media (max-width: 320px) {
+    gap: 40px;
   }
 }
 .slick-arrow {
