@@ -9,6 +9,9 @@ import CentralHeader from "../components/Header/CentralHeader";
 import BottomHeader from "../components/Header/BottomHeader";
 import BlowJobSection from "../components/BlowJobSection";
 import DiscoverSection from "../components/DiscoverSection";
+import BestSection from "../components/BestSellerSection";
+import ZipSection from "../components/ZipSection";
+import CollabrotionSection from "../components/CollabrotionSection";
 
 const Home = () => {
   const { showSidebar, toggleSidebar } = useContext(MainContext);
@@ -28,6 +31,9 @@ const Home = () => {
         <CollectionSection />
         <BlowJobSection/>
         <DiscoverSection/>
+        <BestSection/>
+        <ZipSection/>
+        <CollabrotionSection/>
       </main>
     </>
   );
