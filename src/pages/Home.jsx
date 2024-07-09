@@ -12,6 +12,7 @@ import DiscoverSection from "../components/DiscoverSection";
 import BestSection from "../components/BestSellerSection";
 import ZipSection from "../components/ZipSection";
 import CollabrotionSection from "../components/CollabrotionSection";
+import Footer from "../components/Footer";
 
 const Home = () => {
   const { showSidebar, toggleSidebar } = useContext(MainContext);
@@ -34,6 +35,7 @@ const Home = () => {
         <BestSection/>
         <ZipSection/>
         <CollabrotionSection/>
+        <Footer/>
       </main>
     </>
   );
