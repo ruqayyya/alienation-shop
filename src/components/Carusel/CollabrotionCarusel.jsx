@@ -1,65 +1,57 @@
-import React, { useContext, useState } from "react";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import black from "../../assets/images/glow_tee_dark_800x.webp";
-import hoverImage from "../../assets/images/kynek.webp";
-import { MainContext } from "../../utils/MainContext";
+import React from "react";
+import { Navigation, Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+import black from "../../assets/images/collaimage.avif";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 
 function CollabrotionCarusel() {
-  const { hoveredIndex, handleMouseEnter, handleMouseLeave } =
-    useContext(MainContext);
+  const slides = Array.from({ length: 9 }).map(
+    (_, index) => `Slide ${index + 1}`
+  );
 
-    const [display, setDisplay] = useState(true);
-    const [width, setWidth] = useState(600);
-  
-    const settings = {
-      dots: true,
-      infinite: true,
-      speed: 500,
-      slidesToShow: 3,
-      slidesToScroll: 1
-    };
   return (
-    <div className="collabrotion-container">
-        <button className="button" onClick={() => setWidth(width + 100)}>
-        {" "}
-        increase{" "}
-      </button>
-      <button className="button" onClick={() => setWidth(width - 100)}>
-        {" "}
-        decrease{" "}
-      </button>
-      <button className="button" onClick={() => setDisplay(!display)}>
-        {" "}
-        toggle{" "}
-      </button>
-      <div
-        style={{
-          width: width + "px",
-          display: display ? "block" : "none"
+    <div className="collaboration-container" style={{ width: "100%" }}>
+      <Swiper
+        modules={[Navigation, Pagination]}
+        slidesPerView={4.5}
+        centeredSlides={true}
+        spaceBetween={8}
+        pagination={false}
+        navigation={true}
+        loop={true}
+        breakpoints={{
+          320: {
+            slidesPerView: 2,
+            spaceBetween: 10,
+          },
+          640: {
+            slidesPerView: 3,
+            spaceBetween: 10,
+          },
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 10,
+          },
+          1024: {
+            slidesPerView: 4,
+            spaceBetween: 10,
+          },
         }}
-      ></div>
-      <Slider {...settings}>
-        {[...Array(8)].map((_, index) => (
-          <div
-            key={index}
-            className="carousel-item"
-            onMouseEnter={() => handleMouseEnter(index)}
-            onMouseLeave={handleMouseLeave}
-          >
-            <div>
+      >
+        {slides.map((slideContent, index) => (
+          <SwiperSlide key={index}>
+            <img src={black} alt={slideContent} />
+            <div className="userinfo">
               {" "}
-              <img
-                src={hoveredIndex === index ? hoverImage : black}
-                alt="black"
-              />
-              <div className="sale">-22%</div>
+              <div className="overlay"></div>
+              <div className="username">silvia olivier</div>
+              <div className="usermail">@sivi_showbefouherf</div>
             </div>
-
-          </div>
+          </SwiperSlide>
         ))}
-      </Slider>
+      </Swiper>
     </div>
   );
 }

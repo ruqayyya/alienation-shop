@@ -1,7 +1,17 @@
 import blow from "../assets/images/zipsection.jpg";
 import gif from '../assets/images/zipGif.webp'
-
+import "aos/dist/aos.css";
+import AOS from "aos";
+import { useEffect } from "react";
 const ZipSection = () => {
+  
+  useEffect(() => {
+    AOS.init({
+      duration: 300,
+      easing: "ease-out",
+      once: true,
+    });
+  }, []);
 
   return (
     <section className="zip-section">

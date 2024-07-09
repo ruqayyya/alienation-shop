@@ -4,6 +4,13 @@
   width: 100%;
   .container {
     overflow: hidden;
+
+    .overlay{
+      position: absolute;
+      height: 600px;
+      background-color: rgb(0, 0, 0, 0.3);
+      z-index: 8;
+    }
     .blow-img {
   
       .blow {
@@ -28,11 +35,13 @@
       }
     }
     .bottom-part {
-      bottom: 90px;
+      bottom: 80px;
       left: 70px;
       @include flex-container(column);
       position: absolute;
-      gap: 30px;
+      gap: 35px;
+      z-index: 10;
+
       @media (max-width: 640px) {
         bottom: 50%;
         left: 50%;
@@ -45,9 +54,12 @@
       .title {
         font-family: var(--base-font);
         letter-spacing: 0.2cap;
+        font-weight: 300;
         color: white;
+        font-size: 15px;
       }
       button {
+
         height: 50px;
         width: 180px;
         border: 3px solid rgb(54, 54, 54);

@@ -2,11 +2,8 @@ import React, { useEffect, useState } from "react";
 import heroImage from "../assets/images/sectionimage.webp";
 import "aos/dist/aos.css";
 import AOS from "aos";
-// import { MainContext } from "../utils/MainContext";
-// import Loading from "./Loading"; // Yükləmə ekranı komponenti
 
 const HeroSection = () => {
-  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     AOS.init({
@@ -14,9 +11,6 @@ const HeroSection = () => {
       easing: "ease-out",
       once: true,
     });
-
-    const timer = setTimeout(() => setLoading(false), 800);
-    return () => clearTimeout(timer);
   }, []);
 
   return (

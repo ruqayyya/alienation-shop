@@ -6,7 +6,7 @@ const BestSection = () => {
     <section className="best-section">
       <div className="container">
         <div className="best">
-          <span className="title">best seller</span>
+          <span className="title">bestseller</span>
           <div className="best-slider">
             <BestSellerCarusel />
           </div>
