@@ -15,6 +15,8 @@
                 letter-spacing: 0.2cap;
             }
             .collection-slider{
+                margin: auto 0;
+                cursor: pointer;
                 width: 90%;
                 @media (max-width: 900px) {
                     width: 100%;

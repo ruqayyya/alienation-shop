@@ -1,0 +1,26 @@
+.collaboration-section{
+    height: 100%;
+    width: 100%;
+    .container{
+        text-align: center;
+        .collaboration{
+            gap: 50px;
+            @include flex-container(column);
+            align-items: center;
+            .title{
+                padding: 70px 0 0 0;
+                color: white;
+                font-family: var(--base-font);
+                text-transform: uppercase;
+                font-size: 25px;
+                letter-spacing: 0.2cap;
+            }
+          .collaboration-slider{
+            padding: 0 0 80px 0;
+          }
+
+        }
+
+
+    }
+}
