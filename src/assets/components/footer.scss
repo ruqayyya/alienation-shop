@@ -1,19 +1,25 @@
 .footer {
-  // background-color: black;
+  padding: 70px 0 0 0;
+  background-color: black;
+  justify-content: center;
+  align-items: center;
+  display: flex;
   .container {
+    gap: 40px;
+    width: 90%;
     h5 {
-        font-family: var(--base-font);
-        text-transform: uppercase;
-        font-weight: 300;
-        font-size: 15px;
-        letter-spacing: 0.1cap;
+      font-family: var(--base-font);
+      text-transform: uppercase;
+      font-weight: 300;
+      font-size: 15px;
+      letter-spacing: 0.2cap;
       color: white;
     }
     display: flex;
     align-items: center;
     flex-direction: column;
     .unit {
-      width: 100px;
+      width: 60px;
       border: none;
       outline: none;
       background-color: black;
@@ -23,14 +29,15 @@
       flex-wrap: wrap;
       width: 100%;
       display: flex;
+      justify-content: space-between;
       .letter-info {
         @include flex-container(column);
-        gap: 30px;
+        gap: 25px;
         p {
-            font-family: var(--base-font);
-            font-weight: 300;
-            font-size: 13px;
-            line-height: 3cap;
+          font-family: var(--base-font);
+          font-weight: 300;
+          font-size: 13px;
+          line-height: 2.5cap;
           color: white;
           width: 280px;
           flex-wrap: wrap;
@@ -38,15 +45,16 @@
         form {
           gap: 20px;
           @include flex-container(column);
-          input{
+          input {
             background-color: transparent;
             border: 1px solid white;
-            padding: 14px 20px ;
+            padding: 12px 20px;
             color: white;
             border-radius: 0;
             outline: none;
           }
           button {
+            cursor: pointer;
             background-color: var(--green);
             border: none;
             width: 150px;
@@ -57,15 +65,72 @@
         }
       }
       .links {
+        @include flex-container(column);
+        gap: 25px;
+        @media (max-width: 650px) {
+          margin-top: 50px;
+        }
+        .link {
+          font-family: var(--base-font);
+          font-size: 13px;
+          @include flex-container(column);
+          gap: 20px;
+          color: white;
+        }
       }
       .contact {
+        margin-right: 200px;
+        @include flex-container(column);
+        gap: 25px;
+        @media (max-width: 1200px) {
+          margin: 0;
+        }
+        @media (max-width: 650px) {
+          margin-top: 50px;
+        }
         .contact-info {
+          gap: 30px;
           @include flex-container(column);
           color: white;
         }
         .insta {
+          font-size: 15px;
+          color: white;
+        }
+      }
+    }
+    .bottom-footer {
+      padding: 100px 0 50px 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      span {
+        color: white;
+        font-family: var(--base-font);
+        letter-spacing: 0.1cap;
+        font-size: 12px;
+      }
+      .pay {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        .apple {
+          height: 27px;
+        }
+        img {
+          height: 30px;
+        }
+        div {
+          align-items: center;
+          justify-content: center;
+          display: flex;
+          width: 30px;
+          height: 21px;
+          border-radius: 2px;
+          background-color: white;
           img {
-            height: 20px;
+            padding: 5px 0;
           }
         }
       }
