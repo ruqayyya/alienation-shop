@@ -1,8 +1,9 @@
 import React from "react";
-import insta from "../assets/images/instagram.png";
 import paypal from "../assets/images/paypal.png";
 import applepay from "../assets/images/apple.png";
 import googelpay from "../assets/images/google-pay.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 
 const Footer = () => {
   return (
@@ -47,14 +48,15 @@ const Footer = () => {
               <span>WhatsApp: +44 07782495646</span>
             </div>
             <div className="insta">
-              <img src={insta} alt="footer-insta" />
+            <FontAwesomeIcon className="instaIcon" icon={faInstagram} />
+
             </div>
           </div>
         </div>
         <div className="bottom-footer">
           <span>© ALIENATION</span>
           <div className="pay">
-            <img src={applepay} alt="apple" />
+            <img  className='apple'src={applepay} alt="apple" />
             <div>
               <img src={googelpay} alt="google" />
             </div>
