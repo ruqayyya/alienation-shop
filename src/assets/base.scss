@@ -18,6 +18,7 @@
 
 :root{
     --green:rgb(119,255,0);
+    --green-light:rgb(180,255,0);
     --base-font: "Montserrat", sans-serif;
     --shadow-color:rgb(29,29,29);
     --gray:rgb(129,129,129);
@@ -49,3 +50,24 @@
     flex-direction: $direction;
   }
 
+
+  // * Custom scrollbar
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    border-radius: 100vh;
+    background: var(--black);
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: var(--green);
+    border-radius: 100vh;
+    // border: 3px solid var(--green-light);
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--green-light);
+  }

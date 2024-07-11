@@ -4,7 +4,7 @@
   }
 
   .navlist {
-    padding: 22px 100px 22px 0;
+    padding: 0 100px 0 0;
     color: white;
     display: flex;
     font-family: var(--base-font);
@@ -17,24 +17,28 @@
     }
 
     .navitem {
+      padding: 22px 0;
       cursor: pointer;
       position: relative;
 
       &::after {
         content: "";
         position: absolute;
-        bottom: -22px;
+        width: 220px;
+        max-width: 220px;
+        bottom: 0;
         left: 0;
         width: 0;
         background-color: white;
         transition:  0.3s ease;
-        @media (max-width: 1350px) {
-          bottom: -26px;
-        }
+        // @media (max-width: 1350px) {
+        //   bottom: 0;
+        // }
       }
 
       &:hover::after {
-        width: 100%;
+        width: 220px;
+        max-width: 220px;
         height: 2px;
       }
 
@@ -42,7 +46,7 @@
         @include flex-container(column);
         justify-content: center;
         position: absolute;
-        top: 40px;
+        top: 100%;
         width: 220px;
         background-color: black;
         transition: 2s ease;
