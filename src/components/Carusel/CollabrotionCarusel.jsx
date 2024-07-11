@@ -15,7 +15,7 @@ function CollabrotionCarusel() {
     <div className="collaboration-container" style={{ width: "100%" }}>
       <Swiper
         modules={[Navigation, Pagination]}
-        slidesPerView={4.5}
+        slidesPerView={4}
         centeredSlides={true}
         spaceBetween={8}
         pagination={false}

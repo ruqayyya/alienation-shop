@@ -9,7 +9,7 @@
       position: absolute;
       height: 600px;
       background-color: rgb(0, 0, 0, 0.3);
-      z-index: 8;
+      z-index: 1;
     }
     .blow-img {
   
@@ -40,7 +40,7 @@
       @include flex-container(column);
       position: absolute;
       gap: 35px;
-      z-index: 10;
+      z-index: 2;
 
       @media (max-width: 640px) {
         bottom: 50%;

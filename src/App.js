@@ -8,10 +8,28 @@ import Header from "./components/Header";
 const App = () => {
   useEffect(() => {
     AOS.init({
-      duration: 100, 
-      easing: "linear", 
-      once: false, 
+      duration: 100,
+      easing: "linear",
+      once: true,
     });
+
+    const handleScroll = () => {
+      if (window.scrollY > 5000) {
+        AOS.init({ disable: true });
+      } else {
+        AOS.init({
+          duration: 100,
+          easing: "linear",
+          once: true,
+        });
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
   return (
     <GlobalContext>

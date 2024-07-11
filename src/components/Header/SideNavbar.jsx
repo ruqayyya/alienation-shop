@@ -2,11 +2,14 @@ import React, { useState, useEffect } from "react";
 import "aos/dist/aos.css";
 import AOS from "aos";
 import { MainContext } from "../../utils/MainContext";
+import { categories } from "../../db/fakeDb";
 
 const SideNavbar = () => {
-  const { toggleSidebar, showSidebar, showDropdown, toggleDropdown } = useState(MainContext);
+  const { toggleSidebar, showSidebar, showDropdown, toggleDropdown } =
+    useState(MainContext);
   const [isRotated, setIsRotated] = useState(false);
   const [isReversed, setIsReversed] = useState(false);
+  const [selectedCategory, setSelecetedCategory] = useState(null);
   useEffect(() => {
     AOS.init({
       duration: 300,
@@ -36,54 +39,36 @@ const SideNavbar = () => {
         data-aos-duration="400"
       >
         <div className="category-list" onClick={toggleDropdown}>
-          <button
-            onClick={toggleRotate}
-            className={`${isRotated ? "rotate" : ""} ${
-              isReversed ? "reverse" : ""
-            }`}
-          >
-            man
-            <span className="toggle-icon"></span>
-          </button>
-          {showDropdown && (
-            <div className="category-map">
-              <div className="category-item">All the products</div>
-              <div className="category-item">sweatshirts</div>
-              <div className="category-item">t-shirt</div>
-              <div className="category-item">trousers</div>
-              <div className="category-item">outwear</div>
-              <div className="category-item">accessories</div>
-              <div className="category-item">gift card</div>
-            </div>
-          )}
-          <span className="line"></span>
-        </div>
-        <div className="category-list" onClick={toggleDropdown}>
-          <button
-            onClick={toggleRotate}
-            className={`${isRotated ? "rotate" : ""} ${
-              isReversed ? "reverse" : ""
-            }`}
-          >
-            woman
-            <span className="toggle-icon"></span>
-          </button>
-          {showSidebar && (
-            <div className="category-map">
-              <div className="category-item">All the products</div>
-              <div className="category-item">sweatshirts</div>
-              <div className="category-item">t-shirt</div>
-              <div className="category-item">tops and dresses</div>
-              <div className="category-item">trousers</div>
-              <div className="category-item">shorts and skirts</div>
-              <div className="category-item">underwear and bikini</div>
-              <div className="category-item">outwear</div>
-              <div className="category-item">accessories</div>
-              <div className="category-item">gift card</div>
-            </div>
-          )}
-
-          <span className="line"></span>
+          {categories.map((item) => (
+            <>
+              <button
+                key={item.id}
+                onClick={() => {
+                  if (selectedCategory) {
+                    setSelecetedCategory(null);
+                  } else {
+                    setSelecetedCategory(item);
+                  }
+                }}
+                className={`${
+                  selectedCategory?.id === item.id ? "rotate" : "reverse"
+                }`}
+              >
+                {item.title}
+                {item.subCategories.length !== 0 && (
+                  <span className="toggle-icon"></span>
+                )}
+              </button>
+              <div className="category-map">
+                {selectedCategory &&
+                  selectedCategory?.id === item.id &&
+                  selectedCategory?.subCategories?.map((subs) => (
+                    <div className="category-item">{subs.title}</div>
+                  ))}
+              </div>
+              <span className="line"></span>
+            </>
+          ))}
         </div>
         <div className="category-list">
           <button>who we are</button>

@@ -29,7 +29,7 @@ const BlowJobSection = () => {
             BLOWJOB TEE
           </div>
           <button data-aos="fade-up" data-aos-duration="1200">
-            şimdi öyrən
+            find out now
           </button>
         </div>
       </div>
