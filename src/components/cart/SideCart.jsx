@@ -25,34 +25,39 @@ const SideCart = () => {
       <div className="container">
         <div className="top">
           <div
-            className="x-icon"
+            className="x-icon row"
             data-aos="fade-right"
             data-aos-offset="400"
             data-aos-easing="easer"
             data-aos-duration="400"
           >
-            <img src={x} alt="x-icon"  />
             <h2>CART</h2>
-          </div>
-          <div className="side-cart-part">
-            <InnerCart/>
+            <img src={x} alt="x-icon" />
+            <span></span>
           </div>
         </div>
+        <div className="side-cart-part">
+          <InnerCart />
+        </div>
         <div
-          className="icon"
+          className="buy-part"
           data-aos="fade-up"
           data-aos-anchor-placement="top-bottom"
           data-aos-duration="600"
         >
-          <span></span>
+          <span className="liner"></span>
           <div className="bottom-part">
             <p className="order-note">Add order note</p>
-            <p className="order-note">edit order note</p>
+            <form>
+              <input type="text" placeholder="How can we help you?" />
+              <button type="submit">SAVE</button>
+            </form>
+            <p className="edit-order-note">edit order note</p>
             <p>Discounts and shipping costs calculated at checkout</p>
-            <button className="checkout">
+            <button className="checkout row">
               CHECKOUT
               <span className="Button-dot"></span>
-              <span className="data-price"></span>
+              <span className="data-price">€509</span>
             </button>
           </div>
         </div>
