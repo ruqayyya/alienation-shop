@@ -10,21 +10,107 @@
   box-shadow: 5px 4px 10px var(--shadow-color);
   .container {
     @include flex-container(column);
-    width: 340px;
+    width: 400px;
     background-color: var(--dark-gray);
     box-shadow: 5px 4px 10px var(--shadow-color);
     justify-content: space-between;
-    @media (max-width: 320px) {
+    @media (max-width: 465px) {
+      width: 360px;
+    }
+    @media (max-width: 380px) {
       width: 270px;
     }
     .top {
       .x-icon {
-        padding: 25px 30px 45px 30px;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 30px 20px 30px;
+        h2 {
+          color: white;
+          font-family: var(--base-font);
+          letter-spacing: 0.2cap;
+          font-weight: 200;
+          font-size: 20px;
+        }
         @media (max-width: 320px) {
           padding: 20px 20px 30px 20px;
         }
         img {
           height: 14px;
+        }
+        span {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          height: 1px;
+          width: 100%;
+          background-color: var(--light-gray);
+        }
+      }
+    }
+    .buy-part {
+      padding: 30px 27px;
+
+      .liner {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 1px;
+        width: 100%;
+        background-color: var(--light-gray);
+      }
+      p {
+        color: white;
+        font-family: var(--base-font);
+        font-weight: 200;
+        font-size: 13px;
+      }
+      .bottom-part {
+        gap: 10px;
+        @include flex-container(column);
+        .edit-order-note {
+          display: none;
+        }
+        form {
+          gap: 10px;
+          @include flex-container(column);
+          input {
+            background-color: transparent;
+            border: 1px solid var(--light-gray);
+            padding: 20px;
+            outline: none;
+            height: 75px;
+            color: white;
+          }
+          button {
+            text-align: center;
+            border: none;
+            width: 100%;
+            height: 50px;
+            background-color: var(--green);
+            font-family: var(--base-font);
+            letter-spacing: 0.2cap;
+          }
+        }
+        .checkout {
+          background-color: var(--green);
+          width: 100%;
+          height: 50px;
+          margin-top: 15px;
+          border: none;
+          align-items: center;
+          justify-content: center;
+          font-family: var(--base-font);
+          letter-spacing: 0.2cap;
+
+          .Button-dot {
+            margin: 0 18px;
+            content: "";
+            height: 3px;
+            width: 3px;
+            border-radius: 100%;
+            background: black;
+          }
         }
       }
     }
