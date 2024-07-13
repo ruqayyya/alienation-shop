@@ -6,9 +6,10 @@ import bag from "../../assets/images/bag.png";
 import menu from "../../assets/images/menu.png";
 import Navbar from "./Navbar";
 import { MainContext } from "../../utils/MainContext";
+import { Link, NavLink } from "react-router-dom";
 
 const CentralHeader = () => {
-  const { toggleSidebar, toggleCart}=useContext(MainContext)
+  const { toggleSidebar, toggleCart } = useContext(MainContext);
   return (
     <header className="central-header">
       <div className="container row">
@@ -16,7 +17,9 @@ const CentralHeader = () => {
           <img className="menu" src={menu} alt="menu" onClick={toggleSidebar} />
         </div>
         <div className="logo">
-          <img src={logo} alt="logo" />
+          <NavLink to="/">
+            <img src={logo} alt="logo" />
+          </NavLink>
         </div>
         <Navbar />
         <div className="image">
@@ -27,7 +30,12 @@ const CentralHeader = () => {
             <img src={search} alt="search" />
           </div>
           <div className="icon">
-            <img className="bag" src={bag} alt="bag" onClick={()=>toggleCart()}/>
+            <img
+              className="bag"
+              src={bag}
+              alt="bag"
+              onClick={() => toggleCart()}
+            />
           </div>
         </div>
       </div>
