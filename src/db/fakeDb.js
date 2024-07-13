@@ -1,89 +1,110 @@
 export const categories = [
   {
     id: 1,
-    title: "Man",
+    title: "MAN",
+    isbar:true,
     subCategories: [
       {
         id: 2,
-        title: "All the products",
+        title: "ALL THE PRODUCTS",
       },
       {
         id: 3,
-        title: "Sweatshirts",
+        title: "SWEATSHIRST",
       },
       {
         id: 4,
-        title: "t-shirt",
+        title: "T-SHIRT",
       },
       {
         id: 5,
-        title: "trousers",
+        title: "TROUSERS",
       },
       {
         id: 6,
-        title: "outwear",
+        title: "OUTWEAR",
       },
       {
         id: 7,
-        title: "accessories",
+        title: "ACCESORIES",
       },
       {
         id: 8,
-        title: "gift card",
+        title: "GIFT CARD",
       },
     ],
   },
   {
     id: 2,
-    title: "Woman",
+    title: "WOMAN",
+    isbar:true,
     subCategories: [
       {
         id: 2,
-        title: "All the products",
+        title: "ALL THE PRODUCTS",
       },
       {
         id: 3,
-        title: "Sweatshirts",
+        title: "SWEATSHIRTS",
       },
       {
         id: 4,
-        title: "t-shirt",
+        title: " T-SHIRT",
       },
       {
         id: 5,
-        title: "tops and dresses",
+        title: " TOPS AND DRESSE",
       },
       {
         id: 6,
-        title: "trousers",
+        title: "TROUSERS",
       },
       {
         id: 7,
-        title: "shorts and skirts",
+        title: " SHORTS AND SKIRTS",
       },
       {
         id: 8,
-        title: "underwear and bikini",
+        title: "UNDERWEAR AND BIKINI",
       },
       {
         id: 9,
-        title: "outwear",
+        title: "OUTWEAR",
       },
       {
         id: 10,
-        title: "accessories",
+        title: "ACCESORIES",
       },
       {
         id: 11,
-        title: "gift card",
+        title: "GIFT CARD",
       },
     ],
   },
   {
     id:3,
-    title:'who we are',
+    title:'WHO WE ARE',
+    isbar:true,
     subCategories:[]
-  }
+  },
+  {
+    id:4,
+    title:'RETURNS AND EXCHANGES',
+    isbar:true,
+    subCategories:[]
+  },
+  {
+    id:4,
+    title:'DOWNLOAD APP',
+    isbar:true,
+    subCategories:[]
+  },
+  {
+    id:4,
+    title:'REVIEWS',
+    isbar:true,
+    subCategories:[]
+  },
 ];
 
 

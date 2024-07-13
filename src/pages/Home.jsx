@@ -13,6 +13,7 @@ import BestSection from "../components/BestSellerSection";
 import ZipSection from "../components/ZipSection";
 import CollabrotionSection from "../components/CollabrotionSection";
 import Footer from "../components/Footer";
+import SideCart from "../components/cart/SideCart";
 
 const Home = () => {
   const { showSidebar, toggleSidebar } = useContext(MainContext);
@@ -27,6 +28,7 @@ const Home = () => {
       <CentralHeader />
       <BottomHeader />
       {showSidebar ? <SidebarMenu /> : null}
+      <SideCart/>
       <main>
         <HeroSection />
         <CollectionSection />

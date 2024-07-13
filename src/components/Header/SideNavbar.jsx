@@ -5,10 +5,8 @@ import { MainContext } from "../../utils/MainContext";
 import { categories } from "../../db/fakeDb";
 
 const SideNavbar = () => {
-  const { toggleSidebar, showSidebar, showDropdown, toggleDropdown } =
+  const {  toggleDropdown } =
     useState(MainContext);
-  const [isRotated, setIsRotated] = useState(false);
-  const [isReversed, setIsReversed] = useState(false);
   const [selectedCategory, setSelecetedCategory] = useState(null);
   useEffect(() => {
     AOS.init({
@@ -18,17 +16,6 @@ const SideNavbar = () => {
     });
   }, []);
 
-  const toggleRotate = () => {
-    if (isRotated) {
-      setIsRotated(false);
-      setIsReversed(true);
-    } else if (isReversed) {
-      setIsReversed(false);
-      setIsRotated(true);
-    } else {
-      setIsRotated(true);
-    }
-  };
   return (
     <nav className="side-navbar">
       <div
@@ -67,24 +54,10 @@ const SideNavbar = () => {
                   ))}
               </div>
               <span className="line"></span>
+
             </>
           ))}
-        </div>
-        <div className="category-list">
-          <button>who we are</button>
-          <span className="line"></span>
-        </div>
-        <div className="category-list">
-          <button>RETURNS AND EXCHANGES</button>
-          <span className="line"></span>
-        </div>
-        <div className="category-list">
-          <button>DOWNLOAD APP</button>
-          <span className="line"></span>
-        </div>
-        <div className="category-list">
-          <button>REVIEWS</button>
-          <span className="line"></span>
+          <p className="title">account</p>
         </div>
       </div>
     </nav>
