@@ -94,13 +94,13 @@ export const categories = [
     subCategories:[]
   },
   {
-    id:4,
+    id:5,
     title:'DOWNLOAD APP',
     isbar:true,
     subCategories:[]
   },
   {
-    id:4,
+    id:6,
     title:'REVIEWS',
     isbar:true,
     subCategories:[]

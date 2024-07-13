@@ -8,7 +8,7 @@ import "aos/dist/aos.css";
 import AOS from "aos";
 
 const SidebarMenu = () => {
-  const { toggleSidebar, showSidebar } = useContext(MainContext);
+  const { toggleSidebar } = useContext(MainContext);
 
   useEffect(() => {
     AOS.init({
@@ -20,7 +20,7 @@ const SidebarMenu = () => {
   return (
     <section
     className='Side-bar' 
-    data-aos={showSidebar ? "fade-right" : "fade-left"}
+    data-aos="fade-right"
     data-aos-offset="300"
     data-aos-easing="easer"
     >

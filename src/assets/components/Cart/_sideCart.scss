@@ -50,6 +50,8 @@
     }
     .buy-part {
       padding: 30px 27px;
+      background-color: var(--dark-gray);
+
 
       .liner {
         position: absolute;
@@ -116,3 +118,6 @@
     }
   }
 }
+.Side-cart[data-aos='fade-right'] {
+    transform: translateX(0);
+  }

@@ -8,7 +8,7 @@ import Navbar from "./Navbar";
 import { MainContext } from "../../utils/MainContext";
 
 const CentralHeader = () => {
-  const { toggleSidebar}=useContext(MainContext)
+  const { toggleSidebar, toggleCart}=useContext(MainContext)
   return (
     <header className="central-header">
       <div className="container row">
@@ -27,7 +27,7 @@ const CentralHeader = () => {
             <img src={search} alt="search" />
           </div>
           <div className="icon">
-            <img className="bag" src={bag} alt="bag" />
+            <img className="bag" src={bag} alt="bag" onClick={()=>toggleCart()}/>
           </div>
         </div>
       </div>
