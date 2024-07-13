@@ -50,7 +50,7 @@ const SideNavbar = () => {
                 {selectedCategory &&
                   selectedCategory?.id === item.id &&
                   selectedCategory?.subCategories?.map((subs) => (
-                    <div className="category-item">{subs.title}</div>
+                    <div key={subs.id} className="category-item">{subs.title}</div>
                   ))}
               </div>
               <span className="line"></span>

@@ -6,7 +6,7 @@ import AOS from "aos";
 import InnerCart from "./InnerCart";
 
 const SideCart = () => {
-  const { toggleSidebar, showSidebar } = useContext(MainContext);
+  const {  toggleCart } = useContext(MainContext);
 
   useEffect(() => {
     AOS.init({
@@ -26,13 +26,13 @@ const SideCart = () => {
         <div className="top">
           <div
             className="x-icon row"
-            data-aos="fade-right"
+            data-aos="fade-left"
             data-aos-offset="400"
             data-aos-easing="easer"
             data-aos-duration="400"
           >
             <h2>CART</h2>
-            <img src={x} alt="x-icon" />
+            <img src={x} alt="x-icon" onClick={()=>toggleCart()} />
             <span></span>
           </div>
         </div>
@@ -48,10 +48,10 @@ const SideCart = () => {
           <span className="liner"></span>
           <div className="bottom-part">
             <p className="order-note">Add order note</p>
-            <form>
+            {/* <form>
               <input type="text" placeholder="How can we help you?" />
               <button type="submit">SAVE</button>
-            </form>
+            </form> */}
             <p className="edit-order-note">edit order note</p>
             <p>Discounts and shipping costs calculated at checkout</p>
             <button className="checkout row">

@@ -16,19 +16,19 @@ import Footer from "../components/Footer";
 import SideCart from "../components/cart/SideCart";
 
 const Home = () => {
-  const { showSidebar, toggleSidebar } = useContext(MainContext);
+  const { showSidebar, showCart, toggleOverlay } = useContext(MainContext);
 
   return (
     <>
       <div
-        className={showSidebar ? "overlay" : null}
-        onClick={toggleSidebar}
+        className={showSidebar || showCart ? "overlay" : null}
+        onClick={toggleOverlay}
       ></div>
       <TopHeader />
       <CentralHeader />
       <BottomHeader />
       {showSidebar ? <SidebarMenu /> : null}
-      <SideCart/>
+      {showCart?<SideCart/> : null }
       <main>
         <HeroSection />
         <CollectionSection />

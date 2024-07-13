@@ -1,9 +1,8 @@
 .inner-cart {
-  max-height: calc(100vh - 150px);
+  max-height: calc(100vh - 245px);
   background-color: var(--dark-gray);
   overflow-y: auto;
   .container {
-    height: 100vh;
     .shop-info {
       padding: 30px;
       @include flex-container(column);
@@ -22,7 +21,7 @@
         .clothes-info {
           @include flex-container(column);
           gap: 10px;
-          span{
+          span {
             text-transform: uppercase;
             color: white;
             font-family: var(--base-font);
@@ -31,54 +30,54 @@
             letter-spacing: 0.2cap;
           }
 
-          .between{
+          .between {
             font-style: italic;
           }
-          .name{
+          .name {
             font-size: 13px;
           }
-          .add{
+          .add {
             margin-top: 13px;
             justify-content: space-between;
             align-items: center;
-            .quantity-box{
-                justify-content: space-around;
-                align-items: center;
-                text-align: center;
-                width: 100px;
-                height: 40px;
-                border: 1px solid var(--light-gray);
-                img{
-                    height: 10px;
-                }
-                .num{
-                    font-size: 14px;
-                }
+            .quantity-box {
+              justify-content: space-around;
+              align-items: center;
+              text-align: center;
+              width: 100px;
+              height: 40px;
+              border: 1px solid var(--light-gray);
+              img {
+                height: 10px;
+              }
+              .num {
+                font-size: 14px;
+              }
             }
-            .remove{
-                position: relative;
-                @include flex-container(column);
-                gap: 5px;
+            .remove {
+              position: relative;
+              @include flex-container(column);
+              gap: 5px;
+              transition: width 0.3s ease;
+              &::after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                width: 100%;
+                background-color: white;
+                height: 1px;
                 transition: width 0.3s ease;
-                &::after {
-                    content: "";
-                    position: absolute;
-                    bottom: 0;
-                    right: 0;
-                    width: 100%;
-                    background-color: white;
-                    height: 1px;
-                    transition: width 0.3s ease;
-                  }
-                
-                  .remove-cart {
-                    cursor: pointer;
-                
-                    &:hover::after {
-                      width: 0; 
-                      left: 0;
-                    }
-                  }
+              }
+
+              .remove-cart {
+                cursor: pointer;
+
+                &:hover::after {
+                  width: 0;
+                  left: 0;
+                }
+              }
             }
           }
         }
