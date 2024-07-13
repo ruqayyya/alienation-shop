@@ -53,8 +53,7 @@
 
   // * Custom scrollbar
 ::-webkit-scrollbar {
-    width: 5px;
-    height: 5px;
+    width: 0px;
   }
   
   ::-webkit-scrollbar-track {
@@ -65,9 +64,20 @@
   ::-webkit-scrollbar-thumb {
     background: var(--green);
     border-radius: 100vh;
-    // border: 3px solid var(--green-light);
   }
   
   ::-webkit-scrollbar-thumb:hover {
     background: var(--green-light);
   }
+
+
+  
+.Button-Dot {
+  display: inline-block;
+  margin: 0 18px;
+  content: "";
+  height: 3px;
+  width: 3px;
+  border-radius: 100%;
+  background: currentColor;
+}

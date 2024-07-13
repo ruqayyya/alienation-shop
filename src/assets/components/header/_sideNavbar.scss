@@ -1,5 +1,8 @@
 .side-navbar {
   background-color: var(--dark-gray);
+  max-height: calc(100vh - 155px);
+  overflow-y:auto;
+
   .category {
     @include flex-container(column);
     font-size: 15px;
@@ -7,7 +10,24 @@
     .category-list {
       cursor: pointer;
       @include flex-container(column);
+      .category-map {
+        .category-item {
+          margin-bottom: 30px;
+          padding: 0px 20px;
+          font-family: var(--base-font);
+          letter-spacing: 0.2cap;
+          font-weight: 500;
+          cursor: pointer;
+          color: var(--gray);
+          font-size: 13px;
+          @media (max-width: 320px) {
+            font-size: 10px;
+            }
+        }
+      }
       button {
+        align-items: center;
+        padding: 33px 0;
         position: relative;
         font-family: var(--base-font);
         letter-spacing: 0.2cap;
@@ -21,11 +41,14 @@
         background-color: var(--dark-gray);
         border: none;
         transition: 1s ease;
+        @media (max-width: 320px) {
+          font-size: 13px;
+          }
         .toggle-icon::after {
           content: "";
           position: absolute;
           right: 1px;
-          top: 10px;
+          top: 30px;
           width: 12px;
           height: 1px;
           background-color: white;
@@ -33,11 +56,11 @@
         .toggle-icon::before {
           content: "";
           position: absolute;
-          top: 5px;
+          top: 25px;
           right: 7px;
           height: 11px;
           width: 1px;
-          background-color:white;
+          background-color: white;
         }
         &.rotate .toggle-icon::after {
           transition: 0.5s ease;
@@ -67,25 +90,3 @@
   }
 }
 
-// .dropdownMenu {
-//     display: none;
-//     @include flex-container(column);
-//     justify-content: center;
-//     position: absolute;
-//     top: 40px;
-//     width: 220px;
-//     background-color: black;
-//     transition: 2s ease;
-//     padding: 20px 10px;
-//     gap: 10px;
-//     font-family: sans-serif;
-//     font-weight: 100;
-//     text-transform: uppercase;
-
-//     .menu {
-//       cursor: pointer;
-//       color: var(--white);
-//       font-size: 13px;
-//       gap: 20px;
-//     }
-//   }

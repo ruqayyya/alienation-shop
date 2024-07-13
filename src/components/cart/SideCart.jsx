@@ -1,28 +1,26 @@
 import React, { useContext, useEffect } from "react";
 import x from "../../assets/images/multiply.png";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faInstagram } from "@fortawesome/free-brands-svg-icons";
-import SideNavbar from "./SideNavbar";
 import { MainContext } from "../../utils/MainContext";
 import "aos/dist/aos.css";
 import AOS from "aos";
+import InnerCart from "./InnerCart";
 
-const SidebarMenu = () => {
+const SideCart = () => {
   const { toggleSidebar, showSidebar } = useContext(MainContext);
 
   useEffect(() => {
     AOS.init({
-      duration: 200, 
-      easing: "ease-in-out", 
-      once: true, 
+      duration: 200,
+      easing: "ease-in-out",
+      once: true,
     });
   });
   return (
-    <section
-    className='Side-bar' 
-    data-aos={showSidebar ? "fade-right" : "fade-left"}
-    data-aos-offset="300"
-    data-aos-easing="easer"
+    <div
+      className="Side-cart"
+      data-aos="fade-right"
+      data-aos-offset="300"
+      data-aos-easing="easer"
     >
       <div className="container">
         <div className="top">
@@ -33,10 +31,11 @@ const SidebarMenu = () => {
             data-aos-easing="easer"
             data-aos-duration="400"
           >
-            <img src={x} alt="x-icon" onClick={toggleSidebar} />
+            <img src={x} alt="x-icon"  />
+            <h2>CART</h2>
           </div>
-          <div className="sidenav">
-            <SideNavbar />
+          <div className="side-cart-part">
+            <InnerCart/>
           </div>
         </div>
         <div
@@ -46,11 +45,20 @@ const SidebarMenu = () => {
           data-aos-duration="600"
         >
           <span></span>
-          <FontAwesomeIcon className="instaIcon" icon={faInstagram} />
+          <div className="bottom-part">
+            <p className="order-note">Add order note</p>
+            <p className="order-note">edit order note</p>
+            <p>Discounts and shipping costs calculated at checkout</p>
+            <button className="checkout">
+              CHECKOUT
+              <span className="Button-dot"></span>
+              <span className="data-price"></span>
+            </button>
+          </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
-export default SidebarMenu;
+export default SideCart;

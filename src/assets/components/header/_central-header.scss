@@ -17,10 +17,10 @@ body {
     align-items: center;
 
     @media (max-width: 1350px) {
-      gap: 15px;
+      gap: 0;
       flex-direction: column !important;
       justify-content: space-around;
-      padding: 21px 0;
+      padding: 0;
     }
 
     @media (max-width: 1230px) {
@@ -52,6 +52,10 @@ body {
 
     .logo {
       margin-left: 0;
+      
+    @media (max-width: 1350px) {
+      margin-top: 15px;
+    }
 
       @media (max-width: 1230px) {
         margin-left: 64px;

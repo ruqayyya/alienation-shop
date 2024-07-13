@@ -1,0 +1,32 @@
+.Side-cart {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  z-index: 1001;
+  transition: 0.3s ease;
+  overflow-y: auto;
+  background-color: var(--dark-gray);
+  box-shadow: 5px 4px 10px var(--shadow-color);
+  .container {
+    @include flex-container(column);
+    width: 340px;
+    background-color: var(--dark-gray);
+    box-shadow: 5px 4px 10px var(--shadow-color);
+    justify-content: space-between;
+    @media (max-width: 320px) {
+      width: 270px;
+    }
+    .top {
+      .x-icon {
+        padding: 25px 30px 45px 30px;
+        @media (max-width: 320px) {
+          padding: 20px 20px 30px 20px;
+        }
+        img {
+          height: 14px;
+        }
+      }
+    }
+  }
+}
