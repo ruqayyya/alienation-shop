@@ -21,10 +21,10 @@ const Categories = () => {
       {showSidebar ? <SidebarMenu /> : null}
       {showCart ? <SideCart /> : null}
       <TopHeader />
-        <CentralHeader />
-        <CategorySection/>
-      {/* <BestSellerCarusel /> */}
-      <CollectionSection/>
+      <CentralHeader />
+      <CategorySection />
+
+      <CollectionSection />
       <Footer />
     </>
   );

@@ -27,7 +27,7 @@ const CategoryHeader = () => {
     <header className='category-header'>
         <div className="container row">
             <div className="grid row">
-                <img src={dual_grid_gray} alt="dual-grid" className={`first ${isFirstWhite ? 'iswhite' : ''}`} onClick={toggleFirstImage} />
+                <img src={dual_grid_gray} alt="dual-grid" className={`first  ${isFirstWhite ? 'iswhite' : ''}`} onClick={toggleFirstImage} />
                 <img src={triple_grid_gray} alt="triple-grid" className={`second ${isSecondWhite ? 'iswhite' : ''}`} onClick={toggleSecondImage} />
             </div>
             <div className="button-container">

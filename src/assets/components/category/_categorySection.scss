@@ -1,32 +1,85 @@
-.category-section{
-    height: 100vh;
-    .container{
-        .main-filter{
-            .collection-part{
-                padding: 50px 30px;
-                justify-content: space-between;
-                .filter{
-                    position: sticky;
-                    top: 70px;
-                    left: 0;
-                    span{
-                        font-family: var(--base-font);
-                        color: white;
-                        text-transform: uppercase;
-                        letter-spacing: 0.2cap;
-                        font-size: 15px;
-                    }
-                }
-
+.category-section {
+    width: 100%;
+  height: auto;
+  .container {
+    .main-filter {
+      .collection-part {
+        height: auto;
+        padding: 50px 50px;
+        .filter {
+          height: 300px;
+          width: 300px;
+          @include flex-container(column);
+          gap: 20px;
+          position: sticky;
+          top: 130px;
+          left: 0;
+          ul {
+            @include flex-container(column);
+            gap: 18px;
+            li {
+              color: white;
+              font-family: var(--base-font);
+              font-weight: 300;
+              font-size: 13px;
             }
-            .collection{
-                overflow-y: auto;
-
-                img{
-                    height: 100px;
-                }
-            }
-
+          }
+          span {
+            font-family: var(--base-font);
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: 0.2cap;
+            font-size: 15px;
+          }
         }
+      }
+      .collection {
+        width: auto;
+        // height: 500px;
+        // overflow-y: auto;
+        .image-grid {
+          display: grid;
+          grid-template-columns: repeat(4, 5fr); 
+          img {
+            object-fit: cover;
+              width: 200px;
+            height: 300px;
+          }
+          .pagination-part{
+            background-color: antiquewhite;
+            width: 300px;
+            height: 50px !important;
+            justify-content: center;
+            align-items: center;
+            .pagination{
+                padding: 40px 20px;
+                display: flex;
+                flex-direction: row;
+                width: 100%;
+                justify-content: center;
+
+            }
+          }
+        }
+      }
     }
+  }
 }
+
+// .collection {
+//     display: flex;
+//     flex-wrap: wrap;
+//   }
+
+//   .image-grid {
+//     display: grid;
+//     grid-template-columns: repeat(4, 5fr); /* 4 sütun */
+//     gap: 10px; /* Aralıklar */
+//     overflow: hidden; /* Ekran dışında kalanları gizle */
+//     max-height: 100vh; /* Maksimum yükseklik ayarı */
+//   }
+
+//   .image-grid img {
+//     width: 100%; /* Resimlerin genişliği */
+//     height: auto; /* Otomatik yükseklik ayarı */
+//   }
