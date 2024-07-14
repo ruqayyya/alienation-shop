@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { categories } from "../../db/fakeDb";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   const [hoveredId, setHoveredId] = useState("");
@@ -14,11 +15,24 @@ const Navbar = () => {
             onMouseEnter={() => setHoveredId(item.id)}
             onMouseLeave={() => setHoveredId("")}
           >
-            {item.title}
+            {item.id === 1 || item.id === 2 ? (
+              <NavLink className="categorylink" to={`/categories`}>
+                {item.title}
+              </NavLink>
+            ) : (
+              item.title
+            )}
             {hoveredId === item.id && item.subCategories.length > 0 && (
               <ul className="dropdownMenu">
                 {item.subCategories.map((subs) => (
-                  <li key={subs.id} className="menu">{subs.title}</li>
+                  <NavLink
+                    className="categorylink"
+                    to={`/categories/${item.id}/${subs.id}`}
+                  >
+                    <li key={subs.id} className="menu">
+                      {subs.title}
+                    </li>
+                  </NavLink>
                 ))}
               </ul>
             )}

@@ -1,9 +1,12 @@
 import "aos/dist/aos.css";
 import AOS from "aos";
-import React, { useEffect } from 'react'
-import Home from './pages/Home'
-import GlobalContext from './utils/MainContext'
-import Header from "./components/Header";
+import React, { useEffect } from "react";
+import Home from "./pages/Home";
+import GlobalContext from "./utils/MainContext";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Cart from "./pages/Cart";
+import ShopDetail from "./pages/ShopDetail";
+import Categories from "./pages/Categories";
 
 const App = () => {
   useEffect(() => {
@@ -31,11 +34,19 @@ const App = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
   return (
     <GlobalContext>
-    <Home/>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/cart" element={<Cart/>}/>
+          <Route path="/shopdetail" element={<ShopDetail/>}/>
+          <Route path="/categories" element={<Categories/>}/>
+        </Routes>
+      </Router>
     </GlobalContext>
-  )
-}
+  );
+};
 
-export default App
+export default App;

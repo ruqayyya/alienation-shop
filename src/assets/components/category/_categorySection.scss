@@ -1,0 +1,32 @@
+.category-section{
+    height: 100vh;
+    .container{
+        .main-filter{
+            .collection-part{
+                padding: 50px 30px;
+                justify-content: space-between;
+                .filter{
+                    position: sticky;
+                    top: 70px;
+                    left: 0;
+                    span{
+                        font-family: var(--base-font);
+                        color: white;
+                        text-transform: uppercase;
+                        letter-spacing: 0.2cap;
+                        font-size: 15px;
+                    }
+                }
+
+            }
+            .collection{
+                overflow-y: auto;
+
+                img{
+                    height: 100px;
+                }
+            }
+
+        }
+    }
+}

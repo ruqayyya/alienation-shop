@@ -43,6 +43,14 @@
   background-color: rgba(47, 47, 47, 0.5);
 }
 
+.iswhite {
+  filter: brightness(0) invert(1);
+}
+body{
+  background-color: var(--dark-gray);
+
+}
+
 // MIXIN
 
 @mixin flex-container($direction: row) {

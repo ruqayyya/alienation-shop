@@ -20,6 +20,9 @@
       padding: 22px 0;
       cursor: pointer;
       position: relative;
+      a{
+      color: white;
+      }
 
       &::after {
         content: "";
@@ -49,12 +52,11 @@
         font-family: sans-serif;
         font-weight: 100;
         text-transform: uppercase;
+        color: white;
         &:hover::after .navitem {
           width: 100%; 
         }
-        
-
-        .menu {
+        .categorylink{
           cursor: pointer;
           color: var(--white);
           font-size: 13px;
