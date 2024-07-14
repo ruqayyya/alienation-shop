@@ -6,7 +6,8 @@ import bag from "../../assets/images/bag.png";
 import menu from "../../assets/images/menu.png";
 import Navbar from "./Navbar";
 import { MainContext } from "../../utils/MainContext";
-import { Link, NavLink } from "react-router-dom";
+import { 
+   NavLink } from "react-router-dom";
 
 const CentralHeader = () => {
   const { toggleSidebar, toggleCart } = useContext(MainContext);

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Fragment } from "react";
 import "aos/dist/aos.css";
 import AOS from "aos";
 import { MainContext } from "../../utils/MainContext";
@@ -27,9 +27,8 @@ const SideNavbar = () => {
       >
         <div className="category-list" onClick={toggleDropdown}>
           {categories.map((item) => (
-            <>
+            <Fragment key={item.id} >
               <button
-                key={item.id}
                 onClick={() => {
                   if (selectedCategory) {
                     setSelecetedCategory(null);
@@ -55,7 +54,7 @@ const SideNavbar = () => {
               </div>
               <span className="line"></span>
 
-            </>
+            </Fragment>
           ))}
           <p className="title">account</p>
         </div>
