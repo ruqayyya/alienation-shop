@@ -29,6 +29,7 @@
 
     .burger {
       display: block;
+      cursor: pointer;
 
       .menu {
         height: 25px;
@@ -92,6 +93,7 @@
         display: flex;
         height: 22px;
 
+        cursor: pointer;
         @media (max-width: 640px) {
           height: 18px;
         }
@@ -100,6 +102,7 @@
           @media (max-width: 640px) {
             display: none;
           }
+
         }
       }
     }

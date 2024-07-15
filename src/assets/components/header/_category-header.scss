@@ -27,6 +27,7 @@
       border-right: 1px solid var(--light-gray);
       gap: 10px;
       img {
+        cursor: pointer;
         height: 20px;
       }
     }
@@ -34,6 +35,7 @@
       @include flex-container(column);
       position: relative;
       .order {
+        cursor: pointer;
         gap: 10px;
         padding: 22px 40px;
         text-transform: uppercase;
@@ -51,7 +53,6 @@
       .drop-button {
         display: flex;
         background-color: var(--dark-gray);
-
         box-shadow: 0px 0px 14px 1px rgb(65, 65, 65);
         @include flex-container(column);
         height: 350px;
@@ -63,6 +64,7 @@
         align-items: end;
         overflow-y: auto;
         button {
+          cursor: pointer;
           padding: 30px 40px 0 40px;
           background-color: var(--dark-gray);
           border: none;
@@ -78,9 +80,3 @@
   }
 }
 
-.sticky-header {
-  position: sticky;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-}

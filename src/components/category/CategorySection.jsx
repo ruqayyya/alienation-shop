@@ -3,7 +3,7 @@ import CategoryHeader from "../Header/CategoryHeader";
 import random from "../../assets/images/glow_tee_dark_800x.webp";
 import { filter } from "../../db/filterDb";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAngleLeft,faAngleRight  } from "@fortawesome/free-solid-svg-icons";
+import { faAngleLeft, faAngleRight } from "@fortawesome/free-solid-svg-icons";
 
 const CategorySection = () => {
   return (
@@ -22,21 +22,27 @@ const CategorySection = () => {
             </aside>
             <div className="collection">
               <div className="image-grid">
-                {Array.from(Array(20).keys()).map(
-                  (
-                    index 
-                  ) => (
-                    <img key={index} src={random} alt="" />
-                  )
-                )}
+                {Array.from(Array(20).keys()).map((index) => (
+                  <div className="image-info">
+                    <div className="image">
+                      <img key={index} src={random} alt="" />
+                    </div>
+                    <div className="sale">22%</div>
+                    <span className="name">GREEN FLUORESCENT CARGO</span>
+                    <div className="row">
+                    <span className="price">€76</span>
+                    <span className="sale-price">€76</span>
+                    </div>
+                  </div>
+                ))}
               </div>
               <div className="pagination-part row">
-              <FontAwesomeIcon icon={faAngleLeft} />
+                <FontAwesomeIcon icon={faAngleLeft} />
                 <ul className="pagination row">
-                    <li>1</li>
-                    <li>2</li>
-                    <li>3</li>
-                    <li>4</li>
+                  <li>1</li>
+                  <li>2</li>
+                  <li>3</li>
+                  <li>4</li>
                 </ul>
                 <FontAwesomeIcon icon={faAngleRight} />
               </div>
