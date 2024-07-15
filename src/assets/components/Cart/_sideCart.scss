@@ -36,6 +36,7 @@
           padding: 20px 20px 30px 20px;
         }
         img {
+          cursor: pointer;
           height: 14px;
         }
         span {
@@ -71,7 +72,11 @@
         gap: 10px;
         @include flex-container(column);
         .edit-order-note {
+          cursor: pointer;
           display: none;
+        }
+        .order-note{
+          cursor: pointer;
         }
         form {
           gap: 10px;
@@ -85,6 +90,7 @@
             color: white;
           }
           button {
+            cursor: pointer;
             text-align: center;
             border: none;
             width: 100%;
@@ -104,6 +110,8 @@
           justify-content: center;
           font-family: var(--base-font);
           letter-spacing: 0.2cap;
+          cursor: pointer;
+
 
           .Button-dot {
             margin: 0 18px;

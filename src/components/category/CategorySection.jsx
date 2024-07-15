@@ -1,41 +1,58 @@
-import React from 'react'
-import CategoryHeader from '../Header/CategoryHeader'
-import random from '../../assets/images/glow_tee_dark_800x.webp'
-import { filter } from '../../db/filterDb'
+import React from "react";
+import CategoryHeader from "../Header/CategoryHeader";
+import random from "../../assets/images/glow_tee_dark_800x.webp";
+import { filter } from "../../db/filterDb";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAngleLeft, faAngleRight } from "@fortawesome/free-solid-svg-icons";
 
 const CategorySection = () => {
   return (
-    <section className='category-section'>
-        <div className="container">
-            <div className="main-filter">
-                <CategoryHeader/>
-                <div className="collection-part row">
-                    <aside className=' filter'>
-                        <span>Filters</span>
-                        <ul>
-                            {filter.map((item)=>(
-                                <li> {item.title}</li>
-                            ))}
-                        </ul>
-                    </aside>
-                    <div className="collection">
-                        <img src={random} alt="" />
-                        <img src={random} alt="" />
-                        <img src={random} alt="" />
-                        <img src={random} alt="" />
-                        <img src={random} alt="" />
-                        <img src={random} alt="" />
-                        <img src={random} alt="" />
-                        <img src={random} alt="" />
-                        <img src={random} alt="" />
-                        <img src={random} alt="" />
-            
+    <section className="category-section">
+      <div className="container">
+        <div className="main-filter">
+          <CategoryHeader />
+          <div className="collection-part row">
+            <aside className=" filter">
+              <span>Filters</span>
+              <ul>
+                {filter.map((item) => (
+                  <li> {item.title}</li>
+                ))}
+              </ul>
+            </aside>
+            <div className="collection">
+              <div className="image-grid">
+                {Array.from(Array(20).keys()).map((index) => (
+                  <div className="image-info">
+                    <div className="image">
+                      <img key={index} src={random} alt="" />
                     </div>
-                </div>
+                    <div className="sale">22%</div>
+                    <span className="name">GREEN FLUORESCENT CARGO</span>
+                    <div className="row">
+                    <span className="price">€76</span>
+                    <span className="sale-price">€76</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <div className="pagination-part row">
+                <FontAwesomeIcon icon={faAngleLeft} />
+                <ul className="pagination row">
+                  <li>1</li>
+                  <li>2</li>
+                  <li>3</li>
+                  <li>4</li>
+                </ul>
+                <FontAwesomeIcon icon={faAngleRight} />
+              </div>
+              <span></span>
             </div>
+          </div>
         </div>
+      </div>
     </section>
-  )
-}
+  );
+};
 
-export default CategorySection
+export default CategorySection;

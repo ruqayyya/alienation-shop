@@ -1,32 +1,144 @@
-.category-section{
-    height: 100vh;
-    .container{
-        .main-filter{
-            .collection-part{
-                padding: 50px 30px;
-                justify-content: space-between;
-                .filter{
-                    position: sticky;
-                    top: 70px;
-                    left: 0;
-                    span{
-                        font-family: var(--base-font);
-                        color: white;
-                        text-transform: uppercase;
-                        letter-spacing: 0.2cap;
-                        font-size: 15px;
-                    }
-                }
-
-            }
-            .collection{
-                overflow-y: auto;
-
-                img{
-                    height: 100px;
-                }
-            }
-
+.category-section {
+    width: 100%;
+  height: auto;
+  .container {
+    .main-filter {
+      .collection-part {
+        display: flex;
+        height: auto;
+        gap: 180px;
+        padding: 50px 50px;
+        justify-content: center;
+        @media (max-width: 670px) {
+          padding: 20px;
         }
+        .filter {
+          height: 300px;
+          width: 300px;
+          @include flex-container(column);
+          gap: 20px;
+          position: sticky;
+          top: 170px;
+          left: 0;
+          @media (max-width: 1066px) {
+            display: none;
+          }
+          ul {
+            @include flex-container(column);
+            gap: 18px;
+            li {
+                cursor: pointer;
+              color: white;
+              font-family: var(--base-font);
+              font-weight: 300;
+              font-size: 13px;
+            }
+          }
+          span {
+            font-family: var(--base-font);
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: 0.2cap;
+            font-size: 15px;
+          }
+        }
+      }
+      .collection {
+        @include flex-container(column);
+        align-items: center;
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 55px; 
+            @media (max-width: 1240px) {
+              grid-template-columns: repeat(3, 1fr);
+            }
+            @media (max-width: 900px) {
+              grid-template-columns: repeat(3, 1fr);
+              gap: 20px;
+            }
+            @media (max-width: 670px) {
+              grid-template-columns: repeat(2, 1fr);
+              gap: 20px;
+            }
+            .image-info{
+              gap: 10px;
+              @include flex-container(column);
+              justify-content: center;
+              align-items: center;
+              position: relative;
+              .image{
+                width: 100%;
+                height: 100%;
+                img {
+                    object-fit: contain;
+                    width: 100%;
+                }
+              }
+              .sale{
+                top: 10px;
+                left: 10px;
+                display: flex;
+                align-items: center;
+                color: black;
+                font-family: var(--base-font);
+                letter-spacing: 0.3cap;
+                font-size: 11px;
+                height: 25px;
+                width: 50px;
+                background-color: var(--green);
+                position: absolute;
+              }
+              span{
+                font-family: var(--base-font);
+                color: white;
+                text-transform: uppercase;
+                letter-spacing: 0.2cap;
+                font-size: 13px;
+              }
+              div{
+                justify-content: center;
+                gap: 10px;
+                .sale-price{
+                  text-decoration: line-through;
+                }
+              }
+            }
+        }
+        .pagination-part{
+            background-color: antiquewhite;
+            width: 300px;
+            height: 50px !important;
+            justify-content: center;
+            align-items: center;
+            .pagination{
+                padding: 40px 20px;
+                display: flex;
+                flex-direction: row;
+                width: 100%;
+                justify-content: center;
+        
+            }
     }
 }
+}
+  }
+}
+
+// .collection {
+//     display: flex;
+//     flex-wrap: wrap;
+//   }
+
+//   .image-grid {
+//     display: grid;
+//     grid-template-columns: repeat(4, 5fr); /* 4 sütun */
+//     gap: 10px; /* Aralıklar */
+//     overflow: hidden; /* Ekran dışında kalanları gizle */
+//     max-height: 100vh; /* Maksimum yükseklik ayarı */
+//   }
+
+//   .image-grid img {
+//     width: 100%; /* Resimlerin genişliği */
+//     height: auto; /* Otomatik yükseklik ayarı */
+//   }
