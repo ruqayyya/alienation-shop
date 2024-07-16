@@ -27,7 +27,7 @@ const Categories = () => {
       <TopHeader />
       <CentralHeader />
       <CategorySection />
-      <CollectionSection />
+      {/* <CollectionSection /> */}
       <Footer />
     </>
   );
