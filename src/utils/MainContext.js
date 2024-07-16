@@ -10,9 +10,10 @@ const GlobalContext = ({ children }) => {
   const [loading, setLoading] = useState(true);
   const [currentPage, setCurrentPage] = useState(1);
   const[showFilter, setShowFilter]=useState(false)
+  const[showOrder, setShowOrder]=useState(false)
 
 
-  // SHOW  SIDEBAR, CART, FILTER FUNCTION
+  // SHOW  SIDEBAR, CART, FILTER, ORDER FUNCTION
   const toggleDropdown = () => {
     setShowDropdown(!showDropdown);
   };
@@ -25,12 +26,15 @@ const GlobalContext = ({ children }) => {
   const toggleOverlay = () => {
     setShowSidebar(false);
     setShowCart(false);
+    setShowOrder(false)
+    setShowFilter(false)
     setCloseOverlay(false);
-    console.log("active");
   };
   const toggleFilter=()=>{
     setShowFilter(!showFilter)
-    console.log('active');
+  }
+  const toggleOrder=()=>{
+    setShowOrder(!showOrder)
   }
 
   // SHOW DROPDOWN MENU FUNCTION
@@ -76,7 +80,7 @@ const GlobalContext = ({ children }) => {
     toggleOverlay,
     nextPage,
     prevPage,
-    handlePageChange, currentPage,totalPages,endIndex,startIndex, totalItems,toggleFilter, showFilter
+    handlePageChange, currentPage,totalPages,endIndex,startIndex, totalItems,toggleFilter, showFilter, toggleOrder,showOrder
   };
   return (
     <MainContext.Provider value={globalData}>{children}</MainContext.Provider>
