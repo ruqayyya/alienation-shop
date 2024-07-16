@@ -47,7 +47,143 @@
         width: 100%;
         @include flex-container(column);
         align-items: center;
-        .image-grid {
+        .dual-grid{
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 55px;
+          // @media (max-width: 1240px) {
+          //   grid-template-columns: repeat(2, 1fr);
+          // }
+          // @media (max-width: 900px) {
+          //   grid-template-columns: repeat(2, 1fr);
+          //   gap: 20px;
+          // }
+          // @media (max-width: 670px) {
+          //   grid-template-columns: repeat(2, 1fr);
+          //   gap: 20px;
+          // }
+          .image-info {
+            width: 100%;
+            gap: 10px;
+            @include flex-container(column);
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            .image {
+              height: 100%;
+              width: 100%;
+              img {
+                object-fit: cover;
+                height: 100%;
+                width: 100%;
+                cursor: pointer;
+              }
+            }
+            .sale {
+              top: 10px;
+              left: 10px;
+              display: flex;
+              align-items: center;
+              color: black;
+              font-family: var(--base-font);
+              letter-spacing: 0.3cap;
+              font-size: 11px;
+              height: 25px;
+              width: 50px;
+              background-color: var(--green);
+              position: absolute;
+              @media (max-width: 330px) {
+                font-size: 10px;
+                height: 20px;
+                width: 40px;
+              }
+            }
+            span {
+              text-align: center;
+              font-family: var(--base-font);
+              color: white;
+              text-transform: uppercase;
+              letter-spacing: 0.2cap;
+              font-size: 12px;
+            }
+            div {
+              justify-content: center;
+              gap: 10px;
+              .sale-price {
+                text-decoration: line-through;
+              }
+            }
+          }
+        }
+        .single-grid{
+          display: grid;
+          grid-template-columns: repeat(1, 1fr);
+          gap: 55px;
+          // @media (max-width: 1240px) {
+          //   grid-template-columns: repeat(2, 1fr);
+          // }
+          // @media (max-width: 900px) {
+          //   grid-template-columns: repeat(2, 1fr);
+          //   gap: 20px;
+          // }
+          // @media (max-width: 670px) {
+          //   grid-template-columns: repeat(2, 1fr);
+          //   gap: 20px;
+          // }
+          .image-info {
+            width: 100%;
+            gap: 10px;
+            @include flex-container(column);
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            .image {
+              height: 100%;
+              width: 100%;
+              img {
+                object-fit: cover;
+                height: 100%;
+                width: 100%;
+                cursor: pointer;
+              }
+            }
+            .sale {
+              top: 10px;
+              left: 10px;
+              display: flex;
+              align-items: center;
+              color: black;
+              font-family: var(--base-font);
+              letter-spacing: 0.3cap;
+              font-size: 11px;
+              height: 25px;
+              width: 50px;
+              background-color: var(--green);
+              position: absolute;
+              @media (max-width: 330px) {
+                font-size: 10px;
+                height: 20px;
+                width: 40px;
+              }
+            }
+            span {
+              text-align: center;
+              font-family: var(--base-font);
+              color: white;
+              text-transform: uppercase;
+              letter-spacing: 0.2cap;
+              font-size: 12px;
+            }
+            div {
+              justify-content: center;
+              gap: 10px;
+              .sale-price {
+                text-decoration: line-through;
+              }
+            }
+          }
+        }
+        .triple-grid {
           display: grid;
           grid-template-columns: repeat(4, 1fr);
           gap: 55px;
@@ -62,6 +198,7 @@
             grid-template-columns: repeat(2, 1fr);
             gap: 20px;
           }
+
           .image-info {
             width: 100%;
             gap: 10px;

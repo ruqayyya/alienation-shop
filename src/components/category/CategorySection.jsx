@@ -9,6 +9,9 @@ import { MainContext } from "../../utils/MainContext";
 
 const CategorySection = () => {
   const {
+    dual,
+    triple,
+    single,
     hoveredIndex,
     handleMouseEnter,
     handleMouseLeave,
@@ -20,6 +23,11 @@ const CategorySection = () => {
     totalItems,
     startIndex,
     endIndex,
+    grid,
+    handleCommonGrid,
+    handleSingle,
+    handleDual,
+    handleTriple,
   } = useContext(MainContext);
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "instant" });
@@ -40,7 +48,8 @@ const CategorySection = () => {
               </ul>
             </aside>
             <div className="collection">
-              <div className="image-grid">
+            <div className={triple ? "triple-grid" : dual ? "dual-grid" : single ? "single-grid" : "dual-grid"}>
+
                 {Array.from(Array(totalItems).keys())
                   .slice(startIndex, endIndex)
                   .map((index) => (

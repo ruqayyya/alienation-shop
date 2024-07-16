@@ -9,9 +9,59 @@ const GlobalContext = ({ children }) => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const [loading, setLoading] = useState(true);
   const [currentPage, setCurrentPage] = useState(1);
-  const[showFilter, setShowFilter]=useState(false)
-  const[showOrder, setShowOrder]=useState(false)
+  const [showFilter, setShowFilter] = useState(false);
+  const [showOrder, setShowOrder] = useState(false);
+  const [isFirstWhite, setIsFirstWhite] = useState(false);
+  const [isSecondWhite, setIsSecondWhite] = useState(false);
+  const [grid, setGrid] = useState(false);
+  const [dual, setDual] = useState(false);
+  const [triple, setTriple] = useState(false);
+  const [single, setSingle] = useState(false);
 
+  const toggleGrid = () => {
+    setGrid(!grid);
+    console.log("active");
+  };
+  const toggleFirstImage = () => {
+    setIsFirstWhite(true);
+    setIsSecondWhite(false);
+  };
+
+  const toggleSecondImage = () => {
+    setIsSecondWhite(true);
+    setIsFirstWhite(false);
+  };
+  const handleSingle = () => {
+    setSingle(true);
+    setDual(false);
+    setTriple(false);
+
+    toggleGrid();
+    toggleSecondImage();
+  };
+  const handleDual = () => {
+    setDual(true);
+    setTriple(false);
+    setSingle(false);
+    toggleGrid();
+    toggleFirstImage();
+  };
+  const handleTriple = () => {
+    setTriple(true);
+    setSingle(false);
+    setDual(false);
+    toggleGrid();
+    toggleSecondImage();
+  };
+  const handleCommonGrid = () => {
+    if (handleSingle) {
+      handleSingle();
+    } else if (handleDual) {
+      handleDual();
+    } else {
+      handleTriple();
+    }
+  };
 
   // SHOW  SIDEBAR, CART, FILTER, ORDER FUNCTION
   const toggleDropdown = () => {
@@ -26,16 +76,16 @@ const GlobalContext = ({ children }) => {
   const toggleOverlay = () => {
     setShowSidebar(false);
     setShowCart(false);
-    setShowOrder(false)
-    setShowFilter(false)
+    setShowOrder(false);
+    setShowFilter(false);
     setCloseOverlay(false);
   };
-  const toggleFilter=()=>{
-    setShowFilter(!showFilter)
-  }
-  const toggleOrder=()=>{
-    setShowOrder(!showOrder)
-  }
+  const toggleFilter = () => {
+    setShowFilter(!showFilter);
+  };
+  const toggleOrder = () => {
+    setShowOrder(!showOrder);
+  };
 
   // SHOW DROPDOWN MENU FUNCTION
   const handleMouseEnter = (index) => {
@@ -66,7 +116,6 @@ const GlobalContext = ({ children }) => {
     }
   };
 
-
   const globalData = {
     toggleSidebar,
     showSidebar,
@@ -80,7 +129,28 @@ const GlobalContext = ({ children }) => {
     toggleOverlay,
     nextPage,
     prevPage,
-    handlePageChange, currentPage,totalPages,endIndex,startIndex, totalItems,toggleFilter, showFilter, toggleOrder,showOrder
+    handlePageChange,
+    currentPage,
+    totalPages,
+    endIndex,
+    startIndex,
+    totalItems,
+    toggleFilter,
+    showFilter,
+    toggleOrder,
+    showOrder,
+    toggleGrid,
+    toggleFirstImage,
+    toggleSecondImage,
+    isSecondWhite,
+    isFirstWhite,
+    handleSingle,
+    handleTriple,
+    handleCommonGrid,
+    dual,
+    triple,
+    single,
+    handleDual,
   };
   return (
     <MainContext.Provider value={globalData}>{children}</MainContext.Provider>
