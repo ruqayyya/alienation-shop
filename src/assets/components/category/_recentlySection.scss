@@ -1,0 +1,33 @@
+.recently-section{
+    background-color: var(--dark-gray);
+    margin-bottom: 100px;
+      height: 100%;
+      width: 100%;
+      .container{
+          text-align: center;
+          .recently{
+              gap: 70px;
+              @include flex-container(column);
+              align-items: center;
+              .title{
+                  padding: 70px 0 0 0;
+                  color: white;
+                  font-family: var(--base-font);
+                  font-size: 25px;
+                  letter-spacing: 0.2cap;
+              }
+              .recently-slider{
+                  margin: auto 0;
+                  cursor: pointer;
+                  width: 90%;
+                  @media (max-width: 900px) {
+                      width: 100%;
+                     }
+  
+              }
+          }
+  
+  
+      }
+  }
+  

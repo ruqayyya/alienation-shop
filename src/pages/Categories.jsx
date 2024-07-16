@@ -8,6 +8,7 @@ import Footer from "../components/Footer";
 import CategorySection from "../components/category/CategorySection";
 import FilterBar from "../components/category/FilterBar";
 import OrderCart from "../components/category/OrderCart";
+import RecentlySection from "../components/category/RecentlySection";
 
 const Categories = () => {
   const { showSidebar, showCart, toggleOverlay, showFilter, showOrder } =
@@ -28,6 +29,7 @@ const Categories = () => {
       <TopHeader />
       <CentralHeader />
       <CategorySection />
+      <RecentlySection/>
       <Footer />
     </>
   );
