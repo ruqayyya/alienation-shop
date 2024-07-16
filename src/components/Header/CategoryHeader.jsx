@@ -17,6 +17,7 @@ const CategoryHeader = () => {
   const toggleDropbutton = () => {
     setIsDropdownOpen(!isDropdownOpen);
   };
+  
   const toggleFirstImage = () => {
     setIsFirstWhite(true);
     setIsSecondWhite(false);
