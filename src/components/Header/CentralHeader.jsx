@@ -18,7 +18,7 @@ const CentralHeader = () => {
           <img className="menu" src={menu} alt="menu" onClick={toggleSidebar} />
         </div>
         <div className="logo">
-          <NavLink to="/">
+          <NavLink className={logo} to="/">
             <img src={logo} alt="logo" />
           </NavLink>
         </div>

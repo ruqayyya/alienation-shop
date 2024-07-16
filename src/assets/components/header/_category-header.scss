@@ -6,14 +6,14 @@
   left: 0;
   z-index: 4; 
   @media (max-width: 1350px) {
-    top: 110px;
+    top: 95px;
   }
 
   @media (max-width: 1230px) {
-    top: 78px;
+    top: 59px;
   }
   @media (max-width: 640px) {
-    top: 71px;
+    top: 63px;
   }
   .container {
     align-items: center;
@@ -32,9 +32,10 @@
       }
     }
     .button-container {
-      @include flex-container(column);
       position: relative;
+      justify-content: flex-end;
       .order {
+        display: flex;
         cursor: pointer;
         gap: 10px;
         padding: 22px 40px;
@@ -50,6 +51,27 @@
         color: white;
         font-size: 15px;
       }
+      .filter {
+        display: none;
+        cursor: pointer;
+        gap: 10px;
+        padding: 22px 40px;
+        text-transform: uppercase;
+        border-left: 1px solid var(--light-gray);
+        border-bottom: transparent;
+        border-right: transparent;
+        border-top: transparent;
+        background-color: var(--dark-gray);
+        font-family: var(--base-font);
+        font-weight: 300;
+        letter-spacing: 0.2cap;
+        color: white;
+        font-size: 15px;
+        @media (max-width: 1066px) {
+          display: block;
+        }
+      }
+
       .drop-button {
         display: flex;
         background-color: var(--dark-gray);
