@@ -8,22 +8,25 @@ import Footer from "../components/Footer";
 import BestSellerCarusel from "../components/Carusel/BestsellerCarusel";
 import CategorySection from "../components/category/CategorySection";
 import CollectionSection from "../components/CollectionSection";
+import FilterBar from "../components/category/FilterBar";
 
 const Categories = () => {
-  const { showSidebar, showCart, toggleOverlay } = useContext(MainContext);
+  const { showSidebar, showCart, toggleOverlay, showFilter } =
+    useContext(MainContext);
 
   return (
     <>
       <div
-        className={showSidebar || showCart ? "overlay" : null}
+        className={showSidebar || showCart || showFilter ? "overlay" : null}
         onClick={toggleOverlay}
       ></div>
       {showSidebar ? <SidebarMenu /> : null}
       {showCart ? <SideCart /> : null}
+      {showFilter ? <FilterBar /> : null}
+
       <TopHeader />
       <CentralHeader />
       <CategorySection />
-
       <CollectionSection />
       <Footer />
     </>
