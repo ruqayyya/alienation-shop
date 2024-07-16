@@ -93,7 +93,7 @@
               background-color: var(--green);
               position: absolute;
               @media (max-width: 330px) {
-                font-size:10px ;
+                font-size: 10px;
                 height: 20px;
                 width: 40px;
               }
@@ -116,12 +116,18 @@
           }
         }
         .pagination-part {
-          margin-top: 100px ;
+          margin-top: 100px;
           width: 400px;
           justify-content: center;
           align-items: center;
           position: relative;
-          .icon{
+          @media (max-width: 720px) {
+            width: 300px;
+          }
+          @media (max-width: 320px) {
+            width: 200px;
+          }
+          .icon {
             color: white;
             font-size: 12px;
           }
@@ -129,8 +135,8 @@
             cursor: not-allowed;
             opacity: 0;
           }
-          span{
-            &::after{
+          span {
+            &::after {
               content: "";
               display: block;
               width: 100%;
@@ -142,7 +148,6 @@
               transition: background-color 0.3s ease;
               background-color: var(--light-gray);
             }
-
           }
           .pagination {
             padding: 5px 0;
@@ -152,14 +157,20 @@
             align-items: center;
             width: 100%;
             justify-content: center;
-            li{
+            @media (max-width: 720px) {
+              gap: 0;
+            }
+            li {
               cursor: pointer;
-              padding:11px 25px;
+              padding: 11px 25px;
               position: relative;
               color: white;
               font-size: 12px;
               font-family: var(--base-font);
-              &::after{
+              @media (max-width: 320px) {
+                padding: 11px 15px;
+              }
+              &::after {
                 content: "";
                 display: block;
                 width: 100%;

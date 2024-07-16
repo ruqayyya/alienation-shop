@@ -41,8 +41,10 @@ const CategoryHeader = () => {
             className={`second ${isSecondWhite ? "iswhite" : ""}`}
             onClick={toggleSecondImage}
           />
+          <span className="first-liner"></span>
         </div>
         <div className="button-container row">
+        <span className="first-liner"></span>
           <button className="order " onClick={toggleDropbutton}>
             order
             <FontAwesomeIcon icon={faAngleDown} />
@@ -54,9 +56,26 @@ const CategoryHeader = () => {
               ))}
             </div>
           )}
+          <span className="middle-liner"></span>
           <button className="filter" onClick={toggleFilter}>
             filters
           </button>
+        </div>
+
+        <span className="middle-liner"></span>
+        <div className="grid closed row">
+          <img
+            src={dual_grid_gray}
+            alt="dual-grid"
+            className={`first  ${isFirstWhite ? "iswhite" : ""}`}
+            onClick={toggleFirstImage}
+          />
+          <img
+            src={triple_grid_gray}
+            alt="triple-grid"
+            className={`second ${isSecondWhite ? "iswhite" : ""}`}
+            onClick={toggleSecondImage}
+          />
         </div>
       </div>
     </header>
