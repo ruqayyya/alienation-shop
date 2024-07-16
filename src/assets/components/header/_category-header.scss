@@ -25,14 +25,22 @@
       align-items: center;
       justify-content: center;
       padding: 22px;
-      border-right: 1px solid var(--light-gray);
+      // border-right: 1px solid var(--light-gray);
       gap: 10px;
-      @media (max-width:625px) {
+      @media (max-width:650px) {
         display: none;
       }
       img {
         cursor: pointer;
         height: 20px;
+      }
+    }
+    .first-liner{
+      width: 1px;
+      height: 64px;
+      background-color: var(--light-gray);
+      @media (max-width:650px) {
+       display: none;
       }
     }
     .button-container {
@@ -57,15 +65,19 @@
         color: white;
         font-size: 15px;
         @media (max-width:650px) {
+          padding: 22px 10px;
+
           display: flex;
           justify-content: center;
+          width: 100%;
+
         }
       }
 
       .middle-liner{
         width: 1px;
         height: 64px;
-        background-color: white;
+        background-color: var(--light-gray);
         display: none;
         @media (max-width: 1066px) {
           display: block;
@@ -75,7 +87,7 @@
       .first-liner{
         width: 1px;
         height: 64px;
-        background-color: white;
+        background-color: var(--light-gray);
         @media (max-width: 623px) {
           display: none;
         }
@@ -97,6 +109,9 @@
           display: block;
         }
         @media (max-width:650px) {
+          width: 100%;
+          padding: 22px 10px;
+
           display: flex;
           justify-content: center;
         }
@@ -115,9 +130,6 @@
         right: 10px;
         align-items: end;
         overflow-y: auto;
-        @media (max-width: 1066px) {
-          display: none;
-        }
         button {
           cursor: pointer;
           padding: 30px 40px 0 40px;
@@ -137,7 +149,7 @@
 
 .closed{
   display: none;
-  @media (max-width:623px) {
+  @media (max-width:650px) {
     width: 120px;
     display: flex !important;
     align-items: center;

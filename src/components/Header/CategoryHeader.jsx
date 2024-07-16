@@ -1,5 +1,6 @@
 import React, { useContext, useState } from "react";
 import dual_grid_gray from "../../assets/images/visualization (1).png";
+import square from "../../assets/images/black-square.png";
 import triple_grid_gray from "../../assets/images/grid (1).png";
 import { buttonlist } from "../../db/buttonDb";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -8,7 +9,7 @@ import { useOutletContext } from "react-router-dom";
 import { MainContext } from "../../utils/MainContext";
 
 const CategoryHeader = () => {
-  const{toggleFilter}=useContext(MainContext)
+  const { toggleFilter, toggleOrder } = useContext(MainContext);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isFirstWhite, setIsFirstWhite] = useState(false);
   const [isSecondWhite, setIsSecondWhite] = useState(false);
@@ -24,6 +25,14 @@ const CategoryHeader = () => {
   const toggleSecondImage = () => {
     setIsSecondWhite(true);
     setIsFirstWhite(false);
+  };
+
+  const handleButtonClick = () => {
+    if (window.innerWidth <= 1066) {
+      toggleOrder();
+    } else {
+      toggleDropbutton();
+    }
   };
   return (
     <header className="category-header">
@@ -41,11 +50,11 @@ const CategoryHeader = () => {
             className={`second ${isSecondWhite ? "iswhite" : ""}`}
             onClick={toggleSecondImage}
           />
-          <span className="first-liner"></span>
         </div>
-        <div className="button-container row">
         <span className="first-liner"></span>
-          <button className="order " onClick={toggleDropbutton}>
+        <div className="button-container row">
+          <span className="first-liner"></span>
+          <button className="order " onClick={handleButtonClick}>
             order
             <FontAwesomeIcon icon={faAngleDown} />
           </button>
@@ -71,8 +80,8 @@ const CategoryHeader = () => {
             onClick={toggleFirstImage}
           />
           <img
-            src={triple_grid_gray}
-            alt="triple-grid"
+            src={square}
+            alt="square"
             className={`second ${isSecondWhite ? "iswhite" : ""}`}
             onClick={toggleSecondImage}
           />
