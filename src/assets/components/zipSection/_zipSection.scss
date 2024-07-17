@@ -45,21 +45,25 @@
           text-transform: uppercase;
           color: white;
         }
-        button {
-          height: 50px;
-          width: 180px;
-          border: 2px solid white;
-          color: white;
-          text-transform: uppercase;
-          font-family: var(--base-font);
-          letter-spacing: 0.2cap;
-          font-weight: 300;
-          text-align: center;
-          background-color: transparent;
-          @media (max-width: 320px) {
-            height: 45px;
-            width: 170px;
-          }
+        a{
+
+          button {
+            cursor: pointer;
+            height: 50px;
+            width: 180px;
+            border: 2px solid white;
+            color: white;
+            text-transform: uppercase;
+            font-family: var(--base-font);
+            letter-spacing: 0.2cap;
+            font-weight: 300;
+            text-align: center;
+            background-color: transparent;
+            @media (max-width: 320px) {
+              height: 45px;
+              width: 170px;
+            }
+        }
         }
       }
     }

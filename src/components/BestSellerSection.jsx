@@ -1,5 +1,6 @@
 import React from "react";
 import BestSellerCarusel from "./Carusel/BestsellerCarusel";
+import { NavLink } from "react-router-dom";
 
 const BestSection = () => {
   return (
@@ -10,7 +11,9 @@ const BestSection = () => {
           <div className="best-slider">
             <BestSellerCarusel />
           </div>
+          <NavLink to={'/categories'}>
           <button className="bestButton">view all products</button>
+          </NavLink>
         </div>
       </div>
     </section>

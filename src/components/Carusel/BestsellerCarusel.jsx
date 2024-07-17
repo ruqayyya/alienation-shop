@@ -5,6 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 import black from "../../assets/images/glow_tee_dark_800x.webp";
 import hoverImage from "../../assets/images/kynek.webp";
 import { MainContext } from "../../utils/MainContext";
+import { NavLink } from "react-router-dom";
 
 function BestSellerCarusel() {
   const { hoveredIndex, handleMouseEnter, handleMouseLeave } =
@@ -55,13 +56,14 @@ function BestSellerCarusel() {
           >
             <div>
               {" "}
-              <img
-                src={hoveredIndex === index ? hoverImage : black}
-                alt="black"
-              />
+              <NavLink to={"/shopdetail"}>
+                <img
+                  src={hoveredIndex === index ? hoverImage : black}
+                  alt="black"
+                />
+              </NavLink>
               <div className="sale">-22%</div>
             </div>
-
           </div>
         ))}
       </Slider>

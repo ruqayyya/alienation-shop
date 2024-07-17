@@ -23,15 +23,19 @@
                    }
 
             }
-            .bestButton{
-                margin-bottom: 50px;
-                height: 54px;
-                border: none;
-                width: 220px;
-                background-color: var(--green);
-                text-align: center;
-                text-transform: uppercase;
-                letter-spacing:0.2cap;
+            a{
+
+                .bestButton{
+                    cursor:pointer;
+                    margin-bottom: 50px;
+                    height: 54px;
+                    border: none;
+                    width: 220px;
+                    background-color: var(--green);
+                    text-align: center;
+                    text-transform: uppercase;
+                    letter-spacing:0.2cap;
+                }
             }
         }
 

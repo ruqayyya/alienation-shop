@@ -12,9 +12,11 @@ const CategoryHeader = () => {
   const {
     toggleFilter,
     toggleOrder,
-    toggleFirstImage,
-    toggleSecondImage,isSecondWhite,isFirstWhite,
-    handleSingle,handleDual,handleTriple
+    isSecondWhite,
+    isFirstWhite,
+    handleSingle,
+    handleDual,
+    handleTriple,
   } = useContext(MainContext);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 

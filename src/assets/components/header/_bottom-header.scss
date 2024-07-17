@@ -2,22 +2,30 @@
   width: 100%;
   .container {
     display: flex;
-    .gender {
-      padding: 30px 0;
+    a{
       width: 100%;
       color: var(--green);
       background-color: var(--black);
+      .gender {
       border: 1px solid var(--green);
-      text-transform: uppercase;
-      font-family: var(--base-font);
-      font-weight: 400;
-      font-size: 15px;
-    }
-    .man {
-      border-left: transparent;
-    }
-    .woman {
-      border-right: transparent;
+
+        cursor: pointer;
+        padding: 30px 0;
+        text-transform: uppercase;
+        font-family: var(--base-font);
+        font-weight: 400;
+        font-size: 15px;
+        background-color: black;
+        color: var(--green);
+        // border: none;
+        width: 100%;
+      }
+      .man {
+        border-left: transparent;
+      }
+      .woman {
+        border-right: transparent;
+      }
     }
   }
 }

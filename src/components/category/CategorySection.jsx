@@ -6,6 +6,7 @@ import { filter } from "../../db/filterDb";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleLeft, faAngleRight } from "@fortawesome/free-solid-svg-icons";
 import { MainContext } from "../../utils/MainContext";
+import { NavLink } from "react-router-dom";
 
 const CategorySection = () => {
   const {
@@ -23,11 +24,6 @@ const CategorySection = () => {
     totalItems,
     startIndex,
     endIndex,
-    grid,
-    handleCommonGrid,
-    handleSingle,
-    handleDual,
-    handleTriple,
   } = useContext(MainContext);
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "instant" });
@@ -59,10 +55,13 @@ const CategorySection = () => {
                         onMouseEnter={() => handleMouseEnter(index)}
                         onMouseLeave={handleMouseLeave}
                       >
+                        <NavLink to={'/shopdetail'}>
+
                         <img
                           src={hoveredIndex === index ? hoverImage : black}
                           alt=""
                         />
+                        </NavLink>
                       </div>
                       <div className="sale">22%</div>
                       <span className="name">GREEN FLUORESCENT CARGO</span>
