@@ -9,19 +9,23 @@
   .container {
     align-items: center;
     overflow: hidden;
-    .discoverbutton {
-      position: absolute;
-      bottom: 50%;
-      left: 50%;
-      transform: translate(-50%, 50%);
-      border: 2px solid black;
-      color: black;
-      font-family: var(--base-font);
-      text-transform: uppercase;
-      background-color: transparent;
-      height: 50px;
-      width: 180px;
-      letter-spacing: 0.1cap;
+    a{
+
+      .discoverbutton {
+        cursor: pointer;
+        position: absolute;
+        bottom: 50%;
+        left: 50%;
+        transform: translate(-50%, 50%);
+        border: 2px solid black;
+        color: black;
+        font-family: var(--base-font);
+        text-transform: uppercase;
+        background-color: transparent;
+        height: 50px;
+        width: 180px;
+        letter-spacing: 0.1cap;
+      }
     }
     .discoverimage {
       .first-image {

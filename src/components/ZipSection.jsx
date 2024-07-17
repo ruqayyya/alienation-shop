@@ -3,6 +3,7 @@ import gif from '../assets/images/zipGif.webp'
 import "aos/dist/aos.css";
 import AOS from "aos";
 import { useEffect } from "react";
+import { NavLink } from "react-router-dom";
 const ZipSection = () => {
   
   useEffect(() => {
@@ -22,7 +23,9 @@ const ZipSection = () => {
         </div>
         <div className="bottom-part">
           <div className="title" data-aos="fade-up" data-aos-duration="1100">back zip</div>
+          <NavLink to={'/categories'}>
           <button data-aos="fade-up"data-aos-duration="1200">you discover</button>
+          </NavLink>
         </div>
       </div>
     </section>

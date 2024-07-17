@@ -13,15 +13,11 @@ const GlobalContext = ({ children }) => {
   const [showOrder, setShowOrder] = useState(false);
   const [isFirstWhite, setIsFirstWhite] = useState(false);
   const [isSecondWhite, setIsSecondWhite] = useState(false);
-  const [grid, setGrid] = useState(false);
   const [dual, setDual] = useState(false);
   const [triple, setTriple] = useState(false);
   const [single, setSingle] = useState(false);
 
-  const toggleGrid = () => {
-    setGrid(!grid);
-    console.log("active");
-  };
+// CHANGE GRID TEMA
   const toggleFirstImage = () => {
     setIsFirstWhite(true);
     setIsSecondWhite(false);
@@ -35,32 +31,19 @@ const GlobalContext = ({ children }) => {
     setSingle(true);
     setDual(false);
     setTriple(false);
-
-    toggleGrid();
     toggleSecondImage();
   };
   const handleDual = () => {
     setDual(true);
     setTriple(false);
     setSingle(false);
-    toggleGrid();
     toggleFirstImage();
   };
   const handleTriple = () => {
     setTriple(true);
     setSingle(false);
     setDual(false);
-    toggleGrid();
     toggleSecondImage();
-  };
-  const handleCommonGrid = () => {
-    if (handleSingle) {
-      handleSingle();
-    } else if (handleDual) {
-      handleDual();
-    } else {
-      handleTriple();
-    }
   };
 
   // SHOW  SIDEBAR, CART, FILTER, ORDER FUNCTION
@@ -139,14 +122,12 @@ const GlobalContext = ({ children }) => {
     showFilter,
     toggleOrder,
     showOrder,
-    toggleGrid,
     toggleFirstImage,
     toggleSecondImage,
     isSecondWhite,
     isFirstWhite,
     handleSingle,
     handleTriple,
-    handleCommonGrid,
     dual,
     triple,
     single,

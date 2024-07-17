@@ -25,15 +25,18 @@
                    }
 
             }
-            .collectionButton{
-                border: none;
-                margin-bottom: 50px;
-                height: 56px;
-                width: 135px;
-                background-color: var(--green);
-                text-align: center;
-                text-transform: uppercase;
-                letter-spacing:0.2cap;
+            a{
+                .collectionButton{
+                    cursor: pointer;
+                    border: none;
+                    margin-bottom: 50px;
+                    height: 56px;
+                    width: 135px;
+                    background-color: var(--green);
+                    text-align: center;
+                    text-transform: uppercase;
+                    letter-spacing:0.2cap;
+                }
             }
         }
 
