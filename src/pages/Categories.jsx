@@ -28,8 +28,10 @@ const Categories = () => {
       {showOrder ? <OrderCart /> : null}
       <TopHeader />
       <CentralHeader />
-      <CategorySection />
-      <RecentlySection/>
+      <main>
+        <CategorySection />
+        <RecentlySection />
+      </main>
       <Footer />
     </>
   );

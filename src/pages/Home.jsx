@@ -37,8 +37,8 @@ const Home = () => {
         <BestSection/>
         <ZipSection/>
         <CollabrotionSection/>
-        <Footer/>
       </main>
+        <Footer/>
     </>
   );
 };

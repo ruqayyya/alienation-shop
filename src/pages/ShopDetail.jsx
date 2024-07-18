@@ -5,6 +5,7 @@ import DetailSection from "../components/shopDetail/DetailSection";
 import Footer from "../components/Footer";
 import RecentlySection from "../components/category/RecentlySection";
 import MeasuresSection from "../components/shopDetail/MeasuresSection";
+import AsymmetrikSection from "../components/shopDetail/AsymmetrikSection";
 
 const ShopDetail = () => {
   return (
@@ -13,9 +14,12 @@ const ShopDetail = () => {
         <TopHeader />
         <CentralHeader />
       </header>
-      <DetailSection />
-      <MeasuresSection/>
-      <RecentlySection />
+      <main>
+        <DetailSection />
+        <MeasuresSection />
+        <AsymmetrikSection/>
+        <RecentlySection />
+      </main>
       <Footer />
     </>
   );
