@@ -44,7 +44,7 @@ const CategorySection = () => {
               </ul>
             </aside>
             <div className="collection">
-            <div className={triple ? "triple-grid" : dual ? "dual-grid" : single ? "single-grid" : "dual-grid"}>
+            <div className={triple ? "triple-grid" : dual ? "dual-grid" : single ? "single-grid" : "triple-grid"}>
 
                 {Array.from(Array(totalItems).keys())
                   .slice(startIndex, endIndex)

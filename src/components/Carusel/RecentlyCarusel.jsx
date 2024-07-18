@@ -55,12 +55,13 @@ const RecentlyCarusel = () => {
           >
             <div>
               {" "}
-              <NavLink to={'/shopdetail'}>
-
-              <img
-                src={hoveredIndex === index ? hoverImage : black}
-                alt="black"
-              />
+              <NavLink to={"/shopdetail"}>
+                <img
+                  src={hoveredIndex === index ? hoverImage : black}
+                  alt="black"
+                >
+                  
+                </img>
               </NavLink>
               <div className="sale">-22%</div>
             </div>
