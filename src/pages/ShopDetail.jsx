@@ -8,6 +8,7 @@ import MeasuresSection from "../components/shopDetail/MeasuresSection";
 import AsymmetrikSection from "../components/shopDetail/AsymmetrikSection";
 import LogoSection from "../components/shopDetail/LogoSection";
 import FabricSection from "../components/shopDetail/FabricSection";
+import CompletedSection from "../components/shopDetail/CompletedSection";
 
 const ShopDetail = () => {
   return (
@@ -22,6 +23,7 @@ const ShopDetail = () => {
         <AsymmetrikSection/>
         <LogoSection/>
         <FabricSection/>
+        <CompletedSection/>
         <RecentlySection />
       </main>
       <Footer />
