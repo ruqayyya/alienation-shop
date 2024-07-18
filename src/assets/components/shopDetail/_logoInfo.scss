@@ -1,22 +1,33 @@
-.asymmetric-section {
-    margin-top: 30px;
+.logo-section {
+  // margin-top: 30px;
   .container {
     @media (max-width: 1000px) {
-        flex-direction: column;
+      flex-direction: column-reverse;
     }
-    .girl-img {
-        flex: 1;
+    .boy-img {
+      flex: 1;
       height: 100%;
       display: flex;
       flex-direction: column;
-      img {
+       img {
         width: 100%;
         height: 100%;
         object-fit: contain;
         flex-grow: 1;
       }
+      .boy-hoodie{
+        @media (max-width: 1000px) {
+           display: none;
+          }
+      }
+      .girl-hoodie{
+        display: none;
+        @media (max-width: 1000px) {
+            display: block;
+           }
+      }
     }
-    .asymmetric-part {
+    .logo-part {
       background-color: black;
       flex: 1;
       @include flex-container(column);
@@ -24,34 +35,17 @@
       align-items: center;
       @media (max-width: 1000px) {
         padding: 50px;
-    }
+      }
       div {
         padding: 0 30px;
         @include flex-container(column);
         justify-content: center;
         align-items: center;
-        title {
-          display: block;
-          text-align: center;
-          p {
-            font-family: var(--base-font);
-            color: white;
-            font-size: 20px;
-            font-weight: 700;
-          padding-bottom: 20px;
-
-            
-          }
-        }
         .text {
-          padding-bottom: 50px;
           font-family: var(--base-font);
           color: white;
           font-size: 20px;
-          @media (max-width: 1000px) {
-            text-align: center;
-            font-size: 15px;
-        }
+          line-height: 0.8cm;
         }
       }
     }
