@@ -1,5 +1,5 @@
 import React from "react";
-import tShirt from "../../assets/images/kynek.webp";
+import hoodie from "../../assets/images/hoodie.webp";
 
 const MeasuresSection = () => {
   return (
@@ -61,7 +61,7 @@ const MeasuresSection = () => {
           </div>
           <div className="right">
             <div>
-              <img src={tShirt} alt="product-image" />
+              <img src={hoodie} alt="product-image" />
             </div>
           </div>
         </div>

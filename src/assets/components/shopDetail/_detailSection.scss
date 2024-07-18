@@ -237,12 +237,91 @@
                 }
               }
             }
+            .product-detail{
+              display: none;
+              @media (max-width: 1000px) {
+                @include flex-container(column);
+              }
+
+
+              button {
+                align-items: center;
+                padding: 33px 0;
+                position: relative;
+                font-family: var(--base-font);
+                letter-spacing: 0.2cap;
+                height: 43px;
+                font-size: 15px;
+                color: white;
+                text-transform: uppercase;
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                background-color: var(--dark-gray);
+                border: none;
+                transition: 1s ease;
+                @media (max-width: 320px) {
+                  font-size: 13px;
+                  }
+                .toggle-icon::after {
+                  content: "";
+                  position: absolute;
+                  right: 1px;
+                  top: 30px;
+                  width: 12px;
+                  height: 1px;
+                  background-color: white;
+                }
+                .toggle-icon::before {
+                  content: "";
+                  position: absolute;
+                  top: 25px;
+                  right: 7px;
+                  height: 11px;
+                  width: 1px;
+                  background-color: white;
+                }
+                &.rotate .toggle-icon::after {
+                  transition: 0.5s ease;
+                  transform: rotate(180deg);
+                }
+              
+                &.rotate .toggle-icon::before {
+                  transition: 0.5s ease;
+                  transform: rotate(90deg);
+                }
+                &.reverse .toggle-icon::after {
+                  transition: 0.5s ease;
+                  transform: rotate(-90deg);
+                }
+              
+                &.reverse .toggle-icon::before {
+                  transition: 0.5s ease;
+                  transform: rotate(-90deg);
+                }
+              }
+              
+              .line {
+                width: 100%;
+                border: 1px solid var(--light-gray);
+              }
+              ul{
+                li{
+                  line-height: 0.8cm;
+                  list-style: inside;
+                  color: white;
+                  font-family: var(--base-font);
+                  font-size: 15px;
+                }
+              }
+            }
             .star-info {
               @include flex-container(column);
               justify-content: center;
               align-items: center;
               gap: 25px;
-              .star-logo {
+              @media (max-width: 1000px) {
+                display: none;
               }
               .star {
                 display: flex;
@@ -272,3 +351,6 @@
     }
   }
 }
+
+
+
