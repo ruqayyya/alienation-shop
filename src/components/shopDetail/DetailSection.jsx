@@ -12,6 +12,7 @@ import starLogo from "../../assets/images/trustpilot_logo.webp";
 import star from "../../assets/images/trustpilot_stars.png";
 import black from "../../assets/images/kynek.webp";
 import { detail } from "../../db/detailDb";
+import { NavLink } from "react-router-dom";
 
 const DetailSection = () => {
   const [selectedCategory, setSelecetedCategory] = useState(null);
@@ -48,7 +49,10 @@ const DetailSection = () => {
                     <span>Only 1 pieces left available</span>
                   </div>
                 </div>
+                <NavLink to={'/cart'}>
+
                 <button className="cart-button">add to cart</button>
+                </NavLink>
                 <div className="secure ">
                   <div className="secure-info row">
                     {" "}
