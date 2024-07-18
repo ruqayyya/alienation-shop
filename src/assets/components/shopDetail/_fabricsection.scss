@@ -1,10 +1,9 @@
-.asymmetric-section {
-  margin-top: 30px;
+.fabric-section {
   .container {
     @media (max-width: 1000px) {
       flex-direction: column;
     }
-    .girl-img {
+    .fabric-img {
       flex: 1;
       height: 100%;
       display: flex;
@@ -16,14 +15,16 @@
         flex-grow: 1;
       }
     }
-    .asymmetric-part {
-      background-color: black;
+    .fabric-part {
+      text-align: center;
+      background-color: var(--dark-gray);
       flex: 1;
       @include flex-container(column);
       justify-content: center;
       align-items: center;
       @media (max-width: 1000px) {
         padding: 50px;
+        background-color: black;
       }
       div {
         padding: 0 30px;

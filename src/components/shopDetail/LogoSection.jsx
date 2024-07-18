@@ -17,7 +17,11 @@ const LogoSection = () => {
         </div>
         <div className="boy-img">
           <img className="boy-hoodie" src={boyHoodie} alt="boy-hoodie" />
-          <img  className="girl-hoodie" src={secondgirlHoodies} alt="girl-hoodie" />
+          <img
+            className="girl-hoodie"
+            src={secondgirlHoodies}
+            alt="girl-hoodie"
+          />
         </div>
       </div>
     </section>
