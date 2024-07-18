@@ -141,13 +141,16 @@
                 }
               }
             }
-            .cart-button {
-              background-color: var(--green);
-              text-transform: uppercase;
-              font-weight: 700;
-              padding: 20px;
-              border: none;
-              cursor: pointer;
+            a{
+              .cart-button {
+                width: 100%;
+                padding: 20px;
+                background-color: var(--green);
+                text-transform: uppercase;
+                font-weight: 700;
+                border: none;
+                cursor: pointer;
+              }
             }
             .secure {
               .secure-info {
@@ -242,8 +245,6 @@
               @media (max-width: 1000px) {
                 @include flex-container(column);
               }
-
-
               button {
                 align-items: center;
                 padding: 33px 0;
