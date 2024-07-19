@@ -4,9 +4,10 @@ import { MainContext } from "../../utils/MainContext";
 import "aos/dist/aos.css";
 import AOS from "aos";
 import InnerCart from "./InnerCart";
+import { NavLink } from "react-router-dom";
 
 const SideCart = () => {
-  const {  toggleCart } = useContext(MainContext);
+  const { toggleCart } = useContext(MainContext);
 
   useEffect(() => {
     AOS.init({
@@ -32,7 +33,7 @@ const SideCart = () => {
             data-aos-duration="400"
           >
             <h2>CART</h2>
-            <img src={x} alt="x-icon" onClick={()=>toggleCart()} />
+            <img src={x} alt="x-icon" onClick={() => toggleCart()} />
             <span></span>
           </div>
         </div>
@@ -54,11 +55,13 @@ const SideCart = () => {
             </form> */}
             <p className="edit-order-note">edit order note</p>
             <p>Discounts and shipping costs calculated at checkout</p>
-            <button className="checkout row">
-              CHECKOUT
-              <span className="Button-dot"></span>
-              <span className="data-price">€509</span>
-            </button>
+            <NavLink to={'/Shop'}>
+              <button className="checkout row">
+                CHECKOUT
+                <span className="Button-dot"></span>
+                <span className="data-price">€509</span>
+              </button>
+            </NavLink>
           </div>
         </div>
       </div>

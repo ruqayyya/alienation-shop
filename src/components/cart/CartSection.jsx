@@ -2,6 +2,7 @@ import React from "react";
 import Hoodie from "../../assets/images/kynek.webp";
 import plus from "../../assets/images/plus.png";
 import minus from "../../assets/images/minus-sign.png";
+import { Link, NavLink } from "react-router-dom";
 const CartSection = () => {
   return (
     <section className="cart-section">
@@ -98,7 +99,9 @@ const CartSection = () => {
             <div className="total-container ">
               <span> total: €1,109</span>
               <p>Discounts and shipping costs calculated at checkout</p>
-              <button>checkout</button>
+              <Link to={'/Shop'}>
+                <button>checkout</button>
+              </Link>
             </div>
           </div>
         </div>

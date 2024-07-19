@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Cart from "./pages/Cart";
 import ShopDetail from "./pages/ShopDetail";
 import Categories from "./pages/Categories";
+import Shop from "./pages/Shop";
 
 const App = () => {
   useEffect(() => {
@@ -43,6 +44,7 @@ const App = () => {
           <Route path="/cart" element={<Cart/>}/>
           <Route path="/shopdetail" element={<ShopDetail/>}/>
           <Route path="/categories" element={<Categories/>}/>
+          <Route path="/Shop" element={<Shop/>}/>
         </Routes>
       </Router>
     </GlobalContext>
