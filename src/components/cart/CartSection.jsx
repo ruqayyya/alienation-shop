@@ -12,26 +12,28 @@ const CartSection = () => {
           <div class="cart-header-item amount">AMOUNT'</div>
           <div class="cart-header-item total">TOTAL</div>
         </div>
-        <span className="header-liner"></span>
+        <span className="header-liner top"></span>
         <div class="cart-item">
           <div class="cart-item-info row">
             <img src={Hoodie} alt="Holo Alien Hoodie" />
-            <div class="item-details">
-              <p>HOLO ALIEN HOODIE</p>
-              <p className="italic">S</p>
-              <p className="italic">ESTIMATED BETWEEN: JUL 14 AND JUL 17</p>
-              <p className="italic">€85</p>
-            </div>
-          </div>
-          <div class="cart-item-amount">
-            <div className="amount-container">
-              <div className="quantity">
-                {" "}
-                <img src={minus} alt="minus" />
-                <span>2</span>
-                <img src={plus} alt="plus" />
+            <div class="item-details row">
+              <div className="item">
+                <p>HOLO ALIEN HOODIE</p>
+                <p className="italic">S</p>
+                <p className="italic">ESTIMATED BETWEEN: JUL 14 AND JUL 17</p>
+                <p className="italic">€85</p>
               </div>
-              <span className="remove">REMOVE</span>
+              <div class="cart-item-amount">
+                <div className="amount-container ">
+                  <div className="quantity">
+                    {" "}
+                    <img src={minus} alt="minus" />
+                    <span>2</span>
+                    <img src={plus} alt="plus" />
+                  </div>
+                  <span className="remove">REMOVE</span>
+                </div>
+              </div>
             </div>
           </div>
           <div class="cart-item-total">€170</div>
@@ -39,22 +41,24 @@ const CartSection = () => {
         <div class="cart-item">
           <div class="cart-item-info row">
             <img src={Hoodie} alt="Holo Alien Hoodie" />
-            <div class="item-details">
-              <p>HOLO ALIEN HOODIE</p>
-              <p className="italic">S</p>
-              <p className="italic">ESTIMATED BETWEEN: JUL 14 AND JUL 17</p>
-              <p className="italic">€85</p>
-            </div>
-          </div>
-          <div class="cart-item-amount">
-            <div className="amount-container">
-              <div className="quantity">
-                {" "}
-                <img src={minus} alt="minus" />
-                <span>2</span>
-                <img src={plus} alt="plus" />
+            <div class="item-details row">
+              <div className="item">
+                <p>HOLO ALIEN HOODIE</p>
+                <p className="italic">S</p>
+                <p className="italic">ESTIMATED BETWEEN: JUL 14 AND JUL 17</p>
+                <p className="italic">€85</p>
               </div>
-              <span className="remove">REMOVE</span>
+              <div class="cart-item-amount">
+                <div className="amount-container ">
+                  <div className="quantity">
+                    {" "}
+                    <img src={minus} alt="minus" />
+                    <span>2</span>
+                    <img src={plus} alt="plus" />
+                  </div>
+                  <span className="remove">REMOVE</span>
+                </div>
+              </div>
             </div>
           </div>
           <div class="cart-item-total">€170</div>
@@ -62,22 +66,24 @@ const CartSection = () => {
         <div class="cart-item">
           <div class="cart-item-info row">
             <img src={Hoodie} alt="Holo Alien Hoodie" />
-            <div class="item-details">
-              <p>HOLO ALIEN HOODIE</p>
-              <p className="italic">S</p>
-              <p className="italic">ESTIMATED BETWEEN: JUL 14 AND JUL 17</p>
-              <p className="italic">€85</p>
-            </div>
-          </div>
-          <div class="cart-item-amount">
-            <div className="amount-container">
-              <div className="quantity">
-                {" "}
-                <img src={minus} alt="minus" />
-                <span>2</span>
-                <img src={plus} alt="plus" />
+            <div class="item-details row">
+              <div className="item">
+                <p>HOLO ALIEN HOODIE</p>
+                <p className="italic">S</p>
+                <p className="italic">ESTIMATED BETWEEN: JUL 14 AND JUL 17</p>
+                <p className="italic">€85</p>
               </div>
-              <span className="remove">REMOVE</span>
+              <div class="cart-item-amount">
+                <div className="amount-container ">
+                  <div className="quantity">
+                    {" "}
+                    <img src={minus} alt="minus" />
+                    <span>2</span>
+                    <img src={plus} alt="plus" />
+                  </div>
+                  <span className="remove">REMOVE</span>
+                </div>
+              </div>
             </div>
           </div>
           <div class="cart-item-total">€170</div>
