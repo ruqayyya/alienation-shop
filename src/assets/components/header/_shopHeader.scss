@@ -1,0 +1,21 @@
+.shop-header {
+  width: 100%;
+  .container {
+    .logo-name {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 23px 23px;
+        border-bottom: 1px solid var(--light-gray);
+        font-family: var(--base-font);
+        font-weight: 700;
+        font-size: 18px;
+        a {
+          color: white;
+        p {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

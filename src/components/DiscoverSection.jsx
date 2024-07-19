@@ -3,7 +3,7 @@ import discoverimage from "../assets/images/discoversection.webp";
 import secondimage from "../assets/images/holo_hoodies_homepage_moble_x800.webp";
 import "aos/dist/aos.css";
 import AOS from "aos";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 const DiscoverSection = () => {
   useEffect(() => {
     AOS.init({

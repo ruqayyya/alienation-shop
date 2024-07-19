@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 import black from "../../assets/images/glow_tee_dark_800x.webp";
 import hoverImage from "../../assets/images/kynek.webp";
 import { MainContext } from "../../utils/MainContext";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 const RecentlyCarusel = () => {
   const { hoveredIndex, handleMouseEnter, handleMouseLeave } =
     useContext(MainContext);
