@@ -1,6 +1,8 @@
 import React from "react";
 import paypal from "../../assets/images/paypalbuy.svg";
 import googlepay from "../../assets/images/light_gpay.svg";
+import Delivery from "./Delivery";
+import PayDetail from "./PayDetail";
 
 const LeftShop = () => {
   return (
@@ -36,31 +38,13 @@ const LeftShop = () => {
             </label>
           </form>
         </div>
-        <div className="delivery">
-          <p>Delivery</p>
-          <input type="text" placeholder="Country"/>
-          <div className="name-surname row">
-            <input type="text" placeholder="Nome/Name" />
-            <input type="text" placeholder="Cognome/Surname" />
-          </div>
-          <input type="text" placeholder="adress" />
-          <input type="text" placeholder="Apartment, suite, etc. (optional)" />
-          <div className="adress-info row">
-            <input type="number" placeholder="Codice postale/Zip Code" />
-            <input type="text" placeholder="Citta'/City" />
-            <input type="text" placeholder="Provincia" />
-          </div>
-          <form className="num">
-            <input type="text" placeholder="Phone" />
-            <label class="custom-checkbox">
-              <input type="checkbox" name="updates" />
-              <span>Save information for next time</span>
-            </label>
-          </form>
-          <span className="shipping">Shipping method</span>
-          <div className="metod">
-            Enter your shipping address to view available shipping methods.
-          </div>
+        <div className="delivery-part">
+          <Delivery />
+        </div>
+        <div className="cart-detail">
+          
+          <PayDetail/>
+          {/* <Delivery /> */}
         </div>
       </div>
     </div>

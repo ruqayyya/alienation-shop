@@ -1,0 +1,43 @@
+.delivery{
+    @include flex-container(column);
+      gap: 10px;
+    p {
+        font-family: var(--base-font);
+        font-size: 20px;
+        font-weight: 500;
+        color: white;
+      }
+      input {
+        border-radius: 5px;
+        outline: none;
+        border: 1px solid var(--light-gray);
+        background-color: var(--dark-gray);
+        padding: 15px 10px;
+        width: 100%;
+      }
+      .name-surname {
+        gap: 10px;
+      }
+      .adress-info {
+        gap: 10px;
+      }
+      .num {
+        @include flex-container(column);
+        gap: 10px;
+      }
+      .shipping {
+        font-family: var(--base-font);
+        font-size: 15px;
+        color: white;
+      }
+      .metod {
+        width: 100%;
+        padding: 17px 10px;
+        background-color: rgb(50, 50, 50);
+        border-radius: 5px;
+        color: var(--gray);
+        font-family: var(--base-font);
+        font-size: 13px;
+      }
+      
+}
