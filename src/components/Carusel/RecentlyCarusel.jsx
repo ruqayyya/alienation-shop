@@ -59,11 +59,9 @@ const RecentlyCarusel = () => {
                 <img
                   src={hoveredIndex === index ? hoverImage : black}
                   alt="black"
-                >
-                  
-                </img>
-              </NavLink>
+                ></img>
               <div className="sale">-22%</div>
+              </NavLink>
             </div>
             <div className="name">thunder tee</div>
             <div className="row">

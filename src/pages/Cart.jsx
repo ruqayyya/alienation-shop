@@ -14,14 +14,12 @@ const Cart = () => {
   return (
     <>
       <div
-        className={showSidebar || showCart ? "overlay" : null}
+        className={showSidebar ? "overlay" : null}
         onClick={toggleOverlay}
       ></div>
       {showSidebar ? <SidebarMenu /> : null}
-      {showCart ? <SideCart /> : null}
       <TopHeader />
       <CentralHeader />
-
       <main>
         <CartSection />
         <RecentlySection />
