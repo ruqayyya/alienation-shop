@@ -7,11 +7,20 @@
     border: 1px solid var(--light-gray);
     padding: 15px 10px;
     border-radius: 5px;
+    color: white;
   }
 
   h2 {
+    font-family: var(--base-font);
+    font-size: 20px;
     margin-bottom: 10px;
   }
+  .payment-text{
+    font-family: var(--base-font);
+    font-size: 13px;
+    margin-bottom: 10px;
+  }
+
   .payment-method {
     cursor: pointer;
     .first-dot {
@@ -66,6 +75,30 @@
       }
     }
   }
+  .button {
+    margin-top: 30px;
+    width: 100%;
+    .pay-button {
+      width: 100%;
+      padding: 15px 0;
+      background-color: var(--blue);
+      border-radius: 5px;
+
+      border: none;
+      img {
+        height: 30px;
+      }
+    }
+    .paga-button {
+      border: none;
+      border-radius: 5px;
+      width: 100%;
+      padding: 15px 0;
+      background-color: var(--green);
+      font-size: 25px;
+      font-family: var(--base-font);
+    }
+  }
   .payment {
     background-color: rgb(48, 48, 48);
     padding: 20px 10px;
@@ -81,6 +114,17 @@
           width: 100%;
         }
       }
+    }
+  }
+  .pay-open {
+    background-color: rgb(48, 48, 48);
+    border: 1px solid var(--light-gray);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    p {
+      text-align: center;
+      padding: 40px 20px;
     }
   }
 }

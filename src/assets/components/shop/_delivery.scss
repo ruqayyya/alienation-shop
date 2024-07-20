@@ -8,6 +8,7 @@
         color: white;
       }
       input {
+        color: white;
         border-radius: 5px;
         outline: none;
         border: 1px solid var(--light-gray);
@@ -24,20 +25,25 @@
       .num {
         @include flex-container(column);
         gap: 10px;
-      }
-      .shipping {
-        font-family: var(--base-font);
-        font-size: 15px;
-        color: white;
-      }
-      .metod {
-        width: 100%;
-        padding: 17px 10px;
-        background-color: rgb(50, 50, 50);
-        border-radius: 5px;
-        color: var(--gray);
-        font-family: var(--base-font);
-        font-size: 13px;
+        margin-bottom: 20px;
       }
       
+      
+}
+
+.shipping {
+  font-family: var(--base-font);
+  font-size: 15px;
+  color: white;
+}
+
+.metod {
+  margin-top: 20px;
+  width: 100%;
+  padding: 17px 10px;
+  background-color: rgb(50, 50, 50);
+  border-radius: 5px;
+  color: var(--gray);
+  font-family: var(--base-font);
+  font-size: 13px;
 }
