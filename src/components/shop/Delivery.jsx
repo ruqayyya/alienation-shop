@@ -23,10 +23,7 @@ const Delivery = () => {
           <span>Save information for next time</span>
         </label>
       </form>
-      <span className="shipping">Shipping method</span>
-      <div className="metod">
-        Enter your shipping address to view available shipping methods.
-      </div>
+      
     </div>
   );
 };

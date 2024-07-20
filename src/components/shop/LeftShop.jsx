@@ -40,10 +40,13 @@ const LeftShop = () => {
         </div>
         <div className="delivery-part">
           <Delivery />
+          <span className="shipping">Shipping method</span>
+          <div className="metod">
+            Enter your shipping address to view available shipping methods.
+          </div>
         </div>
         <div className="cart-detail">
-          
-          <PayDetail/>
+          <PayDetail />
           {/* <Delivery /> */}
         </div>
       </div>
