@@ -18,7 +18,7 @@ const Delivery = () => {
       </div>
       <form className="num">
         <input type="text" placeholder="Phone" />
-        <label class="custom-checkbox">
+        <label className="custom-checkbox">
           <input type="checkbox" name="updates" />
           <span>Save information for next time</span>
         </label>

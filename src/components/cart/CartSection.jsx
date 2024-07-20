@@ -8,23 +8,23 @@ const CartSection = () => {
     <section className="cart-section">
       <div className="container">
         <h1>CART</h1>
-        <div class="cart-header row">
-          <div class="cart-header-item articles">ARTICLES</div>
-          <div class="cart-header-item amount">AMOUNT'</div>
-          <div class="cart-header-item total">TOTAL</div>
+        <div className="cart-header row">
+          <div className="cart-header-item articles">ARTICLES</div>
+          <div className="cart-header-item amount">AMOUNT'</div>
+          <div className="cart-header-item total">TOTAL</div>
         </div>
         <span className="header-liner top"></span>
-        <div class="cart-item">
-          <div class="cart-item-info row">
+        <div className="cart-item">
+          <div className="cart-item-info row">
             <img src={Hoodie} alt="Holo Alien Hoodie" />
-            <div class="item-details row">
+            <div className="item-details row">
               <div className="item">
                 <p>HOLO ALIEN HOODIE</p>
                 <p className="italic">S</p>
                 <p className="italic">ESTIMATED BETWEEN: JUL 14 AND JUL 17</p>
                 <p className="italic">€85</p>
               </div>
-              <div class="cart-item-amount">
+              <div className="cart-item-amount">
                 <div className="amount-container ">
                   <div className="quantity">
                     {" "}
@@ -37,19 +37,19 @@ const CartSection = () => {
               </div>
             </div>
           </div>
-          <div class="cart-item-total">€170</div>
+          <div className="cart-item-total">€170</div>
         </div>
-        <div class="cart-item">
-          <div class="cart-item-info row">
+        <div className="cart-item">
+          <div className="cart-item-info row">
             <img src={Hoodie} alt="Holo Alien Hoodie" />
-            <div class="item-details row">
+            <div className="item-details row">
               <div className="item">
                 <p>HOLO ALIEN HOODIE</p>
                 <p className="italic">S</p>
                 <p className="italic">ESTIMATED BETWEEN: JUL 14 AND JUL 17</p>
                 <p className="italic">€85</p>
               </div>
-              <div class="cart-item-amount">
+              <div className="cart-item-amount">
                 <div className="amount-container ">
                   <div className="quantity">
                     {" "}
@@ -62,19 +62,19 @@ const CartSection = () => {
               </div>
             </div>
           </div>
-          <div class="cart-item-total">€170</div>
+          <div className="cart-item-total">€170</div>
         </div>
-        <div class="cart-item">
-          <div class="cart-item-info row">
+        <div className="cart-item">
+          <div className="cart-item-info row">
             <img src={Hoodie} alt="Holo Alien Hoodie" />
-            <div class="item-details row">
+            <div className="item-details row">
               <div className="item">
                 <p>HOLO ALIEN HOODIE</p>
                 <p className="italic">S</p>
                 <p className="italic">ESTIMATED BETWEEN: JUL 14 AND JUL 17</p>
                 <p className="italic">€85</p>
               </div>
-              <div class="cart-item-amount">
+              <div className="cart-item-amount">
                 <div className="amount-container ">
                   <div className="quantity">
                     {" "}
@@ -87,7 +87,7 @@ const CartSection = () => {
               </div>
             </div>
           </div>
-          <div class="cart-item-total">€170</div>
+          <div classname="cart-item-total">€170</div>
         </div>
         <span className="header-liner"></span>
         <div className="check-part">
