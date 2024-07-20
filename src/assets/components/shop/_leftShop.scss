@@ -1,95 +1,113 @@
-.left-shop {
-  flex-grow: 1;
-  width: 700px;
-  .container {
-    margin-left: 40px;
-    @include flex-container(column);
-    gap: 10px;
-    .payment-way {
-      margin-top: 30px;
+.left{
+  width: 100%;
+  .left-shop {
+    justify-content: flex-end;
+    display: flex;
+    padding-right: 30px;
+    padding-bottom: 50px;
+    padding-left: 15%;
+    flex-grow: 1;
+    width: 100%;
+    overflow-y: auto;
+      @media (max-width:1000px) {
+     padding: 0 100px 50px 100px;
+    } 
+    @media (max-width: 600px) {
+      padding: 0 20px 50px 20px;
+    }
+    .container {
       @include flex-container(column);
-      align-items: center;
-      gap: 20px;
-      .title {
-        color: var(--gray);
-        font-family: var(--base-font);
-        font-size: 13px;
-        font-weight: 500;
-      }
-      .button-container {
-        width: 100%;
-        display: flex;
-        flex: 1;
-        gap: 10px;
-        justify-content: center;
+      gap: 10px;
+      .payment-way {
+        margin-top: 30px;
+        @include flex-container(column);
         align-items: center;
-        button {
-          cursor: pointer;
-          padding: 10px;
-          border-radius: 5px;
-          border: none;
-          img {
-            height: 30px;
+        gap: 20px;
+        .title {
+          color: var(--gray);
+          font-family: var(--base-font);
+          font-size: 13px;
+          font-weight: 500;
+        }
+        .button-container {
+          width: 100%;
+          display: flex;
+          flex: 1;
+          gap: 10px;
+          justify-content: center;
+          align-items: center;
+          button {
+            display: flex;
+          justify-content: center;
+  
+            align-items: center;
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            img {
+              height: 25px;
+            }
+          }
+          .paypal {
+            width: 100%;
+            flex-grow: 1;
+            background-color: rgb(255, 196, 57);
+          }
+          .googlepay {
+            width: 100%;
+            flex-grow: 1;
+            background-color: white;
           }
         }
-        .paypal {
-          width: 100%;
-          flex-grow: 1;
-          background-color: rgb(255, 196, 57);
-        }
-        .googlepay {
-          width: 100%;
-          flex-grow: 1;
-          background-color: white;
-        }
-      }
-      .or-way {
-        gap: 10px;
-        align-items: center;
-        span {
-          width: 100%;
-          height: 1px;
-          background-color: var(--light-gray);
-        }
-        p {
-          text-transform: uppercase;
-          color: white;
-          font-family: var(--base-font);
-          color: var(--gray);
+        .or-way {
+          gap: 10px;
+          align-items: center;
+          span {
+            width: 100%;
+            height: 1px;
+            background-color: var(--light-gray);
+          }
+          p {
+            text-transform: uppercase;
+            color: white;
+            font-family: var(--base-font);
+            color: var(--gray);
+          }
         }
       }
-    }
-    .contact-part {
-      @include flex-container(column);
-      width: 100%;
-      gap: 10px;
-      .text-login {
-        font-family: var(--base-font);
-        text-transform: capitalize;
-        font-size: 20px;
-        font-weight: 500;
-        width: 100%;
-        color: white;
-        justify-content: space-between !important;
-        .login {
-          font-size: 12px;
-          cursor: pointer;
-          text-decoration: underline;
-        }
-      }
-      form {
+      .contact-part {
         @include flex-container(column);
+        width: 100%;
         gap: 10px;
-        input[type="text"] {
+        .text-login {
+          font-family: var(--base-font);
+          text-transform: capitalize;
+          font-size: 20px;
+          font-weight: 500;
+          width: 100%;
           color: white;
-          border-radius: 5px;
-          border: 1px solid var(--light-gray);
-          background-color: var(--dark-gray);
-          padding: 15px 10px;
+          justify-content: space-between !important;
+          .login {
+            font-size: 12px;
+            cursor: pointer;
+            text-decoration: underline;
+          }
+        }
+        form {
+          @include flex-container(column);
+          gap: 10px;
+          input[type="text"] {
+            color: white;
+            border-radius: 5px;
+            border: 1px solid var(--light-gray);
+            background-color: var(--dark-gray);
+            padding: 15px 10px;
+          }
         }
       }
+  
     }
-
   }
 }
 

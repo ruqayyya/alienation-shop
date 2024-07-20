@@ -32,7 +32,7 @@ const LeftShop = () => {
           </div>
           <form>
             <input type="text" placeholder="Email" />
-            <label class="custom-checkbox">
+            <label className="custom-checkbox">
               <input type="checkbox" name="updates" />
               <span>Update me on offers and news</span>
             </label>
@@ -47,7 +47,6 @@ const LeftShop = () => {
         </div>
         <div className="cart-detail">
           <PayDetail />
-          {/* <Delivery /> */}
         </div>
       </div>
     </div>

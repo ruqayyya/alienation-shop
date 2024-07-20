@@ -3,7 +3,7 @@
   border-radius: 10px;
   width: 100%;
   input {
-    background-color: rgb(48, 48, 48);
+    background-color: var(--back-gray);
     border: 1px solid var(--light-gray);
     padding: 15px 10px;
     border-radius: 5px;
@@ -100,12 +100,12 @@
     }
   }
   .payment {
-    background-color: rgb(48, 48, 48);
+    background-color: var(--back-gray);
     padding: 20px 10px;
     .card-details {
       @include flex-container(column);
       gap: 10px;
-      background-color: rgb(48, 48, 48);
+      background-color: var(--back-gray);
       .expiry-cvv {
         gap: 15px;
         display: flex;
@@ -117,7 +117,7 @@
     }
   }
   .pay-open {
-    background-color: rgb(48, 48, 48);
+    background-color: var(--back-gray);
     border: 1px solid var(--light-gray);
     display: flex;
     justify-content: center;
