@@ -10,6 +10,7 @@ import Categories from "./pages/Categories";
 import Shop from "./pages/Shop";
 import LoginPage from "./pages/LoginPage";
 import SignPage from "./pages/SignPage";
+import Forget from "./pages/Forget";
 
 const App = () => {
   useEffect(() => {
@@ -49,6 +50,7 @@ const App = () => {
           <Route path="/Shop" element={<Shop/>}/>
           <Route path="/login" element={<LoginPage/>}/>
           <Route path="/sign" element={<SignPage/>}/>
+          <Route path="/forget" element={<Forget/>}/>
         </Routes>
       </Router>
     </GlobalContext>

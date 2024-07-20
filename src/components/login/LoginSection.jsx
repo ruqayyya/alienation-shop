@@ -12,13 +12,15 @@ const LoginSection = () => {
             <input type="email" placeholder="E-mail" />
             <div className="password-container">
               <input type="password" placeholder="Password" />
+              <NavLink to={'/forget'}>
               <p className='forget'>Forgot password?</p>
+              </NavLink>
             </div>
             <button type="submit">LOGIN</button>
           </form>
           <p className="create-account row">
             Don't have an account?{" "}
-            <NavLink>
+            <NavLink to={'/sign'}>
               <p>Create one</p>
             </NavLink>
           </p>
