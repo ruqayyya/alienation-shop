@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 const LoginSection = () => {
   return (
-    <section className="login">
+    <section className="login-page">
       <div className="container">
         <div className="login-part">
           <h1 className="login-tag">Login</h1>
@@ -13,7 +13,7 @@ const LoginSection = () => {
             <div className="password-container">
               <input type="password" placeholder="Password" />
               <NavLink to={'/forget'}>
-              <p className='forget'>Forgot password?</p>
+              <p className='forget-text'>Forgot password?</p>
               </NavLink>
             </div>
             <button type="submit">LOGIN</button>

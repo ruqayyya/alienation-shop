@@ -25,7 +25,7 @@ const CentralHeader = () => {
         <Navbar />
         <div className="image">
           <div className="icon">
-            <img className="user" src={user} alt="user" />
+            <NavLink to={'/login'}><img className="user" src={user} alt="user" /></NavLink>
           </div>
           <div className="icon">
             <img src={search} alt="search" />

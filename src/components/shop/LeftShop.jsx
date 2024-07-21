@@ -3,6 +3,7 @@ import paypal from "../../assets/images/paypalbuy.svg";
 import googlepay from "../../assets/images/light_gpay.svg";
 import Delivery from "./Delivery";
 import PayDetail from "./PayDetail";
+import { NavLink } from "react-router-dom";
 
 const LeftShop = () => {
   return (
@@ -28,10 +29,10 @@ const LeftShop = () => {
         <div className="contact-part">
           <div className="text-login row">
             <span>contact information</span>
-            <span className="login">Log in</span>
+            <NavLink to={'/login'}><span className="login">Log in</span></NavLink>
           </div>
           <form>
-            <input type="text" placeholder="Email" />
+            <input type="gmail" placeholder="Email" />
             <label className="custom-checkbox">
               <input type="checkbox" name="updates" />
               <span>Update me on offers and news</span>
