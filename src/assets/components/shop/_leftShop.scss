@@ -1,4 +1,4 @@
-.left{
+.left {
   width: 100%;
   .left-shop {
     justify-content: flex-end;
@@ -9,9 +9,9 @@
     flex-grow: 1;
     width: 100%;
     overflow-y: auto;
-      @media (max-width:1000px) {
-     padding: 0 100px 50px 100px;
-    } 
+    @media (max-width: 1000px) {
+      padding: 0 100px 50px 100px;
+    }
     @media (max-width: 600px) {
       padding: 0 20px 50px 20px;
     }
@@ -38,8 +38,8 @@
           align-items: center;
           button {
             display: flex;
-          justify-content: center;
-  
+            justify-content: center;
+
             align-items: center;
             cursor: pointer;
             padding: 10px;
@@ -89,6 +89,8 @@
           color: white;
           justify-content: space-between !important;
           .login {
+            color: white;
+
             font-size: 12px;
             cursor: pointer;
             text-decoration: underline;
@@ -97,7 +99,8 @@
         form {
           @include flex-container(column);
           gap: 10px;
-          input[type="text"] {
+          input[type="text"],
+          input[type="gmail"] {
             color: white;
             border-radius: 5px;
             border: 1px solid var(--light-gray);
@@ -106,7 +109,6 @@
           }
         }
       }
-  
     }
   }
 }
