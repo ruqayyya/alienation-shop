@@ -19,7 +19,7 @@ const ShopDetail = () => {
       </header>
       <main>
         <DetailSection />
-        <MeasuresSection />
+        <MeasuresSection title={'GREEN FLUORESCENT CARGO'} details={'Cargo pants with fluorescent side bands featuring two additional pockets above the knees, one of which features the Alienation logo sewn on. Perfect to match with the Alien Hoodie.'} />
         <AsymmetrikSection/>
         <LogoSection/>
         <FabricSection/>

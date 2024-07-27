@@ -90,7 +90,7 @@ const PayDetail = () => {
           </div>
           <div className="text-part row">
             <div className="text">
-              <span>paypal</span>
+              <span>Paypal</span>
             </div>
             <div className="icon">
               <div className="pay-img">

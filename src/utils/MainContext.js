@@ -1,4 +1,5 @@
-import { createContext, useState } from "react";
+import axios from "axios";
+import { createContext, useEffect, useState } from "react";
 export const MainContext = createContext();
 
 const GlobalContext = ({ children }) => {
@@ -16,8 +17,9 @@ const GlobalContext = ({ children }) => {
   const [dual, setDual] = useState(false);
   const [triple, setTriple] = useState(false);
   const [single, setSingle] = useState(false);
+  const [countries, setCountries] = useState([]);
 
-// CHANGE GRID TEMA
+  // CHANGE GRID TEMA
   const toggleFirstImage = () => {
     setIsFirstWhite(true);
     setIsSecondWhite(false);
@@ -98,6 +100,8 @@ const GlobalContext = ({ children }) => {
       setCurrentPage(currentPage + 1);
     }
   };
+
+
 
   const globalData = {
     toggleSidebar,

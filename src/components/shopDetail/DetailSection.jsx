@@ -27,10 +27,18 @@ const DetailSection = () => {
                 <img src={black} alt="detail-hero-img" />
               </div>
               <div className="images row">
-                <img src={black} alt="detail-img" />
-                <img src={black} alt="detail-img" />
-                <img src={black} alt="detail-img" />
-                <img src={black} alt="detail-img" />
+                <div className="single-img">
+                  <img src={black} alt="detail-img" />
+                </div>
+                <div className="single-img">
+                  <img src={black} alt="detail-img" />
+                </div>
+                <div className="single-img">
+                  <img src={black} alt="detail-img" />
+                </div>
+                <div className="single-img">
+                  <img src={black} alt="detail-img" />
+                </div>
               </div>
             </div>
             <div className="clothes-detail">
@@ -49,9 +57,8 @@ const DetailSection = () => {
                     <span>Only 1 pieces left available</span>
                   </div>
                 </div>
-                <NavLink to={'/cart'}>
-
-                <button className="cart-button">add to cart</button>
+                <NavLink to={"/cart"}>
+                  <button className="cart-button">add to cart</button>
                 </NavLink>
                 <div className="secure ">
                   <div className="secure-info row">
@@ -148,13 +155,11 @@ const DetailSection = () => {
                           <span className="toggle-icon"></span>
                         )}
                       </button>
-                      <ul >
+                      <ul>
                         {selectedCategory &&
                           selectedCategory?.id === item.id &&
                           selectedCategory?.subdetails?.map((subs) => (
-                            <li key={subs.id}>
-                              {subs.title}
-                            </li>
+                            <li key={subs.id}>{subs.title}</li>
                           ))}
                       </ul>
                       <span className="line"></span>
