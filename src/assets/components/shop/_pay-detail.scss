@@ -2,12 +2,29 @@
   color: white;
   border-radius: 10px;
   width: 100%;
-  input {
+  input, select {
     background-color: var(--back-gray);
     border: 1px solid var(--light-gray);
     padding: 15px 10px;
     border-radius: 5px;
-    color: white;
+    color: gray;
+  }
+  .react-tel-input {
+    border-radius: 5px;
+    .form-control {
+      width: 100% !important;
+      height: 45px;
+      background-color: var(--back-gray);
+      border: 1px solid var(--light-gray);
+      color: gray;
+    }
+    .flag-dropdown{
+      background-color: var(--back-gray);
+      border: 1px solid var(--light-gray);
+    }
+    .selected-flag{
+      background-color: var(--back-gray) !important;
+    }
   }
 
   h2 {
@@ -15,7 +32,7 @@
     font-size: 20px;
     margin-bottom: 10px;
   }
-  .payment-text{
+  .payment-text {
     font-family: var(--base-font);
     font-size: 13px;
     margin-bottom: 10px;
@@ -83,6 +100,7 @@
       padding: 15px 0;
       background-color: var(--blue);
       border-radius: 5px;
+      cursor: pointer;
 
       border: none;
       img {
@@ -97,6 +115,7 @@
       background-color: var(--green);
       font-size: 25px;
       font-family: var(--base-font);
+      cursor: pointer;
     }
   }
   .payment {
@@ -122,6 +141,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
     p {
       text-align: center;
       padding: 40px 20px;

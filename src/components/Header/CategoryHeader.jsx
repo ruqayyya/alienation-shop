@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import dual_grid_gray from "../../assets/images/visualization (1).png";
 import square from "../../assets/images/black-square.png";
 import triple_grid_gray from "../../assets/images/grid (1).png";
@@ -23,7 +23,6 @@ const CategoryHeader = () => {
   const toggleDropbutton = () => {
     setIsDropdownOpen(!isDropdownOpen);
   };
-
   const handleButtonClick = () => {
     if (window.innerWidth <= 1066) {
       toggleOrder();
@@ -67,7 +66,6 @@ const CategoryHeader = () => {
             filters
           </button>
         </div>
-
         <span className="middle-liner"></span>
         <div className="grid closed row">
           <img

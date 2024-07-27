@@ -1,7 +1,7 @@
 import React from "react";
 import hoodie from "../../assets/images/hoodie.webp";
 
-const MeasuresSection = () => {
+const MeasuresSection = ({title,details}) => {
   return (
     <section className="measures-section">
       <div className="container ">
@@ -13,16 +13,12 @@ const MeasuresSection = () => {
           <div className="left">
             <div className="product-info">
               <div className="title">
-                <p>BLOCK LAYER HOODIE</p>
+                <p>{title}</p>
               </div>
               <div className="about">
                 <p className="first-text">
-                  {" "}
-                  <strong>Avant-garde Design</strong> Immerse yourself in a
-                  futuristic vision with our black sweatshirt, embellished with
-                  asymmetric layers in bright shades of gray and fuchsia. These
-                  inserts are strategically positioned to create a dynamic and
-                  original visual effect.
+                  <strong>DESCRIPTION: </strong>
+                  {details}
                 </p>
                 <p className="second-text">
                   “Alienation” logo sewn on the chest.
