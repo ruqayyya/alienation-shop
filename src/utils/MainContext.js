@@ -9,7 +9,7 @@ const GlobalContext = ({ children }) => {
   const [closeOverlay, setCloseOverlay] = useState(false);
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const [loading, setLoading] = useState(true);
-  const [currentPage, setCurrentPage] = useState(1);
+  // const [currentPage, setCurrentPage] = useState(1);
   const [showFilter, setShowFilter] = useState(false);
   const [showOrder, setShowOrder] = useState(false);
   const [isFirstWhite, setIsFirstWhite] = useState(false);
@@ -18,6 +18,8 @@ const GlobalContext = ({ children }) => {
   const [triple, setTriple] = useState(false);
   const [single, setSingle] = useState(false);
   const [countries, setCountries] = useState([]);
+  const [products, setProducts] = useState([]);
+
 
   // CHANGE GRID TEMA
   const toggleFirstImage = () => {
@@ -80,27 +82,21 @@ const GlobalContext = ({ children }) => {
     setHoveredIndex(null);
   };
 
-  // PAGINATION
-  const ITEMS_PER_PAGE = 20;
-  const totalItems = 70;
-  const totalPages = Math.ceil(totalItems / ITEMS_PER_PAGE);
-  const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
-  const endIndex = startIndex + ITEMS_PER_PAGE;
 
-  const handlePageChange = (page) => {
-    setCurrentPage(page);
-  };
-  const prevPage = () => {
-    if (currentPage > 1) {
-      setCurrentPage(currentPage - 1);
+
+  const getProduct = async () => {
+    try {
+      const res = await axios
+        .get(process.env.REACT_APP_ALL_PRODUCTS)
+        .then((res) => res.data);
+      setProducts(res);
+    } catch (error) {
+      console.log(error);
     }
   };
-  const nextPage = () => {
-    if (currentPage < totalPages) {
-      setCurrentPage(currentPage + 1);
-    }
-  };
-
+  useEffect(() => {
+    getProduct();
+  }, [setProducts]);
 
 
   const globalData = {
@@ -114,14 +110,6 @@ const GlobalContext = ({ children }) => {
     toggleCart,
     showCart,
     toggleOverlay,
-    nextPage,
-    prevPage,
-    handlePageChange,
-    currentPage,
-    totalPages,
-    endIndex,
-    startIndex,
-    totalItems,
     toggleFilter,
     showFilter,
     toggleOrder,
@@ -136,6 +124,7 @@ const GlobalContext = ({ children }) => {
     triple,
     single,
     handleDual,
+    products
   };
   return (
     <MainContext.Provider value={globalData}>{children}</MainContext.Provider>

@@ -32,7 +32,7 @@ const MeasuresSection = ({title,details}) => {
                   retaining its shape and color wash after wash.{" "}
                 </p>
                 <div className="product-detail">
-                  <ul >
+                  <ul>
                     <li className="detail-item">100% Cotton</li>
                     <li className="detail-item">
                       Distressed effect with raw cut
@@ -55,7 +55,7 @@ const MeasuresSection = ({title,details}) => {
               </div>
             </div>
           </div>
-          <div className="right">
+          <div className="right-img">
             <div>
               <img src={hoodie} alt="product-image" />
             </div>

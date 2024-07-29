@@ -44,13 +44,13 @@ const App = () => {
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/cart" element={<Cart/>}/>
-          <Route path="/shopdetail" element={<ShopDetail/>}/>
-          <Route path="/categories" element={<Categories/>}/>
-          <Route path="/Shop" element={<Shop/>}/>
-          <Route path="/login" element={<LoginPage/>}/>
-          <Route path="/sign" element={<SignPage/>}/>
-          <Route path="/forget" element={<Forget/>}/>
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/shopdetail" element={<ShopDetail />} />
+          <Route path="/categories" element={<Categories />} />
+          <Route path="/Shop" element={<Shop />} />
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/sign" element={<SignPage />} />
+          <Route path="/forget" element={<Forget />} />
         </Routes>
       </Router>
     </GlobalContext>
