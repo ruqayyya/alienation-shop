@@ -11,7 +11,7 @@ import OrderCart from "../components/category/OrderCart";
 import RecentlySection from "../components/category/RecentlySection";
 
 const Categories = () => {
-  const { showSidebar, showCart, toggleOverlay, showFilter, showOrder } =
+  const { showSidebar, showCart, toggleOverlay, showFilter, showOrder, products } =
     useContext(MainContext);
 
   return (
@@ -29,7 +29,7 @@ const Categories = () => {
       <TopHeader />
       <CentralHeader />
       <main>
-        <CategorySection />
+        <CategorySection data={products} />
         <RecentlySection />
       </main>
       <Footer />

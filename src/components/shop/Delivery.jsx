@@ -1,12 +1,12 @@
 import React, { useContext, useEffect, useState } from "react";
 import { MainContext } from "../../utils/MainContext";
 import axios from "axios";
-import PhoneInput from 'react-phone-input-2'
-import 'react-phone-input-2/lib/style.css'
+import PhoneInput from "react-phone-input-2";
+import "react-phone-input-2/lib/style.css";
 
 const Delivery = () => {
   const [countries, setCountries] = useState([]);
-  const [phone, setPhone] = useState('');
+  const [phone, setPhone] = useState("");
 
   useEffect(() => {
     const getCounties = async () => {
@@ -32,16 +32,23 @@ const Delivery = () => {
         ))}
       </select>
       <div className="name-surname row">
-        <input type="text" placeholder="Nome/Name" />
-        <input type="text" placeholder="Cognome/Surname" />
+        <input
+          type="text"
+          placeholder="Nome/Name "
+          required
+          pattern="^[a-zA-Z\s]+$"
+          title="Name should only contain letters and spaces."
+        />
+        <input type="text" placeholder="Cognome/Surname" required />
       </div>
-      <input type="text" placeholder="adress" />
+      <input type="text" placeholder="adress" required />
       <input type="text" placeholder="Apartment, suite, etc. (optional)" />
       <div className="adress-info row">
-        <input type="text" placeholder="Citta'/City" />
+        <input type="text" placeholder="Citta'/City" required />
       </div>
       <form className="num">
         <PhoneInput
+          required
           country={"az"}
           value={phone}
           onChange={(value) => setPhone(value)}

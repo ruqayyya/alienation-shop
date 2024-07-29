@@ -9,7 +9,7 @@ const BestSection = () => {
         <div className="best">
           <span className="title">bestseller</span>
           <div className="best-slider">
-            <BestSellerCarusel />
+            <BestSellerCarusel   />
           </div>
           <NavLink to={'/categories'}>
           <button className="bestButton">view all products</button>

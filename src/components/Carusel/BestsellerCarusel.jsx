@@ -62,6 +62,7 @@ function BestSellerCarusel() {
                   alt="black"
                 />
               </NavLink>
+              
               <div className="sale">-22%</div>
             </div>
           </div>
