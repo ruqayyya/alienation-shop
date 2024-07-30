@@ -7,7 +7,7 @@ import hoverImage from "../../assets/images/kynek.webp";
 import { MainContext } from "../../utils/MainContext";
 import { Link, NavLink } from "react-router-dom";
 const RecentlyCarusel = () => {
-  const { hoveredIndex, handleMouseEnter, handleMouseLeave } =
+  const { hoveredIndex, handleMouseEnter, handleMouseLeave, products } =
     useContext(MainContext);
 
   const settings = {
@@ -46,9 +46,9 @@ const RecentlyCarusel = () => {
   return (
     <div className="slider-container">
       <Slider {...settings}>
-        {[...Array(8)].map((_, index) => (
+        {products.map((item, index) => (
           <div
-            key={index}
+            key={item.id}
             className="carousel-item"
             onMouseEnter={() => handleMouseEnter(index)}
             onMouseLeave={handleMouseLeave}
@@ -57,16 +57,30 @@ const RecentlyCarusel = () => {
               {" "}
               <NavLink to={"/shopdetail"}>
                 <img
-                  src={hoveredIndex === index ? hoverImage : black}
-                  alt="black"
+                  src={
+                    hoveredIndex === index
+                      ? hoverImage
+                      : `${process.env.REACT_APP_BASE_URL}/${item.productImage}`
+                  }
+                  alt={item.name}
                 ></img>
-              <div className="sale">-22%</div>
+                {item.old_price > 0 && (
+                  <div className="sale">
+                    -
+                    {Math.round(
+                      ((item.old_price - item.price) / item.old_price) * 100
+                    )}
+                    %
+                  </div>
+                )}
               </NavLink>
             </div>
-            <div className="name">thunder tee</div>
+            <div className="name">{item.name}</div>
             <div className="row">
-              <span className="price">€76</span>
-              <span className="sale-price">€76</span>
+              <span className="price">€{item.price}</span>
+              {item.old_price > 0 && (
+                <span className="sale-price">€{item.old_price}</span>
+              )}
             </div>
           </div>
         ))}
