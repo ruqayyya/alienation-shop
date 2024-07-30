@@ -2,13 +2,12 @@ import React, { useContext } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import black from "../../assets/images/glow_tee_dark_800x.webp";
 import hoverImage from "../../assets/images/kynek.webp";
 import { MainContext } from "../../utils/MainContext";
 import { NavLink } from "react-router-dom";
 
 function CollectionCarousel() {
-  const { hoveredIndex, handleMouseEnter, handleMouseLeave } =
+  const { hoveredIndex, handleMouseEnter, handleMouseLeave, products } =
     useContext(MainContext);
 
   const settings = {
@@ -47,7 +46,7 @@ function CollectionCarousel() {
   return (
     <div className="slider-container">
       <Slider {...settings}>
-        {[...Array(8)].map((_, index) => (
+        {products.map((item, index) => (
           <div
             key={index}
             className="carousel-item"
@@ -58,14 +57,22 @@ function CollectionCarousel() {
               {" "}
               <NavLink to={"/shopdetail"}>
                 <img
-                  src={hoveredIndex === index ? hoverImage : black}
-                  alt="black"
+                  src={hoveredIndex === index ? hoverImage :  `${process.env.REACT_APP_BASE_URL}/${item.productImage}`}
+                  alt={item.name}
                 />
               </NavLink>
-              <div className="sale">-22%</div>
+              {item.old_price > 0 && (
+                  <div className="sale">
+                    -
+                    {Math.round(
+                      ((item.old_price - item.price) / item.old_price) * 100
+                    )}
+                    %
+                  </div>
+                )}
             </div>
-            <div className="name">thunder tee</div>
-            <div className="price">€54</div>
+            <div className="name">{item.name}</div>
+            <div className="price">€{item.price}</div>
           </div>
         ))}
       </Slider>

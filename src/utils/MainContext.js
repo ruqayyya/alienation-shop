@@ -20,7 +20,6 @@ const GlobalContext = ({ children }) => {
   const [countries, setCountries] = useState([]);
   const [products, setProducts] = useState([]);
 
-
   // CHANGE GRID TEMA
   const toggleFirstImage = () => {
     setIsFirstWhite(true);
@@ -82,22 +81,22 @@ const GlobalContext = ({ children }) => {
     setHoveredIndex(null);
   };
 
-
-
+  // DATA
+  
   const getProduct = async () => {
     try {
       const res = await axios
-        .get(process.env.REACT_APP_ALL_PRODUCTS)
+        .get(process.env.REACT_APP_ALL)
         .then((res) => res.data);
       setProducts(res);
     } catch (error) {
       console.log(error);
     }
   };
+
   useEffect(() => {
     getProduct();
-  }, [setProducts]);
-
+  }, []);
 
   const globalData = {
     toggleSidebar,
@@ -124,7 +123,7 @@ const GlobalContext = ({ children }) => {
     triple,
     single,
     handleDual,
-    products
+    products,
   };
   return (
     <MainContext.Provider value={globalData}>{children}</MainContext.Provider>

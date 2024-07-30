@@ -8,7 +8,7 @@ import { MainContext } from "../../utils/MainContext";
 import { NavLink } from "react-router-dom";
 
 function BestSellerCarusel() {
-  const { hoveredIndex, handleMouseEnter, handleMouseLeave } =
+  const { hoveredIndex, handleMouseEnter, handleMouseLeave, products } =
     useContext(MainContext);
 
   const settings = {
@@ -47,7 +47,7 @@ function BestSellerCarusel() {
   return (
     <div className="slider-container">
       <Slider {...settings}>
-        {[...Array(8)].map((_, index) => (
+        {products.map((item, index) => (
           <div
             key={index}
             className="carousel-item"
@@ -58,12 +58,15 @@ function BestSellerCarusel() {
               {" "}
               <NavLink to={"/shopdetail"}>
                 <img
-                  src={hoveredIndex === index ? hoverImage : black}
-                  alt="black"
+                  src={
+                    hoveredIndex === index
+                      ? hoverImage
+                      : `${process.env.REACT_APP_BASE_URL}/${item.productImage}`
+                  }
+                  alt={item.name}
                 />
               </NavLink>
-              
-              <div className="sale">-22%</div>
+              {item.old_price > 0 && <div className="sale">-{Math.round(((item.old_price - item.price) / item.old_price) * 100)}%</div>}
             </div>
           </div>
         ))}
