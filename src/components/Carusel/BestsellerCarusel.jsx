@@ -56,7 +56,6 @@ function BestSellerCarusel() {
           >
             <div>
               {" "}
-              <NavLink to={"/shopdetail"}>
                 <img
                   src={
                     hoveredIndex === index
@@ -65,7 +64,6 @@ function BestSellerCarusel() {
                   }
                   alt={item.name}
                 />
-              </NavLink>
               {item.old_price > 0 && <div className="sale">-{Math.round(((item.old_price - item.price) / item.old_price) * 100)}%</div>}
             </div>
           </div>

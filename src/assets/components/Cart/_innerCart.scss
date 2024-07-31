@@ -7,6 +7,7 @@
       padding: 30px;
       @include flex-container(column);
       gap: 60px;
+
       .clothes {
         gap: 10px;
         .clothes-img {

@@ -55,12 +55,10 @@ function CollectionCarousel() {
           >
             <div>
               {" "}
-              <NavLink to={"/shopdetail"}>
                 <img
                   src={hoveredIndex === index ? hoverImage :  `${process.env.REACT_APP_BASE_URL}/${item.productImage}`}
                   alt={item.name}
                 />
-              </NavLink>
               {item.old_price > 0 && (
                   <div className="sale">
                     -

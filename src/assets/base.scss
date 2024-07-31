@@ -15,6 +15,16 @@
     width: 100%;
     height: 100%;
 }
+.empty{
+  padding: 100px 20px;
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+  color: white;
+  letter-spacing: 0.2cap;
+  text-transform: uppercase;
+  font-family: var(--base-font);
+}
 
 :root{
     --green:rgb(119,255,0);

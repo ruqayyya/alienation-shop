@@ -7,7 +7,7 @@ import InnerCart from "./InnerCart";
 import { NavLink } from "react-router-dom";
 
 const SideCart = () => {
-  const { toggleCart } = useContext(MainContext);
+  const { toggleCart,totalPrice } = useContext(MainContext);
 
   useEffect(() => {
     AOS.init({
@@ -59,7 +59,7 @@ const SideCart = () => {
               <button className="checkout row">
                 CHECKOUT
                 <span className="Button-dot"></span>
-                <span className="data-price">€509</span>
+                <span className="data-price">€{totalPrice}</span>
               </button>
             </NavLink>
           </div>

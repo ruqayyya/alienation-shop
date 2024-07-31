@@ -1,281 +1,34 @@
-import React from "react";
-import closhed from "../../assets/images/kynek.webp";
+import React, { useContext } from "react";
+import { MainContext } from "../../utils/MainContext";
 
 const RightShop = () => {
+    
+    const { cartList, totalPrice } = useContext(MainContext);
   return (
     <div className="right-part left">
       <div className="container">
         <div className="selected-clothes">
-          <div className="clothes-info row">
+          {cartList.map(item=>(
+            <div key={item.id} className="clothes-info row">
             <div className="image">
-              <img src={closhed} alt="" />
-              <div className="quantity">2</div>
+              <img src={`${process.env.REACT_APP_BASE_URL}/${item.productImage}`} alt={item.name} />
+              <div className="quantity">{item.quantity}</div>
             </div>
             <div className="info row">
               <div className="product-info">
-                <span className="name">Buckle Black Cargo</span>
+                <span className="name">{item.name}</span>
                 <span className="size">M</span>
                 <span className="date">
                   Estimated between: Jul 14 and Jul 17
                 </span>
               </div>
               <div className="common-price">
-                <span className="price">€84.00</span>
+                <span className="price">€{item.quantity * item.price}</span>
               </div>
             </div>
           </div>
-          <div className="clothes-info row">
-            <div className="image">
-              <img src={closhed} alt="" />
-              <div className="quantity">2</div>
-            </div>
-            <div className="info row">
-              <div className="product-info">
-                <span className="name">Buckle Black Cargo</span>
-                <span className="size">M</span>
-                <span className="date">
-                  Estimated between: Jul 14 and Jul 17
-                </span>
-              </div>
-              <div className="common-price">
-                <span className="price">€84.00</span>
-              </div>
-            </div>
-          </div>
-          <div className="clothes-info row">
-            <div className="image">
-              <img src={closhed} alt="" />
-              <div className="quantity">2</div>
-            </div>
-            <div className="info row">
-              <div className="product-info">
-                <span className="name">Buckle Black Cargo</span>
-                <span className="size">M</span>
-                <span className="date">
-                  Estimated between: Jul 14 and Jul 17
-                </span>
-              </div>
-              <div className="common-price">
-                <span className="price">€84.00</span>
-              </div>
-            </div>
-          </div>
-          <div className="clothes-info row">
-            <div className="image">
-              <img src={closhed} alt="" />
-              <div className="quantity">2</div>
-            </div>
-            <div className="info row">
-              <div className="product-info">
-                <span className="name">Buckle Black Cargo</span>
-                <span className="size">M</span>
-                <span className="date">
-                  Estimated between: Jul 14 and Jul 17
-                </span>
-              </div>
-              <div className="common-price">
-                <span className="price">€84.00</span>
-              </div>
-            </div>
-          </div>
-          <div className="clothes-info row">
-            <div className="image">
-              <img src={closhed} alt="" />
-              <div className="quantity">2</div>
-            </div>
-            <div className="info row">
-              <div className="product-info">
-                <span className="name">Buckle Black Cargo</span>
-                <span className="size">M</span>
-                <span className="date">
-                  Estimated between: Jul 14 and Jul 17
-                </span>
-              </div>
-              <div className="common-price">
-                <span className="price">€84.00</span>
-              </div>
-            </div>
-          </div>
-          <div className="clothes-info row">
-            <div className="image">
-              <img src={closhed} alt="" />
-              <div className="quantity">2</div>
-            </div>
-            <div className="info row">
-              <div className="product-info">
-                <span className="name">Buckle Black Cargo</span>
-                <span className="size">M</span>
-                <span className="date">
-                  Estimated between: Jul 14 and Jul 17
-                </span>
-              </div>
-              <div className="common-price">
-                <span className="price">€84.00</span>
-              </div>
-            </div>
-          </div>
-          <div className="clothes-info row">
-            <div className="image">
-              <img src={closhed} alt="" />
-              <div className="quantity">2</div>
-            </div>
-            <div className="info row">
-              <div className="product-info">
-                <span className="name">Buckle Black Cargo</span>
-                <span className="size">M</span>
-                <span className="date">
-                  Estimated between: Jul 14 and Jul 17
-                </span>
-              </div>
-              <div className="common-price">
-                <span className="price">€84.00</span>
-              </div>
-            </div>
-          </div>
-          <div className="clothes-info row">
-            <div className="image">
-              <img src={closhed} alt="" />
-              <div className="quantity">2</div>
-            </div>
-            <div className="info row">
-              <div className="product-info">
-                <span className="name">Buckle Black Cargo</span>
-                <span className="size">M</span>
-                <span className="date">
-                  Estimated between: Jul 14 and Jul 17
-                </span>
-              </div>
-              <div className="common-price">
-                <span className="price">€84.00</span>
-              </div>
-            </div>
-          </div>
-          <div className="clothes-info row">
-            <div className="image">
-              <img src={closhed} alt="" />
-              <div className="quantity">2</div>
-            </div>
-            <div className="info row">
-              <div className="product-info">
-                <span className="name">Buckle Black Cargo</span>
-                <span className="size">M</span>
-                <span className="date">
-                  Estimated between: Jul 14 and Jul 17
-                </span>
-              </div>
-              <div className="common-price">
-                <span className="price">€84.00</span>
-              </div>
-            </div>
-          </div>
-          <div className="clothes-info row">
-            <div className="image">
-              <img src={closhed} alt="" />
-              <div className="quantity">2</div>
-            </div>
-            <div className="info row">
-              <div className="product-info">
-                <span className="name">Buckle Black Cargo</span>
-                <span className="size">M</span>
-                <span className="date">
-                  Estimated between: Jul 14 and Jul 17
-                </span>
-              </div>
-              <div className="common-price">
-                <span className="price">€84.00</span>
-              </div>
-            </div>
-          </div>
-          <div className="clothes-info row">
-            <div className="image">
-              <img src={closhed} alt="" />
-              <div className="quantity">2</div>
-            </div>
-            <div className="info row">
-              <div className="product-info">
-                <span className="name">Buckle Black Cargo</span>
-                <span className="size">M</span>
-                <span className="date">
-                  Estimated between: Jul 14 and Jul 17
-                </span>
-              </div>
-              <div className="common-price">
-                <span className="price">€84.00</span>
-              </div>
-            </div>
-          </div>
-          <div className="clothes-info row">
-            <div className="image">
-              <img src={closhed} alt="" />
-              <div className="quantity">2</div>
-            </div>
-            <div className="info row">
-              <div className="product-info">
-                <span className="name">Buckle Black Cargo</span>
-                <span className="size">M</span>
-                <span className="date">
-                  Estimated between: Jul 14 and Jul 17
-                </span>
-              </div>
-              <div className="common-price">
-                <span className="price">€84.00</span>
-              </div>
-            </div>
-          </div>
-          <div className="clothes-info row">
-            <div className="image">
-              <img src={closhed} alt="" />
-              <div className="quantity">2</div>
-            </div>
-            <div className="info row">
-              <div className="product-info">
-                <span className="name">Buckle Black Cargo</span>
-                <span className="size">M</span>
-                <span className="date">
-                  Estimated between: Jul 14 and Jul 17
-                </span>
-              </div>
-              <div className="common-price">
-                <span className="price">€84.00</span>
-              </div>
-            </div>
-          </div>
-          <div className="clothes-info row">
-            <div className="image">
-              <img src={closhed} alt="" />
-              <div className="quantity">2</div>
-            </div>
-            <div className="info row">
-              <div className="product-info">
-                <span className="name">Buckle Black Cargo</span>
-                <span className="size">M</span>
-                <span className="date">
-                  Estimated between: Jul 14 and Jul 17
-                </span>
-              </div>
-              <div className="common-price">
-                <span className="price">€84.00</span>
-              </div>
-            </div>
-          </div>
-          <div className="clothes-info row">
-            <div className="image">
-              <img src={closhed} alt="" />
-              <div className="quantity">2</div>
-            </div>
-            <div className="info row">
-              <div className="product-info">
-                <span className="name">Buckle Black Cargo</span>
-                <span className="size">M</span>
-                <span className="date">
-                  Estimated between: Jul 14 and Jul 17
-                </span>
-              </div>
-              <div className="common-price">
-                <span className="price">€84.00</span>
-              </div>
-            </div>
-          </div>
+          ))}
+
         </div>
         <div className="gift-input row">
           <input type="text" placeholder="Gift card" />
@@ -284,7 +37,7 @@ const RightShop = () => {
         <div className="final-info">
           <div className="final-Subprice row">
             <span className="subtotal">Subtotal</span>
-            <span>€1,279.00</span>
+            <span>€{totalPrice}</span>
           </div>
           <div className="final-adress row">
             <span>Spedizione</span>
@@ -294,7 +47,7 @@ const RightShop = () => {
             <span className="total">Total</span>
             <div className="total-price row">
               <span className="eur">EUR</span>
-              <span>€1,279.00</span>
+              <span>€{totalPrice}</span>
             </div>
           </div>
           <span>Including €309.45 in taxes</span>

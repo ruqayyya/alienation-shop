@@ -9,7 +9,6 @@ const GlobalContext = ({ children }) => {
   const [closeOverlay, setCloseOverlay] = useState(false);
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const [loading, setLoading] = useState(true);
-  // const [currentPage, setCurrentPage] = useState(1);
   const [showFilter, setShowFilter] = useState(false);
   const [showOrder, setShowOrder] = useState(false);
   const [isFirstWhite, setIsFirstWhite] = useState(false);
@@ -19,6 +18,9 @@ const GlobalContext = ({ children }) => {
   const [single, setSingle] = useState(false);
   const [countries, setCountries] = useState([]);
   const [products, setProducts] = useState([]);
+  const [cartList, setCartList] = useState([]);
+  const [totalPrice, setTotalPrice] = useState(0);
+  const [totalSinglePrice, setTotalSinglePrice] = useState(0);
 
   // CHANGE GRID TEMA
   const toggleFirstImage = () => {
@@ -82,7 +84,6 @@ const GlobalContext = ({ children }) => {
   };
 
   // DATA
-  
   const getProduct = async () => {
     try {
       const res = await axios
@@ -97,6 +98,29 @@ const GlobalContext = ({ children }) => {
   useEffect(() => {
     getProduct();
   }, []);
+
+  // CART TOTAL
+
+  const calcCartCount = () => {
+    const total = cartList.reduce(
+      (sum, item) => sum + item.quantity * item.price,
+      0
+    );
+    setTotalPrice(total);
+  };
+
+  const calcMultiPrice = () => {
+    const multiPrices = cartList.reduce((acc, item) => {
+      acc[item.id] = item.quantity * item.price;
+      return acc;
+    }, {});
+    setTotalSinglePrice(multiPrices);
+  };
+  
+  useEffect(() => {
+    calcCartCount();
+    calcMultiPrice();
+  }, [cartList]);
 
   const globalData = {
     toggleSidebar,
@@ -124,6 +148,12 @@ const GlobalContext = ({ children }) => {
     single,
     handleDual,
     products,
+    setCartList,
+    cartList,
+    calcMultiPrice,
+    calcCartCount,
+    totalPrice,
+    totalSinglePrice,
   };
   return (
     <MainContext.Provider value={globalData}>{children}</MainContext.Provider>
