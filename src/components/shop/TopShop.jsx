@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleUp, faAngleDown } from "@fortawesome/free-solid-svg-icons";
 import RightShop from "./RightShop";
+import { MainContext } from "../../utils/MainContext";
 
 const TopShop = () => {
   const [isOrderSummaryVisible, setIsOrderSummaryVisible] = useState(false);
+  const {totalPrice}= useContext(MainContext)
 
   const toggleOrderSummary = () => {
     setIsOrderSummaryVisible((prevState) => !prevState);
@@ -21,7 +23,7 @@ const TopShop = () => {
             <span>Show order summary</span>
             <FontAwesomeIcon icon={faAngleDown} />
           </div>
-          <span>€1,716.00</span>
+          <span>€{totalPrice}</span>
         </div>
         <div
           className="hidden row"
@@ -32,7 +34,7 @@ const TopShop = () => {
             <span>Hidden order summary</span>
             <FontAwesomeIcon icon={faAngleUp} />
           </div>
-          <span>€1,716.00</span>
+          <span>€{totalPrice}</span>
         </div>
         {isOrderSummaryVisible && <RightShop />}
       </div>

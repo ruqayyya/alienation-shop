@@ -79,7 +79,7 @@ const CategorySection = ({ data }) => {
                       onMouseEnter={() => handleMouseEnter(startIndex + index)}
                       onMouseLeave={handleMouseLeave}
                     >
-                      <NavLink to={"/shopdetail"}>
+                      <NavLink to={`/shopdetail/${item.id}`}>
                         <img
                           src={
                             hoveredIndex === startIndex + index

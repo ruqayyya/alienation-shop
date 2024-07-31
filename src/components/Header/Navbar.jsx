@@ -27,9 +27,10 @@ const Navbar = () => {
                 {item.subCategories.map((subs) => (
                   <NavLink
                     className="categorylink"
-                    to={`/categories/${item.id}/${subs.id}`}
+                    to={"/categories"}
+                    key={subs.id}
                   >
-                    <li key={subs.id} className="menu">
+                    <li  className="menu">
                       {subs.title}
                     </li>
                   </NavLink>

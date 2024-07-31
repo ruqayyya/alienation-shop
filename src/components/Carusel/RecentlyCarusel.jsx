@@ -55,7 +55,6 @@ const RecentlyCarusel = () => {
           >
             <div>
               {" "}
-              <NavLink to={"/shopdetail"}>
                 <img
                   src={
                     hoveredIndex === index
@@ -73,7 +72,6 @@ const RecentlyCarusel = () => {
                     %
                   </div>
                 )}
-              </NavLink>
             </div>
             <div className="name">{item.name}</div>
             <div className="row">
