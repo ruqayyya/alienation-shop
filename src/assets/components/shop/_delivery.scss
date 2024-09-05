@@ -10,11 +10,11 @@
       border: 1px solid var(--light-gray);
       color: gray;
     }
-    .flag-dropdown{
+    .flag-dropdown {
       background-color: var(--dark-gray);
       border: 1px solid var(--light-gray);
     }
-    .selected-flag{
+    .selected-flag {
       background-color: var(--dark-gray) !important;
     }
   }
@@ -46,6 +46,9 @@
   }
   .name-surname {
     gap: 10px;
+    div {
+      width: 100%;
+    }
   }
   .adress-info {
     gap: 10px;
@@ -74,4 +77,13 @@
   font-size: 13px;
 }
 
+.errorInput {
+  border: 1px solid var(--error) !important;
+}
 
+.error-text {
+  color: var(--error) !important;
+  font-size: 13px !important;
+  text-align: center;
+  font-size: var(--base-font) !important;
+}

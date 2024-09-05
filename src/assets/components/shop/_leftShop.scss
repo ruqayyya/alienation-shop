@@ -100,7 +100,7 @@
           @include flex-container(column);
           gap: 10px;
           input[type="text"],
-          input[type="gmail"] {
+          input[type="email"] {
             color: white;
             border-radius: 5px;
             border: 1px solid var(--light-gray);

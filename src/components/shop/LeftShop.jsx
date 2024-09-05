@@ -32,7 +32,7 @@ const LeftShop = () => {
             <NavLink to={'/login'}><span className="login">Log in</span></NavLink>
           </div>
           <form>
-            <input type="gmail" placeholder="Email" />
+            <input type="email" placeholder="Email" required />
             <label className="custom-checkbox">
               <input type="checkbox" name="updates" />
               <span>Update me on offers and news</span>

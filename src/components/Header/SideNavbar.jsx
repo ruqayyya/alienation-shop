@@ -3,10 +3,10 @@ import "aos/dist/aos.css";
 import AOS from "aos";
 import { MainContext } from "../../utils/MainContext";
 import { categories } from "../../db/fakeDb";
+import { NavLink } from "react-router-dom";
 
 const SideNavbar = () => {
-  const {  toggleDropdown } =
-    useState(MainContext);
+  const { toggleDropdown } = useState(MainContext);
   const [selectedCategory, setSelecetedCategory] = useState(null);
   useEffect(() => {
     AOS.init({
@@ -27,7 +27,7 @@ const SideNavbar = () => {
       >
         <div className="category-list" onClick={toggleDropdown}>
           {categories.map((item) => (
-            <Fragment key={item.id} >
+            <Fragment key={item.id}>
               <button
                 onClick={() => {
                   if (selectedCategory) {
@@ -49,11 +49,12 @@ const SideNavbar = () => {
                 {selectedCategory &&
                   selectedCategory?.id === item.id &&
                   selectedCategory?.subCategories?.map((subs) => (
-                    <div key={subs.id} className="category-item">{subs.title}</div>
+                    <div key={subs.id} className="category-item">
+                      <NavLink to={"/categories"}>{subs.title}</NavLink>
+                    </div>
                   ))}
               </div>
               <span className="line"></span>
-
             </Fragment>
           ))}
           <p className="title">account</p>

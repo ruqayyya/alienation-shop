@@ -7,24 +7,25 @@ import { faAngleLeft, faAngleRight } from "@fortawesome/free-solid-svg-icons";
 import { MainContext } from "../../utils/MainContext";
 import { NavLink } from "react-router-dom";
 
-const CategorySection = ({ data }) => {
+const CategorySection = () => {
   const [currentPage, setCurrentPage] = useState(1);
-
-  const ITEMS_PER_PAGE = 4;
-  const items = Array.isArray(data) ? data : Object.values(data);
-  const totalItems = items.length;
-  const totalPages = Math.ceil(totalItems / ITEMS_PER_PAGE);
-  const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
-  const endIndex = startIndex + ITEMS_PER_PAGE;
-
   const {
+    sortedProducts,
     dual,
     triple,
     single,
     hoveredIndex,
     handleMouseEnter,
     handleMouseLeave,
+    products
   } = useContext(MainContext);
+
+  const ITEMS_PER_PAGE = 4;
+  const items = sortedProducts.length ? sortedProducts : products;
+  const totalItems = items.length;
+  const totalPages = Math.ceil(totalItems / ITEMS_PER_PAGE);
+  const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+  const endIndex = startIndex + ITEMS_PER_PAGE;
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "instant" });

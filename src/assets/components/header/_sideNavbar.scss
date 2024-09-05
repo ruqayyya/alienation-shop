@@ -1,7 +1,7 @@
 .side-navbar {
   background-color: var(--dark-gray);
   max-height: calc(100vh - 155px);
-  overflow-y:auto;
+  overflow-y: auto;
 
   .category {
     @include flex-container(column);
@@ -11,18 +11,21 @@
       cursor: pointer;
       @include flex-container(column);
       .category-map {
-        .category-item {
-          margin-bottom: 30px;
-          padding: 0px 20px;
+        a {
+          color: white;
           font-family: var(--base-font);
           letter-spacing: 0.2cap;
           font-weight: 500;
-          cursor: pointer;
-          color: var(--gray);
           font-size: 13px;
+          color: var(--gray);
+          margin-bottom: 10px;
+          padding: 0px 20px;
           @media (max-width: 320px) {
             font-size: 10px;
-            }
+          }
+          .category-item {
+            cursor: pointer;
+          }
         }
       }
       button {
@@ -43,7 +46,7 @@
         transition: 1s ease;
         @media (max-width: 320px) {
           font-size: 13px;
-          }
+        }
         .toggle-icon::after {
           content: "";
           position: absolute;
@@ -89,4 +92,3 @@
     }
   }
 }
-
