@@ -25,6 +25,16 @@
   text-transform: uppercase;
   font-family: var(--base-font);
 }
+.input-error {
+  border: 2px solid red;
+  background-color: #fff0f0;
+}
+
+.error-message {
+  color: red;
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+}
 
 :root{
     --green:rgb(119,255,0);
@@ -37,6 +47,7 @@
     --dark-gray:rgb(33, 33, 33);
     --blue:rgb(0,112,186);
     --back-gray:rgb(48, 48, 48);
+    --error:rgb(103, 3, 3);
 }
 
 .row{

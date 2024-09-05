@@ -6,6 +6,7 @@ import "react-phone-input-2/lib/style.css";
 
 const Delivery = () => {
   const [countries, setCountries] = useState([]);
+  const { nameError,phoneError, setPhoneNumber, surnameError, adressError, setNameError, setSurnameError, setAdressError,setAddress, setName, setSurname } = useContext(MainContext);
   const [phone, setPhone] = useState("");
 
   useEffect(() => {
@@ -24,7 +25,7 @@ const Delivery = () => {
     <div className="delivery">
       <p>Delivery</p>
       <select>
-        <option value="">Country</option>
+        <option value="" >Country</option>
         {countries.map((item) => (
           <option key={item.id} value={item.id}>
             {item.label}
@@ -32,27 +33,58 @@ const Delivery = () => {
         ))}
       </select>
       <div className="name-surname row">
+        <div>
+          <input
+            type="text"
+            placeholder="Nome/Name "
+            className={nameError ? "errorInput" : ""}
+            onChange={(e) => setName(e.target.value)}
+            required
+            pattern="^[a-zA-Z\s]+$"
+            title="Name should only contain letters and spaces."
+          />
+          {nameError && (
+            <p className="error-text">Please, fill in the blank </p>
+          )}
+        </div>
+        <div>
+          {" "}
+          <input
+            type="text"
+            placeholder="Cognome/Surname"
+            onChange={(e) => setSurname(e.target.value)}
+            className={surnameError ? "errorInput" : ""}
+            required
+          />
+          {surnameError && (
+            <p className="error-text">Please, fill in the blank </p>
+          )}
+        </div>
+      </div>
+      <div>
         <input
           type="text"
-          placeholder="Nome/Name "
+          placeholder="adress"
+          onChange={(e) => setAddress(e.target.value)}
+          className={adressError ? "errorInput" : ""}
           required
-          pattern="^[a-zA-Z\s]+$"
-          title="Name should only contain letters and spaces."
         />
-        <input type="text" placeholder="Cognome/Surname" required />
+        {adressError && (
+          <p className="error-text">Please, fill in the blank </p>
+        )}
       </div>
-      <input type="text" placeholder="adress" required />
       <input type="text" placeholder="Apartment, suite, etc. (optional)" />
-      <div className="adress-info row">
-        <input type="text" placeholder="Citta'/City" required />
-      </div>
       <form className="num">
         <PhoneInput
           required
           country={"az"}
           value={phone}
-          onChange={(value) => setPhone(value)}
+          className={phoneError ? "errorInput" : ""}
+          onChange={(value) => setPhoneNumber(value)}
         />
+           {phoneError && (
+            <p className="error-text">Please, fill in the phone number </p>
+          )}
         <label className="custom-checkbox">
           <input type="checkbox" name="updates" />
           <span>Save information for next time</span>

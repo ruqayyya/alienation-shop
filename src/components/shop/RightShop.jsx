@@ -3,7 +3,7 @@ import { MainContext } from "../../utils/MainContext";
 
 const RightShop = () => {
     
-    const { cartList, totalPrice } = useContext(MainContext);
+    const { cartList, totalPrice,totalSinglePrice } = useContext(MainContext);
   return (
     <div className="right-part left">
       <div className="container">
@@ -23,7 +23,7 @@ const RightShop = () => {
                 </span>
               </div>
               <div className="common-price">
-                <span className="price">€{item.quantity * item.price}</span>
+                <span className="price">€{totalSinglePrice[item.id]}</span>
               </div>
             </div>
           </div>

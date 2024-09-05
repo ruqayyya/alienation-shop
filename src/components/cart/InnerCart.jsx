@@ -5,7 +5,7 @@ import plus from "../../assets/images/plus.png";
 import { MainContext } from "../../utils/MainContext";
 
 const InnerCart = () => {
-  const { cartList } = useContext(MainContext);
+  const { cartList,increaseQuantity,decreaseQuantity,removeProductlist } = useContext(MainContext);
   return (
     <div
       className="inner-cart"
@@ -38,12 +38,12 @@ const InnerCart = () => {
                 <span className="price">€{item.price} </span>
                 <div className="add row">
                   <div className="quantity-box row">
-                    <img src={minus} alt="minus" className="decrease" />
+                    <img src={minus} alt="minus" className="decrease" onClick={() => decreaseQuantity(item.id)} />
                     <span className="num">{item.quantity}</span>
-                    <img src={plus} alt="plus" className="increase" />
+                    <img src={plus} alt="plus" className="increase" onClick={() => increaseQuantity(item.id)}/>
                   </div>
                   <div className="remove">
-                    <span className="remove-cart">remove</span>
+                    <span className="remove-cart" onClick={() => removeProductlist(item.id)}>remove</span>
                     <span className="line"></span>
                   </div>
                 </div>

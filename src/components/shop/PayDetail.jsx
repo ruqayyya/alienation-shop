@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useRef, useState } from "react";
 import visa from "../../assets/images/visa.svg";
 import visaSirqule from "../../assets/images/visa-sirqule.svg";
 import discover from "../../assets/images/discover.svg";
@@ -6,14 +6,22 @@ import amex from "../../assets/images/amex.svg";
 import paypal from "../../assets/images/paypal (1).png";
 import buyPay from "../../assets/images/button-pay.svg";
 import Delivery from "./Delivery";
+import { MainContext } from "../../utils/MainContext";
 
 const PayDetail = () => {
   const [selectedMethod, setSelectedMethod] = useState("credit");
   const [showDelivery, setShowDelivery] = useState(false);
+  const { checkedInputEmpty } = useContext(MainContext);
+
+  const cardNumberRef = useRef(null);
+  const expiryDateRef = useRef(null);
+  const cvvRef = useRef(null);
+  const cardNameRef = useRef(null);
 
   const handleRadioChange = (event) => {
     setSelectedMethod(event.target.value);
   };
+
   const handleCheckboxChange = (event) => {
     setShowDelivery(event.target.checked);
   };
@@ -21,7 +29,7 @@ const PayDetail = () => {
   return (
     <div className="payment-form">
       <h2>Pagamenti</h2>
-      <p className="payment-text" >Tutte le transazioni sono sicure e criptate</p>
+      <p className="payment-text">Tutte le transazioni sono sicure e criptate</p>
 
       <label className="payment-method">
         <div className="first-dot row">
@@ -54,12 +62,34 @@ const PayDetail = () => {
       {selectedMethod === "credit" && (
         <div className="payment">
           <div className="card-details">
-            <input type="text" placeholder="Numero carta/ Card number" />
+            <input
+              type="text"
+              placeholder="Numero carta/ Card number"
+              ref={cardNumberRef}
+              maxLength="16" // Maximum length for card number
+              onChange={() => {
+                // You can add additional validation here if needed
+              }}
+            />
             <div className="expiry-cvv">
-              <input type="text" placeholder="Data di scadenza (MM/YY)" />
-              <input type="text" placeholder="Codice sicurezza (CVV)" />
+              <input
+                type="text"
+                placeholder="Data di scadenza (MM/YY)"
+                ref={expiryDateRef}
+                maxLength="4" // MM/YY format
+              />
+              <input
+                type="text"
+                placeholder="Codice sicurezza (CVV)"
+                ref={cvvRef}
+                maxLength="3" // CVV typically has 3 or 4 digits
+              />
             </div>
-            <input type="text" placeholder="Nome sulla carta/ Card name" />
+            <input
+              type="text"
+              placeholder="Nome sulla carta/ Card name"
+              ref={cardNameRef}
+            />
             <div className="custom-checkbox">
               <label className="custom-checkbox">
                 <input
@@ -110,12 +140,14 @@ const PayDetail = () => {
       )}
       <div className="button">
         {selectedMethod === "paypal" && (
-          <button className="pay-button">
+          <button className="pay-button" onClick={checkedInputEmpty}>
             <img src={buyPay} alt="paypal" />
           </button>
         )}
         {selectedMethod === "credit" && (
-          <button className="paga-button"> Paga</button>
+          <button className="paga-button" onClick={checkedInputEmpty}>
+            Paga
+          </button>
         )}
       </div>
     </div>

@@ -4,7 +4,6 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import hoverImage from "../../assets/images/kynek.webp";
 import { MainContext } from "../../utils/MainContext";
-import { NavLink } from "react-router-dom";
 
 function CollectionCarousel() {
   const { hoveredIndex, handleMouseEnter, handleMouseLeave, products } =

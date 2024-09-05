@@ -1,11 +1,10 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useState } from "react";
 import dual_grid_gray from "../../assets/images/visualization (1).png";
 import square from "../../assets/images/black-square.png";
 import triple_grid_gray from "../../assets/images/grid (1).png";
 import { buttonlist } from "../../db/buttonDb";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
-import { useOutletContext } from "react-router-dom";
 import { MainContext } from "../../utils/MainContext";
 
 const CategoryHeader = () => {
@@ -17,12 +16,17 @@ const CategoryHeader = () => {
     handleSingle,
     handleDual,
     handleTriple,
+    setSortedProducts,
+    products,
+    handleSort
   } = useContext(MainContext);
+
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const toggleDropbutton = () => {
     setIsDropdownOpen(!isDropdownOpen);
   };
+
   const handleButtonClick = () => {
     if (window.innerWidth <= 1066) {
       toggleOrder();
@@ -30,6 +34,9 @@ const CategoryHeader = () => {
       toggleDropbutton();
     }
   };
+
+
+
   return (
     <header className="category-header">
       <div className="container row">
@@ -37,7 +44,7 @@ const CategoryHeader = () => {
           <img
             src={dual_grid_gray}
             alt="dual-grid"
-            className={`first  ${isFirstWhite ? "iswhite" : ""}`}
+            className={`first ${isFirstWhite ? "iswhite" : ""}`}
             onClick={handleDual}
           />
           <img
@@ -50,14 +57,16 @@ const CategoryHeader = () => {
         <span className="first-liner"></span>
         <div className="button-container row">
           <span className="first-liner"></span>
-          <button className="order " onClick={handleButtonClick}>
+          <button className="order" onClick={handleButtonClick}>
             order
             <FontAwesomeIcon icon={faAngleDown} />
           </button>
           {isDropdownOpen && (
             <div className="drop-button">
               {buttonlist.map((item) => (
-                <button key={item.id}>{item.title}</button>
+                <button key={item.id} onClick={() => handleSort(item.id)}>
+                  {item.title}
+                </button>
               ))}
             </div>
           )}
@@ -77,7 +86,7 @@ const CategoryHeader = () => {
           <img
             src={dual_grid_gray}
             alt="dual-grid"
-            className={`first  ${isFirstWhite ? "iswhite" : ""}`}
+            className={`first ${isFirstWhite ? "iswhite" : ""}`}
             onClick={handleDual}
           />
         </div>

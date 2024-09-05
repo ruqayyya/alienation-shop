@@ -4,7 +4,8 @@ import { MainContext } from "../../utils/MainContext";
 import x from "../../assets/images/multiply.png";
 
 const OrderCart = () => {
-    const{toggleOrder }=useContext(MainContext)
+    const{toggleOrder,handleSort }=useContext(MainContext)
+    
   return (
     <div className="order-cart">
       <div className="container">
@@ -18,7 +19,7 @@ const OrderCart = () => {
         <div className="button-container">
           <div className="drop-button">
             {buttonlist.map((item) => (
-              <button key={item.id}>{item.title}</button>
+              <button key={item.id}  onClick={() => handleSort(item.id)}>{item.title}</button>
             ))}
           </div>
         </div>

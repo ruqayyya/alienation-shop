@@ -6,7 +6,7 @@ import { Link, NavLink } from "react-router-dom";
 import { MainContext } from "../../utils/MainContext";
 
 const CartSection = () => {
-  const { cartList,totalPrice,totalSinglePrice } = useContext(MainContext);
+  const { cartList,totalPrice,totalSinglePrice,increaseQuantity,decreaseQuantity,removeProductlist } = useContext(MainContext);
 
   return (
     <section className="cart-section">
@@ -43,11 +43,11 @@ const CartSection = () => {
                     <div className="cart-item-amount">
                       <div className="amount-container ">
                         <div className="quantity">
-                          <img src={minus} alt="minus" />
+                          <img src={minus} alt="minus" onClick={() => decreaseQuantity(item.id)} />
                           <span>{item.quantity}</span>
-                          <img src={plus} alt="plus" />
+                          <img src={plus} alt="plus" onClick={()=>increaseQuantity(item.id)} />
                         </div>
-                        <span className="remove">REMOVE</span>
+                        <span className="remove" onClick={()=>removeProductlist(item.id)}>REMOVE</span>
                       </div>
                     </div>
                   </div>
